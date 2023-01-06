@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @PandiaJason
 - 👀 I’m interested in DL, NLP, Android, Python, Java, Solidity. 
-- 🌱 I’m currently learning Java, Kotlin, SqlLite, Solidity and BLockchain
+- 🌱 I’m currently learning Solidity and Blockchain
 - 💞️ I’m looking to collaborate on FOSS projects
 - 📫 How to reach me pandiajason@gmail.con and jason.co.in
 
