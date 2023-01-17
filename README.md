@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @JSP
+- 👋 Hi, I’m Jason Pandian
 - 👀 I’m interested in DL, NLP, Android, Python, Java, Solidity. 
 - 🌱 I’m currently learning Solidity and Blockchain
 - 💞️ I’m looking to collaborate on web3 projects
