@@ -1,8 +1,6 @@
-- 👋 Hi, I’m Jason Pandian
-- 👀 I’m interested in DL, NLP, Android, Python, Java, Solidity. 
-- 🌱 I’m currently learning Solidity and Blockchain
-- 💞️ I’m looking to collaborate on web3 projects
-- 📫 How to reach me pandiajason@gmail.con
+- 👋 Hi, I’m JP
+- 🌱 I’m currently working on zkp based account abstaction system
+- 📫 How to reach me pandiajason@gmail.com
 
 <!---
 PandiaJason/PandiaJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
