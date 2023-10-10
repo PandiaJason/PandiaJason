@@ -2,7 +2,7 @@
 - 🌊 Currently deep-diving into the C language ocean.
 - ♢ Crafting magic in the world of EVM blockchain programming.
 - 🛠 Creating Non-Transferable Tokens - because sharing is overrated.
-- 🤖 An AI and Deep Learning aficionado; once built a functional Chatbot with BERT, no biggie!
+- 🤖 An AI and Deep Learning aficionado; once built a functional Chatbot with BERT, yeah biggie at that time!
 - </> I speak fluent "Hello, World" in over 5 programming languages.
 - 🐧 Proud open-source evangelist.
 - 📫 Reach me at pandiajason@gmail.com, but don't send me cat memes... just kidding, send all the cat memes!
