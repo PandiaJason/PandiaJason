@@ -1,5 +1,5 @@
 - 👋 Hey there, I'm JSN, the proud founder/author of https://jsncrypts.vercel.app/
-- 🇨 I use ++C, not C++
+- 💾 I use ++C, not C++
 - 🌊 Currently deep-diving into the C language ocean.
 - ♢ Crafting magic in the world of EVM blockchain programming.
 - 🛠 Creating Non-Transferable Tokens - because sharing is overrated.
