@@ -1,6 +1,6 @@
 - 👋 I'm Jason Pandian, Engineer/Researcher
--  Current Research Area Domain Deep Space Networks, SPICE, ns3
-- 💾 Master of Comuper Science and Engineering, Thesis on [PoKoC] (https://github.com/PandiaJason/Non-Transferable-Non-Fungible-Tokens)
+- ⚓ Current Research Area Domain Deep Space Networks, SPICE, ns3
+- 🎓 Master of Computer Science and Engineering, Thesis on [PoKoC](https://github.com/PandiaJason/Non-Transferable-Non-Fungible-Tokens)
 - 🌊 
 - 🤖 An AI and Deep Learning aficionado; once built a functional Chatbot with BERT, yeah biggie at that time!
 - </> I speak fluent "Hello, World" in over 5 programming languages.
