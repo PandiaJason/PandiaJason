@@ -5,7 +5,7 @@
 - 🤖 Bachelor of Computer Science and Engineering (2017 -- 2021), Thesis on [AI Chatbot using Deep Learning Based NLP](https://github.com/PandiaJason/AI-DL-NLP-CHATBOT) 
 - 🐧 Proud open-source and Linux evangelist.
 - 📫 Reach me at pandiajason@gmail.com.
-- 📘 Read me at https://pandiajason.github.io/PandiaNotes/
+- 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
 
 ## Startup
 
