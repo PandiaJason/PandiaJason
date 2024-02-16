@@ -13,6 +13,7 @@
 ## ✉️ Email and Blogs
 - 📫 Reach me at pandiajason@gmail.com.
 - 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
+-  🛰️ [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
 
 ## 💼 Web3 Startup Experiences
 - 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
@@ -36,7 +37,6 @@
     - 💻 Bash scripting
   - 💻 VS Code(Codium), RemixIDE, Colab
 
-
 - 🔗 **Blockchain & Web3**
   - 🌐 EVMs L1 & L2, Ganache
   - 🔐 Metamask, Hardhat, Solc
@@ -44,11 +44,9 @@
   - 🔗 ERC721, ERC 1155, ERC4337.
 
 ## Achievements
-
 - 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
 - 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
 - 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
-
   
 <!---
 PandiaJason/PandiaJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
