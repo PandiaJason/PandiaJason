@@ -7,7 +7,7 @@
 - 📫 Reach me at pandiajason@gmail.com.
 - 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
 
-## Startup
+## Web3 Startup
 
 - 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
 - 🔍 Contrackts(2023), [Contrackts - A Blockchain-based End-to-End Traceability](https://github.com/PandiaJason/contrackts-docs)
