@@ -10,9 +10,6 @@
 ## 🤖 Transformer-based Generic Chatbot
 - 🎓 Bachelor of Computer Science and Engineering (2017 -- 2021), Thesis on [AI Chatbot using Deep Learning Based NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)
 
-## 🐧 Super User on GNU/Linux
-- 🐧 Proud open-source and Linux evangelist.
-
 ## ✉️ Email and Blogs
 - 📫 Reach me at pandiajason@gmail.com.
 - 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
@@ -23,7 +20,6 @@
 - 👛 Dvault(2022), [ERC4337 smart contract-based web3 wallet](https://github.com/PandiaJason/dvault-docs)
 
 ## Skills
-
 - 🖥️ **Programming Languages**
   - 📜 K&R C/GCC C2X/C++
   - 💡 Solidity
