@@ -1,4 +1,4 @@
-# 👋 Hello, I'm Jason Pandian - Engineer/Researcher
+## 👋 Hello, I'm Jason Pandian - Engineer/Researcher
 
 # ✍🏻 Research Projects
 ## 🚀 Deep Space Networks & Simulations
