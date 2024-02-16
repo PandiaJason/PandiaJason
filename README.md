@@ -23,9 +23,28 @@
 
 ## Skills
 
-- 🖥️ **Programming Languages:** K&R C/GCC C2X/C++, Solidity, Java, Python, JavaScript.
-- 🛠️ **Frameworks & Environment:** NodeJS, ReactJS, NextJs, EthersJS, Flask, ML Toolkits, BERT, Longformer, PyTorch, GNU/Linux, VS Code(Codium), RemixIDE, Colab.
-- 🔗 **Blockchain & Web3:** EVMs L1 & L2, Ganache, Metamask, Hardhat, Solc, Ethers, Hyperledger, ERC721, ERC 1155, ERC4337.
+- 🖥️ **Programming Languages**
+  - 📜 K&R C/GCC C2X/C++
+  - 💡 Solidity
+  - ☕ Java
+  - 🐍 Python
+  - 🌐 JavaScript
+
+- 🛠️ **Frameworks & Environment**
+  - 🚀 NodeJS, ReactJS, NextJs
+  - 💻 EthersJS, Flask
+  - 🧠 ML Toolkits: BERT, Longformer, PyTorch
+  - 🐧 **Linux and Bash:**
+    - 🐧 GNU/Linux (Debian, Ubuntu, Clear Linux, Fedora, Manjaro)
+    - 💻 Bash scripting
+  - 💻 VS Code(Codium), RemixIDE, Colab
+
+
+- 🔗 **Blockchain & Web3**
+  - 🌐 EVMs L1 & L2, Ganache
+  - 🔐 Metamask, Hardhat, Solc
+  - 💸 Ethers, Hyperledger
+  - 🔗 ERC721, ERC 1155, ERC4337.
 
 ## Achievements
 
