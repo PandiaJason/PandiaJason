@@ -2,7 +2,7 @@
 
 # ✍🏻 Research Projects
 ## 🚀 Deep Space Networks & Simulations
-- 📡 PhD Research Area (2024-- ____): [SPICE ns: A modular extension for Simulating Deep Space Networks under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
+- 📡 PhD Research Area (2024 -- ____): [SPICE ns: A modular extension for Simulating Deep Space Networks under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
 
 ## ⚓ Blockchain Technology-based Secured Credential Management System
 - 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
