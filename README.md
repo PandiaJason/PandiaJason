@@ -34,13 +34,13 @@
   - 🧠 ML Toolkits: BERT, Longformer, PyTorch
   - 🐧 **Linux and Bash:**
     - 🐧 GNU/Linux (Debian, Ubuntu, Clear Linux, Fedora, Manjaro)
-    - 💻 Bash scripting
+    - ✨ Bash scripting
   - 💻 VS Code(Codium), RemixIDE, Colab
 
 - 🔗 **Blockchain & Web3**
   - 🌐 EVMs L1 & L2, Ganache
   - 🔐 Metamask, Hardhat, Solc
-  - 💸 Ethers, Hyperledger
+  - ✨ Ethers, Hyperledger
   - 🔗 ERC721, ERC 1155, ERC4337.
 
 ## Achievements
