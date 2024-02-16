@@ -1,9 +1,9 @@
 # 👋 Hello, I'm Jason Pandian - Engineer/Researcher
 
 ## 🚀 Deep Space Networks & Simulations
-- ⚓ PhD Research Area: [SPICE ns: A modular extension for Deep Space Network under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
+- 📡 PhD Research Area: [SPICE ns: A modular extension for Deep Space Network under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
 
-## 🔗 Blockchain Technology-based Secured Credential Management System
+## ⚓ Blockchain Technology-based Secured Credential Management System
 - 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
 
 ## 🤖 Transformer-based Generic Chatbot
