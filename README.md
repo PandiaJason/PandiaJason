@@ -1,5 +1,6 @@
 # 👋 Hello, I'm Jason Pandian - Engineer/Researcher
 
+# ✍🏻 Research Projects
 ## 🚀 Deep Space Networks & Simulations
 - 📡 PhD Research Area: [SPICE ns: A modular extension for Deep Space Network under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
 
