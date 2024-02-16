@@ -13,7 +13,7 @@
 ## ✉️ Email and Blogs
 - 📫 Reach me at pandiajason@gmail.com.
 - 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
--  🛰️ [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
+- 🛰️ SPICE ns Tutorials at [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
 
 ## 💼 Web3 Startup Experiences
 - 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
