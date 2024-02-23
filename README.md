@@ -22,8 +22,11 @@
 
 ## Skills
 - 🖥️ **Programming Languages**
-- 📜 K&R C/GCC C2X/C++ - 💡 Solidity - ☕ Java - 🐍 Python - 🌐 JavaScript
-
+  - 📜 K&R C/GCC C2X/C++
+  - 💡 Solidity
+  - ☕ Java
+  - 🐍 Python
+  - 🌐 JavaScript
 
 - 🛠️ **Frameworks & Environment**
   - 🚀 NodeJS, ReactJS, NextJs
