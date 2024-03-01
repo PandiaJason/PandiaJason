@@ -12,6 +12,7 @@
 
 ## Lectures Notes
 - 📘 Let's Program with [Python](https://github.com/PandiaJason/Python)
+- 📘 Let's Program with [C](https://github.com/PandiaJason/ANSI-C)
 
 ## ✉️ Email and Blogs
 - 📫 Reach me at pandiajason@gmail.com.
