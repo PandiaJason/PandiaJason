@@ -11,7 +11,7 @@
 - 🎓 Bachelor of Computer Science and Engineering (2017 -- 2021), Thesis on [AI Chatbot using Deep Learning Based NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)
 
 ## Lectures Notes
-- 📘 Let's Program with Python with [Python](https://github.com/PandiaJason/Python)
+- 📘 Let's Program with [Python](https://github.com/PandiaJason/Python)
 
 ## ✉️ Email and Blogs
 - 📫 Reach me at pandiajason@gmail.com.
