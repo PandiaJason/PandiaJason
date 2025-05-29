@@ -9,6 +9,7 @@
 - I presented a Lightning Talk remotely at the prestigious Workshop on ns-3 [(WNS-3 2024) held in Barcelona, Spain.](https://www.nsnam.org/research/wns3/wns3-2024/program/) The talk, titled “Modeling the Astrodynamics of Space Missions in ns-3 for High-Fidelity Simulations of Deep Space Communications,” was part of the conference program.
 - On September 28, 2024, I was invited as a resource person for a One-Day Workshop on “Open Source Computing” at [Periyar Maniammai Institute of Science & Technology, Thanjavur.](https://www.pmu.edu/events/804/a-one-day-workshop-on-open-source-computing-%7C-cse.aspx)
 - On November 8, 2024, at the ‘NIT in-house Award Ceremony 2024’ held at Nehru Institute of Technology (NIT), Coimbatore, I was awarded “The Best Faculty of the Year.”
+- On March 29 2025, 'International Conference: ICNGTS New-Gen Technologies for Sustainable Development', I was awarded "Best Researcher Award."
 ##
 
 ## ⚓ Blockchain Technology-based Secured Credential Management System
@@ -30,7 +31,7 @@
 - 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
 - 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
 - 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
-- 🥇 Best Faulty of the year, Nehru Institute of Technology - 2024
+- 🥇 Best Faulty of the Year, Nehru Institute of Technology - 2024
 - 🎓 Best Researcher Award, ICNGTS International Conference - 2025
 
 ## 💼 Web3 Startup Experiences
