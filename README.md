@@ -51,6 +51,8 @@
 - 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
 - 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
 - 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
+- 🥇 Best Faulty of the year, Nehru Institute of Technology - 2024
+- 🎓 Best Researcher Award ICNGTS International Conference - 2025
   
 <!---
 PandiaJason/PandiaJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
