@@ -19,6 +19,13 @@
 - 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
 - 🛰️ SPICE ns Tutorials at [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
 
+## Achievements
+- 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
+- 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
+- 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
+- 🥇 Best Faulty of the year, Nehru Institute of Technology - 2024
+- 🎓 Best Researcher Award ICNGTS International Conference - 2025
+
 ## 💼 Web3 Startup Experiences
 - 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
 - 🔍 Contrackts(2023), [Contrackts - A Blockchain-based End-to-End Traceability](https://github.com/PandiaJason/contrackts-docs)
@@ -27,6 +34,7 @@
 ## Skills
 - 🖥️ **Programming Languages**
   - 📜 K&R C/GCC C2X/C++
+  - 🥳 Go
   - 💡 Solidity
   - ☕ Java
   - 🐍 Python
@@ -47,12 +55,6 @@
   - ✨ Ethers, Hyperledger
   - 🔗 ERC721, ERC 1155, ERC4337.
 
-## Achievements
-- 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
-- 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
-- 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
-- 🥇 Best Faulty of the year, Nehru Institute of Technology - 2024
-- 🎓 Best Researcher Award ICNGTS International Conference - 2025
   
 <!---
 PandiaJason/PandiaJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
