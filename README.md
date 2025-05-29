@@ -12,7 +12,8 @@
 - On March 29 2025, 'International Conference: ICNGTS New-Gen Technologies for Sustainable Development', I was awarded "Best Researcher Award."
 
 ## On-Going Ventures
-- [AstronDynamics](https://astrondynamics.com/) is an edTech research startup focused on deep space network simulations, open-source computing, state-of-the-art teaching methodologies, coding playgrounds, and much more. It is backed by a team of contributors passionate about FOSS (Free and Open Source Software).
+- [AstronDynamics](https://astrondynamics.com/): **AstronDynamics** is a research-first startup that also builds EdTech solutions for teaching and academic enterprise needs. Its focus areas include deep space network simulations, computing networks, AI research, and the development of research-backed tools. The team is passionate about open-source computing, state-of-the-art teaching methodologies, and interactive coding playgrounds. Backed by contributors who actively support FOSS (Free and Open Source Software), AstronDynamics blends cutting-edge research with practical, scalable solutions for the academic and educational ecosystem.
+
 
 ## ⚓ Blockchain Technology-based Secured Credential Management System
 - 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
