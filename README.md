@@ -24,7 +24,7 @@
 - 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
 - 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
 - 🥇 Best Faulty of the year, Nehru Institute of Technology - 2024
-- 🎓 Best Researcher Award ICNGTS International Conference - 2025
+- 🎓 Best Researcher Award, ICNGTS International Conference - 2025
 
 ## 💼 Web3 Startup Experiences
 - 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
