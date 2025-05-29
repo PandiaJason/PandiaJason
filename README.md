@@ -10,7 +10,9 @@
 - On September 28, 2024, I was invited as a resource person for a One-Day Workshop on “Open Source Computing” at [Periyar Maniammai Institute of Science & Technology, Thanjavur.](https://www.pmu.edu/events/804/a-one-day-workshop-on-open-source-computing-%7C-cse.aspx)
 - On November 8, 2024, at the ‘NIT in-house Award Ceremony 2024’ held at Nehru Institute of Technology (NIT), Coimbatore, I was awarded “The Best Faculty of the Year.”
 - On March 29 2025, 'International Conference: ICNGTS New-Gen Technologies for Sustainable Development', I was awarded "Best Researcher Award."
-##
+
+## On-Going Ventures
+- [AstronDynamics](https://astrondynamics.com/) is an edTech research startup focused on deep space network simulations, open-source computing, state-of-the-art teaching methodologies, coding playgrounds, and much more. It is backed by a team of contributors passionate about FOSS (Free and Open Source Software).
 
 ## ⚓ Blockchain Technology-based Secured Credential Management System
 - 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
