@@ -1,8 +1,8 @@
-## 👋 Hello, I'm Jason Pandian - Engineer/Researcher/Assistant Professor
+## 👋 Hello, I'm Jason Pandian - Engineer/Researcher/Assistant Professor/Entrepreneur
 
-# ✍🏻 Research Projects
+# ✍🏻Research Projects
 ## 🚀 Deep Space Networks & Simulations
-- 📡 PhD Research Area: [SPICE ns: A modular extension for Simulating Deep Space Networks under ns3](https://github.com/PandiaJason/SPICE-ns-Project)
+- 📡 PhD Research Area: [Mitigating challenges in Deep Space Networking](https://github.com/PandiaJason/SPICE-ns-Project)
 
 ## 2024 - Present
 - I secured admission to Anna University's part-time Ph.D. program before completing my first year as assistant professor.
