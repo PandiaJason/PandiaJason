@@ -14,7 +14,12 @@
 ## On-Going Ventures
 - [AstronDynamics](https://astrondynamics.com/) is a research-first startup that also builds EdTech solutions for teaching, academic and enterprise needs. Its focus areas include deep space network simulations, nlp & llms, blockchains, AI research, and the development of research-backed tools. The team is passionate about open-source computing, state-of-the-art teaching methodologies, and interactive coding playgrounds. Backed by contributors who actively support FOSS (Free and Open Source Software), AstronDynamics blends cutting-edge research with practical, scalable solutions for the academic and educational ecosystem.
 
+## ✉️ Email and Blogs
+- 📫 Reach me at pandiajason@gmail.com.
+- 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
+- 🛰️ SPICE ns Tutorials at [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
 
+## Other Projects
 ## ⚓ Blockchain Technology-based Secured Credential Management System
 - 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
 
@@ -25,10 +30,10 @@
 - 📘 Let's Program with [Python](https://github.com/PandiaJason/Python)
 - 📘 Let's Program with [C](https://github.com/PandiaJason/ANSI-C)
 
-## ✉️ Email and Blogs
-- 📫 Reach me at pandiajason@gmail.com.
-- 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
-- 🛰️ SPICE ns Tutorials at [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
+## 💼 Web3 Startup Experiences
+- 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
+- 🔍 Contrackts(2023), [Contrackts - A Blockchain-based End-to-End Traceability](https://github.com/PandiaJason/contrackts-docs)
+- 👛 Dvault(2022), [ERC4337 smart contract-based web3 wallet](https://github.com/PandiaJason/dvault-docs)
 
 ## Achievements
 - 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
@@ -36,11 +41,6 @@
 - 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
 - 🥇 Best Faulty of the Year, Nehru Institute of Technology - 2024
 - 🎓 Best Researcher Award, ICNGTS International Conference - 2025
-
-## 💼 Web3 Startup Experiences
-- 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
-- 🔍 Contrackts(2023), [Contrackts - A Blockchain-based End-to-End Traceability](https://github.com/PandiaJason/contrackts-docs)
-- 👛 Dvault(2022), [ERC4337 smart contract-based web3 wallet](https://github.com/PandiaJason/dvault-docs)
 
 ## Skills
 - 🖥️ **Programming Languages**
