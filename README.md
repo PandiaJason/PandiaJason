@@ -1,73 +1,43 @@
-## 👋 Hello, I'm Jason Pandian - Engineer/Researcher/Assistant Professor/Entrepreneur
+# 👋 Hello, I'm Jason Pandian
 
-# ✍🏻Research Projects
-## 🚀 Deep Space Networks & Simulations
-- 📡 PhD Research Area: [Mitigating challenges in Deep Space Networking](https://github.com/PandiaJason/SPICE-ns-Project)
+**Engineer · Researcher · Professor**
 
-## 2024 - Present
-- I secured admission to Anna University's part-time Ph.D. program before completing my first year as assistant professor.
-- I presented a Lightning Talk remotely at the prestigious Workshop on ns-3 [(WNS-3 2024) held in Barcelona, Spain.](https://www.nsnam.org/research/wns3/wns3-2024/program/) The talk, titled “Modeling the Astrodynamics of Space Missions in ns-3 for High-Fidelity Simulations of Deep Space Communications,” was part of the conference program.
-- On September 28, 2024, I was invited as a resource person for a One-Day Workshop on “Open Source Computing” at [Periyar Maniammai Institute of Science & Technology, Thanjavur.](https://www.pmu.edu/events/804/a-one-day-workshop-on-open-source-computing-%7C-cse.aspx)
-- On November 8, 2024, at the ‘NIT in-house Award Ceremony 2024’ held at Nehru Institute of Technology (NIT), Coimbatore, I was awarded “The Best Faculty of the Year.”
-- On March 29 2025, 'International Conference: ICNGTS New-Gen Technologies for Sustainable Development', I was awarded "Best Researcher Award."
+---
 
-## On-Going Ventures
-- [AstronDynamics](https://astrondynamics.com/) is a research-first startup that also builds EdTech solutions for teaching, academic and enterprise needs. Its focus areas include deep space network simulations, nlp & llms, blockchains, AI research, and the development of research-backed tools. The team is passionate about open-source computing, state-of-the-art teaching methodologies, and interactive coding playgrounds. Backed by contributors who actively support FOSS (Free and Open Source Software), AstronDynamics blends cutting-edge research with practical, scalable solutions for the academic and educational ecosystem.
+### 🌌 About Me
+I am a part-time **Ph.D. Researcher** in the **Department of Information and Communication Engineering** at **Anna University**. My research focuses on **Mitigating Challenges in Deep Space Networking**, developing high-fidelity simulators, and optimizing delay-tolerant communication protocols. 
 
-## ✉️ Email and Blogs
-- 📫 Reach me at pandiajason@gmail.com.
-- 📘 Read me at [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
-- 🛰️ SPICE ns Tutorials at [SPICE ns](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
+Alongside my research, I work as an Assistant Professor, bridging academic research with hands-on systems engineering in space communication, blockchain technology, and AI.
 
-## Other Projects
-## ⚓ Blockchain Technology-based Secured Credential Management System
-- 🎓 Master of Computer Science and Engineering (2021 -- 2023), Thesis on [PoKoC: Blockchain-based Credential System with MultiSig Registry](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)
+---
 
-## 🤖 Transformer-based Generic Chatbot
-- 🎓 Bachelor of Computer Science and Engineering (2017 -- 2021), Thesis on [AI Chatbot using Deep Learning Based NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)
+### 📡 Research Focus
+* **Deep Space Networks & DTN**: Optimizing routing protocols, mitigating latency, and improving throughput in deep space communications.
+* **SPICE-ns**: Lead developer of [SPICE-ns](https://github.com/PandiaJason/SPICE-ns-Project) — an extension for the ns-3 network simulator to model DSN and DTN environments.
+* **Astrodynamics Simulation**: Modeling space communication architectures with high fidelity (presented at *WNS-3 2024*, Barcelona).
 
-## Lectures Notes
-- 📘 Let's Program with [Python](https://github.com/PandiaJason/Python)
-- 📘 Let's Program with [C](https://github.com/PandiaJason/ANSI-C)
+---
 
-## 💼 Web3 Startup Experiences
-- 📝 JSNcrypts(2023), [Decentralized newsletter](https://github.com/PandiaJason/jsncrypts-docs)
-- 🔍 Contrackts(2023), [Contrackts - A Blockchain-based End-to-End Traceability](https://github.com/PandiaJason/contrackts-docs)
-- 👛 Dvault(2022), [ERC4337 smart contract-based web3 wallet](https://github.com/PandiaJason/dvault-docs)
+### 🏆 Key Recognitions
+* **Best Researcher Award (2025)** – *International Conference on New-Gen Technologies for Sustainable Development (ICNGTS)*
+* **Best Faculty of the Year (2024)** – *Nehru Institute of Technology*
 
-## Achievements
-- 🏆 Best Mini Project Award of the Year (Dept. of CSE, IIC, MHRD) - 2019 - 2020
-- 🥇 Gold Medal for Best Student of the Year (TCE Hostel) - 2018 - 2019
-- 🎓 Certificate of Excellence for an Academic Year (Dept. of CSE) - 2018 - 2019
-- 🥇 Best Faulty of the Year, Nehru Institute of Technology - 2024
-- 🎓 Best Researcher Award, ICNGTS International Conference - 2025
+---
 
-## Skills
-- 🖥️ **Programming Languages**
-  - 📜 K&R C/GCC C2X/C++
-  - 🥳 Go
-  - 💡 Solidity
-  - ☕ Java
-  - 🐍 Python
-  - 🌐 JavaScript
+### 🛠️ Tech Stack & Focus Areas
 
-- 🛠️ **Frameworks & Environment**
-  - 🚀 NodeJS, ReactJS, NextJs
-  - 💻 EthersJS, Flask
-  - 🧠 ML Toolkits: BERT, Longformer, PyTorch
-  - 🐧 **Linux and Bash:**
-    - 🐧 GNU/Linux (Debian, Ubuntu, Clear Linux, Fedora, Manjaro)
-    - ✨ Bash scripting
-  - 💻 VS Code(Codium), RemixIDE, Colab
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│  Languages           ::  C / C++ · Go · Python · Solidity · Java · JS  │
+│  Networking & Sim    ::  ns-3 · DTN (Delay-Tolerant Networking) · Bash │
+│  Blockchain / Web3   ::  EVM (L1/L2) · Hardhat · Ethers.js · ERC-4337  │
+│  AI & Machine Learning::  PyTorch · BERT · Longformer · NLP            │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
-- 🔗 **Blockchain & Web3**
-  - 🌐 EVMs L1 & L2, Ganache
-  - 🔐 Metamask, Hardhat, Solc
-  - ✨ Ethers, Hyperledger
-  - 🔗 ERC721, ERC 1155, ERC4337.
+---
 
-  
-<!---
-PandiaJason/PandiaJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+### ✉️ Connect & Read
+* **Email**: [pandiajason@gmail.com](mailto:pandiajason@gmail.com)
+* **Technical Blog**: [PandiaNotes](https://pandiajason.github.io/PandiaNotes/)
+* **Simulations Guide**: [SPICE-ns Tutorials](https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html)
