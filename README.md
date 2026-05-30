@@ -69,7 +69,7 @@
 *   **[bats](https://github.com/PandiaJason/bats)** — *WAND (Watch. Audit. Never Delegate)*: A Go-native deterministic safety enforcement and policy auditing layer for autonomous AI agents and MCP tools.
 *   **[antapi](https://github.com/PandiaJason/antapi)** — Go-native REST API with Redis caching, Prometheus metrics, and API-key auth for orchestrating multiple LLM agents and agentic *Teams* (local & cloud models).
 *   **[ninai](https://github.com/PandiaJason/ninai)** — A local-first desktop app unifying AI tools and note-taking into one seamless, unified workspace (TypeScript).
-*   **[AI-Chatbot-using-Deep-Learning-based-NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)** — Deep learning-based conversational NLP chatbot architecture.
+*   **[AI-Chatbot-using-Deep-Learning-based-NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)** — A fully functional conversational assistant built pre-GenAI boom (2019–2021). Utilizes **BERT** and **Longformer** transformer architectures for personalized context retrieval and real-time knowledge queries integrated via Wikipedia and DuckDuckGo APIs.
 
 #### 🔗 Web3, Cryptography & Security
 *   **[Proof-of-Knowledge-On-Chain](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)** — EVM decentralized credential verification system using Non-Transferable Soulbound NFTs and extensible ZoKrates-based Proofs in Solidity.
