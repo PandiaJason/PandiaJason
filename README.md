@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="./alligator_dev.png" alt="Alligator Developer" width="75%" style="border-radius: 10px;" />
+  <img src="./alligator_dev.jpg" alt="Alligator Developer" width="75%" style="border-radius: 10px;" />
 </p>
 
 <p align="center">
