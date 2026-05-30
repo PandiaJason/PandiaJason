@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.png" alt="Deep Space Network & Systems Banner" width="100%" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);" />
+  <img src="./network_animation.svg" alt="Deep Space Network Simulation" width="100%" style="border-radius: 10px;" />
 </p>
 
 <h1 align="center">Jason Pandian</h1>
