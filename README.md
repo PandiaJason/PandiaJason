@@ -21,23 +21,9 @@
 ---
 
 ### 🌌 Research & Academics
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="28%">
-      <img src="./profile.png" alt="Jason Pandian" width="100%" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);" />
-    </td>
-    <td width="72%" style="vertical-align: top; padding-left: 20px;">
-      <ul>
-        <li>🎓 <b>Confirmed Ph.D. Research Scholar</b>: Anna University (Part-Time) — officially approved by the Doctoral Committee to proceed with research under the <b>Faculty of Computer Science and Information Engineering</b>.</li>
-        <br/>
-        <li>🛰️ <b>Thesis Focus</b>: <i>Mitigating Challenges in Deep Space Networking</i> — optimizing routing protocols, congestion dynamics, and delay-tolerant architectures.</li>
-        <br/>
-        <li>🏫 <b>Academic Instruction & Mentorship</b>: Assistant Professor and <b>Programming & DSA Communicator</b>. Active instructor in core programming paradigms, data structures & algorithms (DSA), and agentic/autonomous AI coding technologies.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+*   🎓 **Confirmed Ph.D. Research Scholar**: Anna University (Part-Time) — officially approved by the Doctoral Committee to proceed with research under the **Faculty of Computer Science and Information Engineering**.
+*   🛰️ **Thesis Focus**: *Mitigating Challenges in Deep Space Networking* — optimizing routing protocols, congestion dynamics, and delay-tolerant architectures.
+*   🏫 **Academic Instruction & Mentorship**: Assistant Professor and **Programming & DSA Communicator**. Active instructor in core programming paradigms, data structures & algorithms (DSA), and agentic/autonomous AI coding technologies.
 
 ---
 
