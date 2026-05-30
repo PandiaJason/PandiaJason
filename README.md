@@ -12,6 +12,10 @@
 </p>
 
 <p align="center">
+  <img src="./alligator_dev.png" alt="Alligator Developer" width="75%" style="border-radius: 10px;" />
+</p>
+
+<p align="center">
   <a href="mailto:pandiajason@gmail.com"><img src="https://img.shields.io/badge/Email-pandiajason%40gmail.com-blue?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://pandiajason.github.io/PandiaNotes/"><img src="https://img.shields.io/badge/Blog-PandiaNotes-brightgreen?style=flat-square&logo=ghost&logoColor=white" alt="Blog" /></a>
   <a href="https://pandiajason.github.io/PandiaNotes/SPICE-ns/SPICE-ns.html"><img src="https://img.shields.io/badge/Tutorials-SPICE--ns-orange?style=flat-square&logo=book&logoColor=white" alt="SPICE-ns Tutorials" /></a>
