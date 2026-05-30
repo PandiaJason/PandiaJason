@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="./network_animation.svg" alt="Deep Space Network Simulation" width="100%" style="border-radius: 10px;" />
-</p>
 
 <h1 align="center">Jason Pandian</h1>
 <p align="center"><b>Systems Developer · Game Dev · Researcher · Programming & DSA Communicator</b></p>
