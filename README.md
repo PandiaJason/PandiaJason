@@ -42,28 +42,37 @@
 
 ### 🚀 Code Portfolio
 
-#### 📡 Space Systems & Simulations
-*   **[SPICE-ns-Project](https://github.com/PandiaJason/SPICE-ns-Project)** — A next-gen simulation framework extending **ns-3** to model Deep Space Networks (DSN) and Delay-Tolerant Networks (DTN).
-*   **[qubo-space-routing](https://github.com/PandiaJason/qubo-space-routing)** — Multi-planetary routing optimization using Quadratic Unconstrained Binary Optimization (QUBO) mathematical models.
-*   **[ns3](https://github.com/PandiaJason/ns3)** — Custom planetary communication simulation nodes and models.
+#### 📡 Space Systems & Network Simulations
+*   **[SPICE-ns-Project](https://github.com/PandiaJason/SPICE-ns-Project)** — A next-gen simulation framework extending **ns-3** to model DSN (Deep Space Network) and DTN (Delay-Tolerant Networking) communications.
+*   **[qubo-space-routing](https://github.com/PandiaJason/qubo-space-routing)** — A Path-Constrained Lagrangian **QUBO (Quadratic Unconstrained Binary Optimization)** mathematical routing architecture for survivable routing in space networks.
+*   **[ns3](https://github.com/PandiaJason/ns3)** — Custom planetary communication simulation nodes and models based on ns-3.
 *   **[DSN](https://github.com/PandiaJason/DSN)** — A learning log and reference repository dedicated to deep space networking mechanics.
-*   **[classic](https://github.com/PandiaJason/classic)** — *Ranotot Classic* — A 2D space transport cargo game built with HTML5 gravity physics.
 
 #### 🦀 High-Performance & AI Infrastructure
 *   **[nanos](https://github.com/PandiaJason/nanos)** — Rust-based, hardware-isolated WebAssembly micro-runtime for AI agents with Apple Metal/CUDA GPU offload. Tailored for extreme efficiency (<15MB RAM, <50ms boot).
-*   **[MidDB](https://github.com/PandiaJason/MidDB)** — Lightweight, AI-aware hybrid database in C++. Integrates structured tables with semantic vector embedding memory.
-*   **[amphitude](https://github.com/PandiaJason/amphitude)** — High-speed C++ signal and digital audio processing library.
+*   **[MidDB](https://github.com/PandiaJason/MidDB)** — Lightweight C++ hybrid database prototype combining structured tables with semantic vector embedding memory for AI agent memory.
+*   **[bats](https://github.com/PandiaJason/bats)** — *WAND (Watch. Audit. Never Delegate)*: A Go-native deterministic safety enforcement and policy auditing layer for autonomous AI agents and MCP tools.
+*   **[antapi](https://github.com/PandiaJason/antapi)** — Go-native REST API with Redis caching, Prometheus metrics, and API-key auth for orchestrating multiple LLM agents and agentic *Teams* (local & cloud models).
+*   **[ninai](https://github.com/PandiaJason/ninai)** — A local-first desktop app unifying AI tools and note-taking into one seamless, unified workspace (TypeScript).
 *   **[AI-Chatbot-using-Deep-Learning-based-NLP](https://github.com/PandiaJason/AI-Chatbot-using-Deep-Learning-based-NLP)** — Deep learning-based conversational NLP chatbot architecture.
 
-#### 🔗 Blockchain & Web3 Systems
-*   **[Proof-of-Knowledge-On-Chain](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)** — Decentralized credential verification system built using Non-Transferable Soulbound NFTs in Solidity.
-*   **[dvault-docs](https://github.com/PandiaJason/dvault-docs)** — Smart contract multi-signature wallets built on ERC-4337 Account Abstraction.
-*   **[contrackts-docs](https://github.com/PandiaJason/contrackts-docs)** — End-to-end supply chain traceability models on blockchain.
-*   **[jsncrypts-docs](https://github.com/PandiaJason/jsncrypts-docs)** — Decentralized content distribution and monetization protocol.
+#### 🔗 Web3, Cryptography & Security
+*   **[Proof-of-Knowledge-On-Chain](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)** — EVM decentralized credential verification system using Non-Transferable Soulbound NFTs and extensible ZoKrates-based Proofs in Solidity.
+*   **[dvault-docs](https://github.com/PandiaJason/dvault-docs)** — Multi-sig contract wallet design using ERC-4337 Account Abstraction.
+*   **[contrackts-docs](https://github.com/PandiaJason/contrackts-docs)** — Multi-party end-to-end blockchain traceability registry.
+*   **[jsncrypts-docs](https://github.com/PandiaJason/jsncrypts-docs)** — Smart contract-based decentralized newsletter subscription system.
 
-#### 🎓 Lectures & DSA Playgrounds
-*   **Curricula & Notes**: Interactive notebooks for **[Python](https://github.com/PandiaJason/Python)**, **[ANSI-C](https://github.com/PandiaJason/ANSI-C)**, **[OOP-LAB](https://github.com/PandiaJason/OOP-LAB)**, **[java](https://github.com/PandiaJason/java)**, and **[PSPP-LAB](https://github.com/PandiaJason/PSPP-LAB)**.
-*   **DSA Practice**: Hands-on algorithms in **[C_DSA](https://github.com/PandiaJason/C_DSA)**, **[DSA-C](https://github.com/PandiaJason/DSA-C)**, and **[blind75](https://github.com/PandiaJason/blind75)**.
+#### 🎮 Graphics, Games & Computer Vision
+*   **[amphitude](https://github.com/PandiaJason/amphitude)** — A serverless P2P multiplayer platform fighter game built from scratch in C++ & SDL2, utilizing a custom reliable UDP protocol with NAT Hole Punching (STUN) for zero-latency peer connection.
+*   **[ranotot](https://github.com/PandiaJason/ranotot)** — *Ranotot* — A gravity-based 2D space cargo delivery platformer with orbital mechanics, developed in Godot 4.6.
+*   **[classic](https://github.com/PandiaJason/classic)** — The predecessor release of the *Ranotot* 2D space delivery game featuring planet gravity mechanics.
+*   **[gyrox](https://github.com/PandiaJason/gyrox)** — Flask & MediaPipe portrait image processor. Performs automatic background segmentation and selective depth-of-field Gaussian blur.
+*   **[avae](https://github.com/PandiaJason/avae)** — Highly styled, animated interactive "Link in Bio" creator landing page.
+
+#### 🎓 Academics, Labs & DSA Playgrounds
+*   **[cnl-codetainers](https://github.com/PandiaJason/cnl-codetainers)** — Lightweight, Docker-isolated sandbox environment for running computer networks laboratory experiments and academic curricula.
+*   **Curricula & Notes**: Jupyter Notebook tutorials for **[Python](https://github.com/PandiaJason/Python)**, **[ANSI-C](https://github.com/PandiaJason/ANSI-C)**, **[OOP-LAB](https://github.com/PandiaJason/OOP-LAB)**, **[java](https://github.com/PandiaJason/java)**, and **[PSPP-LAB](https://github.com/PandiaJason/PSPP-LAB)**.
+*   **DSA Practice**: Native implementations of data structures & algorithms in **[C_DSA](https://github.com/PandiaJason/C_DSA)**, **[DSA-C](https://github.com/PandiaJason/DSA-C)**, and **[blind75](https://github.com/PandiaJason/blind75)**.
 
 ---
 
