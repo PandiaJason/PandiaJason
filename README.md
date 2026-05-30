@@ -40,6 +40,14 @@
 
 ---
 
+### ⚡ Quick Status
+*   👨🏽‍💻 **Currently working on**: Simulating delay-tolerant space routing protocols ([SPICE-ns-Project](https://github.com/PandiaJason/SPICE-ns-Project))
+*   🌱 **Currently exploring**: High-performance WebAssembly runtimes with GPU offloads ([nanos](https://github.com/PandiaJason/nanos))
+*   👯 **Looking to collaborate on**: Embedded systems, decentralized EVM credential architectures ([PoKoC](https://github.com/PandiaJason/Proof-of-Knowledge-On-Chain)), and game engines
+*   💬 **Ask me about**: Space communication protocols, C++/Rust programming, or building game physics in Godot
+
+---
+
 ### 🎤 Conference Talks & Presentations
 *   🇯🇵 **[ICNS3 2025](https://www.nsnam.org/research/icns3/icns3-2025/program/) (Ritsumeikan, Japan)**: Presented a Lightning Talk remotely at *The International Conference on ns-3 (ICNS3)* on **"A Simple Geospatial Propagation Model for Deep Space Communication Simulations in ns-3"**.
 *   🇪🇸 **[WNS-3 2024](https://www.nsnam.org/research/wns3/wns3-2024/program/) (Barcelona, Spain)**: Presented a Lightning Talk remotely at the *Workshop on ns-3 (WNS-3)* on **"Modeling the Astrodynamics of Space Missions in ns-3 for High-Fidelity Simulations of Deep Space Communications"**.
@@ -117,6 +125,14 @@
     </td>
   </tr>
 </table>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PandiaJason/PandiaJason/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PandiaJason/PandiaJason/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/PandiaJason/PandiaJason/output/github-contribution-grid-snake.svg" width="100%">
+  </picture>
+</p>
 
 ---
 
