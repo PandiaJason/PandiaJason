@@ -19,10 +19,16 @@
 
 ---
 
-### 🌌 Research Focus & Academics
-*   🎓 **Ph.D. Research (Part-Time)**: Under the **Department of Information and Communication Engineering** at **Anna University**.
-*   🛰️ **Thesis Topic**: *Mitigating Challenges in Deep Space Networking* — optimizing delay-tolerant communication protocols and multi-planetary routing architectures.
-*   🏫 **Academic Mentoring**: Assistant Professor. Bridging rigorous academic research with hands-on systems engineering and software architecture.
+### 🌌 Research & Academics
+*   🎓 **Confirmed Ph.D. Research Scholar**: Anna University (Part-Time) — officially approved by the Doctoral Committee to proceed with research under the **Faculty of Computer Science and Information Engineering**.
+*   🛰️ **Thesis Focus**: *Mitigating Challenges in Deep Space Networking* — optimizing routing protocols, congestion dynamics, and delay-tolerant architectures.
+*   🏫 **Academic Instruction**: Assistant Professor. Teaching and bridging systems software engineering, computer networking, and academic research.
+
+---
+
+### 🎤 Conference Talks & Presentations
+*   🇯🇵 **ICNS3 2025 (Ritsumeikan, Japan)**: Presented a Lightning Talk remotely at *The International Conference on ns-3 (ICNS3)* on **"A Simple Geospatial Propagation Model for Deep Space Communication Simulations in ns-3"**.
+*   🇪🇸 **WNS-3 2024 (Barcelona, Spain)**: Presented a Lightning Talk remotely at the *Workshop on ns-3 (WNS-3)* on **"Modeling the Astrodynamics of Space Missions in ns-3 for High-Fidelity Simulations of Deep Space Communications"**.
 
 ---
 
