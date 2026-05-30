@@ -3,11 +3,11 @@
 </p>
 
 <h1 align="center">Jason Pandian</h1>
-<p align="center"><b>Engineer · Researcher · Assistant Professor</b></p>
+<p align="center"><b>Programmer · Systems Developer · Game Dev · Researcher</b></p>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3000&pause=1000&color=61AFEF&background=00000000&center=true&vCenter=true&width=600&lines=Ph.D.+Researcher+%40+Anna+University;Deep+Space+Networking+Architect;Rust+%7C+C%2B%2B+%7C+Go+%7C+Solidity;Creator+of+SPICE-ns+%26+nanos" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3000&pause=1000&color=61AFEF&background=00000000&center=true&vCenter=true&width=600&lines=Programmer+%26+Sys+Dev;Indie+Game+Developer;Ph.D.+Researcher+%40+Anna+University;Rust+%7C+C%2B%2B+%7C+Go+%7C+Solidity" alt="Typing SVG" />
   </a>
 </p>
 
