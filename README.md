@@ -3,11 +3,11 @@
 </p>
 
 <h1 align="center">Jason Pandian</h1>
-<p align="center"><b>Programmer · Systems Developer · Game Dev · Researcher</b></p>
+<p align="center"><b>Systems Developer · Game Dev · Researcher · Programming & DSA Communicator</b></p>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3000&pause=1000&color=61AFEF&background=00000000&center=true&vCenter=true&width=600&lines=Programmer+%26+Sys+Dev;Indie+Game+Developer;Ph.D.+Researcher+%40+Anna+University;Rust+%7C+C%2B%2B+%7C+Go+%7C+Solidity" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3000&pause=1000&color=61AFEF&background=00000000&center=true&vCenter=true&width=600&lines=Programming+%26+DSA+Communicator;Agentic+Coding+Instructor;Indie+Game+Developer;Ph.D.+Researcher+%40+Anna+University" alt="Typing SVG" />
   </a>
 </p>
 
@@ -22,7 +22,7 @@
 ### 🌌 Research & Academics
 *   🎓 **Confirmed Ph.D. Research Scholar**: Anna University (Part-Time) — officially approved by the Doctoral Committee to proceed with research under the **Faculty of Computer Science and Information Engineering**.
 *   🛰️ **Thesis Focus**: *Mitigating Challenges in Deep Space Networking* — optimizing routing protocols, congestion dynamics, and delay-tolerant architectures.
-*   🏫 **Academic Instruction**: Assistant Professor. Teaching and bridging systems software engineering, computer networking, and academic research.
+*   🏫 **Academic Instruction & Mentorship**: Assistant Professor and **Programming & DSA Communicator**. Active instructor in core programming paradigms, data structures & algorithms (DSA), and agentic/autonomous AI coding technologies.
 
 ---
 
