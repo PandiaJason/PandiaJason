@@ -3,35 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Pandian | Systems & Infrastructure Engineer</title>
-  <meta name="description" content="Portfolio of Jason Pandian: Ph.D. Scholar at Anna University, Systems Builder, and developer of nanos, amphitude, and qubo-space-routing.">
+  <title>Jason Pandian | Systems, Game & Optimization Engineer</title>
+  <meta name="description" content="Portfolio of Jason Pandian: Ph.D. Scholar at Anna University, Systems Developer, and Game Designer. Creator of nanos, amphitude, ranotot, and blind75.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="crt-flicker">
-  
-  <!-- CRT Screen Filter Overlay -->
-  <div class="crt-overlay"></div>
+<body>
 
   <div class="container">
-    
-    <!-- Header Warning Stripes -->
-    <div class="warning-stripes" style="border-radius: 4px 4px 0 0;"></div>
     
     <!-- Profile Header Panel -->
     <header class="header-panel">
       <div class="profile-title-container">
         <div class="profile-info">
-          <h1>JASON PANDIAN</h1>
-          <p>Systems & Infrastructure Engineer | Ph.D. Researcher | Technical Code Auditor</p>
+          <h1>Jason Pandian</h1>
+          <p>Systems Engineer | Ph.D. Researcher | Game Developer | Code Auditor</p>
         </div>
         <div class="status-badge">
           <span class="status-dot"></span>
-          <span>SYSTEM STATE: <span class="accent-text">CO-DESIGNING WITH AI</span></span>
+          <span>SYSTEM STATE: <span class="accent-text" style="color: var(--yellow-accent);">BUILDING & REFLEXIVE LEARNING</span></span>
         </div>
       </div>
     </header>
 
-    <!-- Interactive Retro Terminal -->
+    <!-- Interactive Developer Console -->
     <section aria-label="Terminal Console">
       <div class="terminal-window">
         <div class="terminal-header">
@@ -40,13 +34,12 @@
             <span class="t-btn yellow"></span>
             <span class="t-btn"></span>
           </div>
-          <div class="terminal-title">PANDIA-SYSTEMS v1.0.5 // GUEST CONSOLE</div>
+          <div class="terminal-title">PANDIA-SYSTEMS v1.0.8 // DEVELOPER CONSOLE</div>
           <div style="width: 50px;"></div>
         </div>
         
         <div class="terminal-body" id="terminal-body">
-          <div class="terminal-output" id="terminal-output">Welcome to Pandia-Systems retro-terminal.
-Type <span class="accent-text">help</span> to list available commands.
+          <div class="terminal-output" id="terminal-output">Initialize developer console. Type <span class="accent-text" style="color: var(--yellow-accent); font-weight: 700;">help</span> to inspect systems.
 
 guest@pandiajason.github.io:~$ </div>
           <div class="terminal-line">
@@ -58,13 +51,14 @@ guest@pandiajason.github.io:~$ </div>
         
         <!-- Terminal Quick Buttons -->
         <div class="terminal-shortcuts">
-          <span class="shortcut-label">QUICK RUN:</span>
+          <span class="shortcut-label">QUICK COMMANDS:</span>
           <button class="shortcut-btn" data-cmd="help">help</button>
           <button class="shortcut-btn" data-cmd="nanos">nanos</button>
           <button class="shortcut-btn" data-cmd="qubo">qubo</button>
           <button class="shortcut-btn" data-cmd="amphitude">amphitude</button>
+          <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
           <button class="shortcut-btn" data-cmd="ninai">ninai</button>
-          <button class="shortcut-btn" data-cmd="creed">creed</button>
+          <button class="shortcut-btn" data-cmd="dsa-c">dsa-c</button>
           <button class="shortcut-btn" data-cmd="clear">clear</button>
         </div>
       </div>
@@ -73,15 +67,13 @@ guest@pandiajason.github.io:~$ </div>
     <!-- Builder Creed Banner -->
     <section class="creed-container" aria-label="Philosophy">
       <div class="creed-card">
-        <div class="warning-stripes" style="position: absolute; top: 0; left: 0; height: 4px;"></div>
         <p>
           "I don't just learn syntax; I build. I learn by building my own version of a system, studying existing production implementations, comparing the differences, and recursively refining both design and code. I believe that mastering data structures and algorithms with AI as an accelerator is a developer's superpower. With perfect agentic orchestration and a deep logical understanding of low-level systems, I build high-performance software that solves real-world challenges—turning complex architectural concepts into highly optimized working beasts."
         </p>
-        <div class="warning-stripes" style="position: absolute; bottom: 0; left: 0; height: 4px;"></div>
       </div>
     </section>
 
-    <!-- Projects Portfolio -->
+    <!-- Systems Portfolio -->
     <section id="portfolio">
       <h2 class="section-title">SYSTEMS PORTFOLIO</h2>
       
@@ -91,15 +83,15 @@ guest@pandiajason.github.io:~$ </div>
         <article class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title accent-text">nanos</h3>
+              <h3 class="project-title">nanos</h3>
               <span class="project-tech">Rust / WASM</span>
             </div>
-            <p class="project-desc">Lightweight, process-isolated WebAssembly micro-runtime for sandboxed AI agents with native GPU (Metal & CUDA) offload capabilities.</p>
+            <p class="project-desc">Lightweight, process-isolated WebAssembly micro-runtime for sandboxed AI agents with native host GPU offloading (CUDA / Metal).</p>
             
             <div class="project-metrics">
               <div class="metric-row">
                 <span class="metric-label">Sandbox Boot:</span>
-                <span class="metric-val accent-text">&lt; 3 ms</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">&lt; 3 ms</span>
               </div>
               <div class="metric-row">
                 <span class="metric-label">Memory Footprint:</span>
@@ -121,23 +113,23 @@ guest@pandiajason.github.io:~$ </div>
         <article class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title accent-text">qubo-routing</h3>
-              <span class="project-tech">Python / C++ / TeX</span>
+              <h3 class="project-title">qubo-routing</h3>
+              <span class="project-tech">Python / C++</span>
             </div>
-            <p class="project-desc">Always-feasible Delay-Tolerant Network (DTN) routing optimization using Lagrangian relaxation and quadratic soft-congestion constraints.</p>
+            <p class="project-desc">Always-feasible Delay-Tolerant Network (DTN) routing optimization using Lagrangian relaxation and quadratic soft constraints.</p>
             
             <div class="project-metrics">
               <div class="metric-row">
-                <span class="metric-label">Data Delivery:</span>
-                <span class="metric-val accent-text">2.4x higher than CGR</span>
+                <span class="metric-label">Delivery Capacity:</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">2.4x higher than CGR</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">Solver Runtime:</span>
+                <span class="metric-label">Solver Speed:</span>
                 <span class="metric-val">&lt; 200 ms</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">Feasibility:</span>
-                <span class="metric-val">100% (under overload)</span>
+                <span class="metric-label">Validation Topo:</span>
+                <span class="metric-val">NASA Mars SPICE Relays</span>
               </div>
             </div>
           </div>
@@ -151,23 +143,23 @@ guest@pandiajason.github.io:~$ </div>
         <article class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title accent-text">amphitude</h3>
+              <h3 class="project-title">amphitude</h3>
               <span class="project-tech">C++ / SDL2</span>
             </div>
-            <p class="project-desc">A serverless, zero-dependency peer-to-peer multiplayer platform fighter built from scratch with custom physics and networking.</p>
+            <p class="project-desc">A serverless, zero-dependency peer-to-peer multiplayer platform fighter built from scratch with custom reliable UDP and STUN NAT traversal.</p>
             
             <div class="project-metrics">
               <div class="metric-row">
-                <span class="metric-label">Network Architecture:</span>
-                <span class="metric-val accent-text">P2P Reliable UDP</span>
+                <span class="metric-label">Network Protocol:</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">P2P Reliable UDP</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">NAT Traversal:</span>
-                <span class="metric-val">Custom STUN client bindings</span>
+                <span class="metric-label">NAT Punching:</span>
+                <span class="metric-val">Custom STUN Client</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">Dependencies:</span>
-                <span class="metric-val">SDL2 (zero heavy engines)</span>
+                <span class="metric-label">Game Engine:</span>
+                <span class="metric-val">Custom (zero Unity/Godot)</span>
               </div>
             </div>
           </div>
@@ -177,33 +169,93 @@ guest@pandiajason.github.io:~$ </div>
           </div>
         </article>
 
-        <!-- Card 4: ninai -->
+        <!-- Card 4: ranotot -->
         <article class="project-card">
           <div>
             <div class="project-card-header">
-              <h3 class="project-title accent-text">ninai</h3>
-              <span class="project-tech">Electron / React 19</span>
+              <h3 class="project-title">Ranotot</h3>
+              <span class="project-tech">Godot 4 / Python</span>
             </div>
-            <p class="project-desc">Local-first desktop workspace side-by-side note editor and AI tool collector with custom desktop API overrides.</p>
+            <p class="project-desc">A gravity-based 2D space delivery platformer game with custom physics and Python-based procedural level generators.</p>
             
             <div class="project-metrics">
               <div class="metric-row">
-                <span class="metric-label">CSP Bypasses:</span>
-                <span class="metric-val accent-text">IPC Main Header Strip</span>
+                <span class="metric-label">Gravity Mechanics:</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">Dynamic 2D Planet Fields</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">Copy Mechanism:</span>
+                <span class="metric-label">Level Gen:</span>
+                <span class="metric-val">Procedural Python Scripting</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Camera System:</span>
+                <span class="metric-val">Fixed Zoom Zero-G Deadzone</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason/ranotot" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 5: ninai -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title">ninai</h3>
+              <span class="project-tech">Electron / React 19</span>
+            </div>
+            <p class="project-desc">Local-first desktop workspace note editor and AI webview collector featuring advanced header modifications and clipboard CORS bypasses.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">WebView Intercept:</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">CSP & Frame Overrides</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Asset Copying:</span>
                 <span class="metric-val">Super Copy (CORS-free)</span>
               </div>
               <div class="metric-row">
-                <span class="metric-label">Local Cache:</span>
-                <span class="metric-val">Debounced IndexedDB</span>
+                <span class="metric-label">Data Storage:</span>
+                <span class="metric-val">IndexedDB/Dexie Caching</span>
               </div>
             </div>
           </div>
           
           <div class="project-links">
             <a href="https://github.com/PandiaJason/ninai" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 6: DSA-C -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title">DSA-C</h3>
+              <span class="project-tech">C</span>
+            </div>
+            <p class="project-desc">A repository containing low-level implementations of fundamental and advanced data structures and algorithms in standard C, focusing on manual memory allocation and pointers.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">DSA Language:</span>
+                <span class="metric-val" style="color: var(--yellow-accent);">Standard C</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Memory:</span>
+                <span class="metric-val">Manual (malloc / free)</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Core structures:</span>
+                <span class="metric-val">Pointers, Lists, Trees, Stacks</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason/DSA-C" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
           </div>
         </article>
 
@@ -220,7 +272,7 @@ guest@pandiajason.github.io:~$ </div>
         <div class="phd-thesis">
           <span class="thesis-tag">Thesis Project</span>
           <h3 class="thesis-title">Always-Feasible DTN Routing via Quadratic Soft Constraints</h3>
-          <p class="thesis-journal">Submitted/Published in: <span class="accent-text">Elsevier Ad Hoc Networks</span></p>
+          <p class="thesis-journal">Submitted/Published in: <span class="accent-text" style="color: var(--yellow-accent); font-weight: 700;">Elsevier Ad Hoc Networks</span></p>
           
           <ul class="thesis-highlights">
             <li>Replaced hard capacity constraints with **quadratic soft penalties** to guarantee valid routing under arbitrary network overloads.</li>
@@ -235,7 +287,7 @@ guest@pandiajason.github.io:~$ </div>
       <div class="visualizer-panel">
         <div class="visualizer-header">
           <span>DTN ORBITAL SIMULATION</span>
-          <span class="accent-text">LIVE RUNNING</span>
+          <span class="accent-text" style="color: var(--yellow-accent);">LIVE RUNNING</span>
         </div>
         
         <div class="canvas-container">
@@ -251,7 +303,7 @@ guest@pandiajason.github.io:~$ </div>
       <!-- Resume Download -->
       <div class="action-card">
         <div>
-          <h3 class="accent-text">SYSTEMS RESUME</h3>
+          <h3 style="color: var(--text-main);">SYSTEMS RESUME</h3>
           <p>Get the fully detailed resume highlighting PhD systems-level achievements, low-level Rust/C++ projects, and code comprehension experience.</p>
         </div>
         <a href="resume.md" class="action-btn-full">VIEW_RESUME_DOC &rarr;</a>
@@ -260,11 +312,11 @@ guest@pandiajason.github.io:~$ </div>
       <!-- Contact Info -->
       <div class="action-card">
         <div>
-          <h3 class="accent-text">CONNECTION_LINKS</h3>
+          <h3 style="color: var(--text-main);">CONNECTION_LINKS</h3>
           <ul class="contact-list">
             <li class="contact-item">
               <span class="contact-label">EMAIL:</span>
-              <span class="contact-val accent-text">pandiajason@gmail.com</span>
+              <span class="contact-val" style="color: var(--yellow-accent);">pandiajason@gmail.com</span>
             </li>
             <li class="contact-item">
               <span class="contact-label">LOCATION:</span>

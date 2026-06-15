@@ -48,7 +48,19 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 *   Bypassed browser CORS and hotlinking blocks by intercepting image downloads and writing binary buffers natively to the host clipboard ("Super Copy").
 *   Managed local-first data using **Dexie.js (IndexedDB)** with debounced disk-writing queues to eliminate I/O thrashing and query locking over 10,000+ notes.
 
-### 5. **cnl-codetainers** (Docker, Go, Shell)
+### 5. **Ranotot** (Godot 4.6, Python)
+*A gravity-based 2D space delivery platformer game with custom physics and procedural level generators.*
+*   Developed a 2D gravity-based platformer in **Godot 4.6 (GL Compatibility / GDScript)** featuring dynamic radial planet gravity fields.
+*   Programmed a custom camera system with a fixed zoom of 0.5 that locks to planets but scrolls with a deadzone when traveling in zero-G.
+*   Created a custom **Python automation script** to procedurally generate levels (levels 31-90), placing planets and spawning asteroid trajectories.
+*   Built and packaged automated release pipelines for macOS, Windows, and Linux headless target compiles.
+
+### 6. **DSA-C** (C)
+*Low-level implementations of fundamental data structures and algorithms in standard C.*
+*   Implemented native **C** solutions for fundamental and advanced data structures, focusing on manual memory management (`malloc` / `free`) and pointers.
+*   Developed clean, custom implementations of lists, trees, and stacks without external dependencies or heavy libraries.
+
+### 7. **cnl-codetainers** (Docker, Go, Shell)
 *Accessible containerized networking sandboxes for student education.*
 *   Created a system of lightweight, Docker-isolated sandbox runtimes to make low-level computer networking lab curricula accessible to students with zero installation and dependency friction.
 

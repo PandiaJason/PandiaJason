@@ -14,7 +14,9 @@ const commands = {
   [nanos]       Display WebAssembly micro-runtime architecture
   [qubo]        View Ph.D. quadratic routing formulation
   [amphitude]   Inspect C++ P2P socket engine specifications
+  [ranotot]     View Godot 4 gravity physics game structure
   [ninai]       Bypass CORS/CSP Electron webview structure
+  [dsa-c]       Inspect C DSA repository implementations
   [creed]       Print Jason's systems engineering philosophy
   [education]   Show academic credentials
   [experience]  Show professional background
@@ -68,6 +70,20 @@ const commands = {
   [Host Player]  <==== STUN NAT Hole Punch ====>  [Client Player]
   (Authoritative)      (Direct UDP Packets)       (Input Forwarding)`,
 
+  ranotot: `[Ranotot] 2D Gravity-Based Space Delivery Game
+  -------------------------------------------------------------
+  Engine: Godot 4.6 (GL Compatibility)
+  Languages: GDScript / Python (Level Generation)
+
+  Mechanics & Architecture:
+  * Dynamic Planet Gravity: Custom radial gravity fields where each planet
+    attracts the player depending on proximity thresholds.
+  * Camera System: Fixed zoom (0.5) that remains locked on planets and 
+    follows the player with deadzone dampening in zero-gravity space.
+  * Procedural Level Generation: Custom Python automation script generates 
+    levels 31-90 dynamically, building planet arrangements and asteroid grids.
+  * Save System: JSON-serialized game progress states stored locally.`,
+
   ninai: `[ninai] Local-First Desktop Workspace Integration
   -------------------------------------------------------------
   Framework: Electron / React 19 / TypeScript 5.9 / Vite 7
@@ -83,9 +99,42 @@ const commands = {
   * DB Write Buffering: Debounced save hooks flush changes in groups to 
     IndexedDB, preventing UI lagging during intensive typing.`,
 
+  'dsa-c': `[DSA-C] Standard C Data Structures & Algorithms
+  -------------------------------------------------------------
+  Language: Standard C (C99/C11)
+  Focus: Low-level memory management, pointers, and custom implementations
+
+  Example Implementation (Linked List Deletion):
+  -------------------------------------------------------------
+  #include <stdlib.h>
+  
+  typedef struct Node {
+      int data;
+      struct Node* next;
+  } Node;
+  
+  void deleteNode(Node** head_ref, int key) {
+      Node *temp = *head_ref, *prev = NULL;
+      if (temp != NULL && temp->data == key) {
+          *head_ref = temp->next;
+          free(temp);
+          return;
+      }
+      while (temp != NULL && temp->data != key) {
+          prev = temp;
+          temp = temp->next;
+      }
+      if (temp == NULL) return;
+      prev->next = temp->next;
+      free(temp);
+  }
+  
+  * Focuses on zero-dependency, manual memory allocation (malloc/free)
+    and raw pointer manipulation to build fundamental structures.`,
+
   creed: `[Engineering Creed]
   -------------------------------------------------------------
-  "I don't just learn syntax; I build. I learn by building my own 
+  "I don't just learn syntax; I build. I learn by building my 
   version of a system, studying existing production implementations, 
   comparing the differences, and recursively refining both design 
   and code. I believe that mastering data structures and algorithms 
@@ -97,7 +146,7 @@ const commands = {
 
   education: `[Academic Background]
   -------------------------------------------------------------
-  * Ph.D. Candidate (Computer Science & Engineering)
+  * Ph.D. Scholar (Computer Science & Engineering)
     Anna University, Chennai, India (Doctoral Committee Confirmed)
     Focus: Delay-Tolerant Networking (DTN), Quadratic soft-constraints.
   
@@ -200,12 +249,12 @@ window.addEventListener('resize', () => {
 });
 
 // Physics/Node coordinates
-const mars = { x: 80, y: 0, r: 35, color: '#e74c3c', label: 'Mars' };
-const earth = { x: 0, y: 0, r: 45, color: '#3498db', label: 'Earth DSN' };
+const mars = { x: 80, y: 0, r: 30, color: '#e74c3c', label: 'Mars' };
+const earth = { x: 0, y: 0, r: 36, color: '#3498db', label: 'Earth DSN' };
 
-const rover = { angle: 0, r: 8, color: '#f1c40f', label: 'Rover (Source)' };
-const mro = { orbitR: 70, speed: 0.008, angle: 0, r: 6, color: '#ffde00', label: 'MRO' };
-const odyssey = { orbitR: 110, speed: 0.005, angle: Math.PI, r: 6, color: '#ffde00', label: 'Odyssey' };
+const rover = { angle: 0, r: 8, color: '#e67e22', label: 'Rover' };
+const mro = { orbitR: 65, speed: 0.009, angle: 0, r: 6, color: '#f1c40f', label: 'MRO' };
+const odyssey = { orbitR: 100, speed: 0.006, angle: Math.PI, r: 6, color: '#f1c40f', label: 'Odyssey' };
 
 // Queue variables to show store-and-forward state
 let mroQueue = [];
@@ -244,18 +293,38 @@ class DataPacket {
     
     ctx.beginPath();
     ctx.arc(currentX, currentY, 4, 0, Math.PI * 2);
-    ctx.fillStyle = this.priority > 5 ? '#ffde00' : '#888888';
-    ctx.shadowBlur = 8;
-    ctx.shadowColor = '#ffde00';
+    ctx.fillStyle = this.priority > 5 ? '#e6b800' : '#7f8c8d';
     ctx.fill();
-    ctx.shadowBlur = 0; // reset
+  }
+}
+
+// Draw a subtle background grid for visual structure (retrofuturist blueprint)
+function drawGrid() {
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 1;
+  const gridSize = 30;
+  
+  for (let x = 0; x < width; x += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, height);
+    ctx.stroke();
+  }
+  for (let y = 0; y < height; y += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(width, y);
+    ctx.stroke();
   }
 }
 
 // Simulation loop
 function drawSimulation() {
-  ctx.fillStyle = '#080808';
-  ctx.fillRect(0, 0, width, height);
+  // Clear transparently to inherit the light neumorphic card background style
+  ctx.clearRect(0, 0, width, height);
+
+  // Draw coordinate grid lines
+  drawGrid();
 
   // Center coordinate mappings
   const centerX = width / 2;
@@ -270,24 +339,24 @@ function drawSimulation() {
   // Draw Earth
   ctx.beginPath();
   ctx.arc(earth.x, earth.y, earth.r, 0, Math.PI * 2);
-  ctx.fillStyle = '#112233';
+  ctx.fillStyle = '#eaf2f8';
   ctx.strokeStyle = '#3498db';
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
-  ctx.font = '10px Fira Code';
-  ctx.fillStyle = '#3498db';
+  ctx.font = '600 10px Inter';
+  ctx.fillStyle = '#2980b9';
   ctx.fillText(earth.label, earth.x - 26, earth.y + 4);
 
   // Draw Mars
   ctx.beginPath();
   ctx.arc(mars.x, mars.y, mars.r, 0, Math.PI * 2);
-  ctx.fillStyle = '#2d1111';
+  ctx.fillStyle = '#fdebd0';
   ctx.strokeStyle = '#e74c3c';
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
-  ctx.fillStyle = '#e74c3c';
+  ctx.fillStyle = '#c0392b';
   ctx.fillText(mars.label, mars.x - 12, mars.y + 4);
 
   // Rover stationary on Mars surface
@@ -297,7 +366,7 @@ function drawSimulation() {
   ctx.arc(roverX, roverY, rover.r, 0, Math.PI * 2);
   ctx.fillStyle = rover.color;
   ctx.fill();
-  ctx.fillStyle = '#ffffff';
+  ctx.fillStyle = '#7f8c8d';
   ctx.fillText('Rover', roverX + 10, roverY - 5);
 
   // Update Orbiters
@@ -314,12 +383,12 @@ function drawSimulation() {
   // Draw Orbits
   ctx.beginPath();
   ctx.arc(mars.x, mars.y, mro.orbitR, 0, Math.PI * 2);
-  ctx.strokeStyle = 'rgba(255,222,0,0.06)';
+  ctx.strokeStyle = 'rgba(0,0,0,0.04)';
   ctx.stroke();
   
   ctx.beginPath();
   ctx.arc(mars.x, mars.y, odyssey.orbitR, 0, Math.PI * 2);
-  ctx.strokeStyle = 'rgba(255,222,0,0.04)';
+  ctx.strokeStyle = 'rgba(0,0,0,0.03)';
   ctx.stroke();
 
   // Draw MRO Relay Node
@@ -327,12 +396,15 @@ function drawSimulation() {
   ctx.arc(mroX, mroY, mro.r, 0, Math.PI * 2);
   ctx.fillStyle = mro.color;
   ctx.fill();
-  ctx.fillStyle = '#888888';
+  ctx.strokeStyle = '#d4ac0d';
+  ctx.stroke();
+  ctx.fillStyle = '#7f8c8d';
   ctx.fillText('MRO', mroX - 10, mroY - 10);
+  
   // Render MRO queue buffer indicator
-  ctx.fillStyle = 'rgba(255,222,0,0.1)';
+  ctx.fillStyle = 'rgba(0,0,0,0.05)';
   ctx.fillRect(mroX - 10, mroY + 8, 20, 4);
-  ctx.fillStyle = '#ffde00';
+  ctx.fillStyle = varColor('yellow-accent');
   ctx.fillRect(mroX - 10, mroY + 8, Math.min(20, mroQueue.length * 4), 4);
 
   // Draw Odyssey Relay Node
@@ -340,12 +412,15 @@ function drawSimulation() {
   ctx.arc(odyX, odyY, odyssey.r, 0, Math.PI * 2);
   ctx.fillStyle = odyssey.color;
   ctx.fill();
-  ctx.fillStyle = '#888888';
+  ctx.strokeStyle = '#d4ac0d';
+  ctx.stroke();
+  ctx.fillStyle = '#7f8c8d';
   ctx.fillText('Odyssey', odyX - 18, odyY - 10);
+  
   // Render Odyssey queue buffer indicator
-  ctx.fillStyle = 'rgba(255,222,0,0.1)';
+  ctx.fillStyle = 'rgba(0,0,0,0.05)';
   ctx.fillRect(odyX - 10, odyY + 8, 20, 4);
-  ctx.fillStyle = '#ffde00';
+  ctx.fillStyle = varColor('yellow-accent');
   ctx.fillRect(odyX - 10, odyY + 8, Math.min(20, odysseyQueue.length * 4), 4);
 
   // Connection range checks (visualize store-and-forward rules)
@@ -366,35 +441,37 @@ function drawSimulation() {
   let mroLinkedToEarth = mroToEarthDist < maxRangeEarth;
   let odyLinkedToEarth = odyToEarthDist < maxRangeEarth;
 
-  // Draw Link lines
+  // Draw Link lines (Clean light-grey indicators)
   if (mroLinkedToRover) {
     ctx.beginPath();
     ctx.moveTo(roverX, roverY);
     ctx.lineTo(mroX, mroY);
-    ctx.strokeStyle = 'rgba(255, 222, 0, 0.4)';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(230, 126, 34, 0.35)';
+    ctx.lineWidth = 1.5;
     ctx.stroke();
   }
   if (odyLinkedToRover) {
     ctx.beginPath();
     ctx.moveTo(roverX, roverY);
     ctx.lineTo(odyX, odyY);
-    ctx.strokeStyle = 'rgba(255, 222, 0, 0.4)';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(230, 126, 34, 0.35)';
+    ctx.lineWidth = 1.5;
     ctx.stroke();
   }
   if (mroLinkedToEarth) {
     ctx.beginPath();
     ctx.moveTo(mroX, mroY);
     ctx.lineTo(earth.x, earth.y);
-    ctx.strokeStyle = 'rgba(52, 152, 219, 0.3)';
+    ctx.strokeStyle = 'rgba(52, 152, 219, 0.25)';
+    ctx.lineWidth = 1.2;
     ctx.stroke();
   }
   if (odyLinkedToEarth) {
     ctx.beginPath();
     ctx.moveTo(odyX, odyY);
     ctx.lineTo(earth.x, earth.y);
-    ctx.strokeStyle = 'rgba(52, 152, 219, 0.3)';
+    ctx.strokeStyle = 'rgba(52, 152, 219, 0.25)';
+    ctx.lineWidth = 1.2;
     ctx.stroke();
   }
 
@@ -458,6 +535,11 @@ function drawSimulation() {
   }
 
   requestAnimationFrame(drawSimulation);
+}
+
+// Get CSS root variables dynamically
+function varColor(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(`--${name}`).trim();
 }
 
 function drawGlowCircle(x, y, radius, color) {
