@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* --- Light Industrial Design System --- */
 :root {
   /* Metallic Half White Background Components */
-  --bg-metal: linear-gradient(135deg, #f1f5f9 0%, #ffffff 50%, #cbd5e1 100%);
+  --bg-metal: radial-gradient(rgba(0, 0, 0, 0.08) 1.2px, transparent 1.2px);
   --bg-white: #ffffff;
   
   /* Glassmorphism Bases */
-  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-bg: rgba(255, 255, 255, 0.35);
   --metal-divider: rgba(0, 0, 0, 0.08);
   
   /* Yellow Accent for Highlights Only */
   --yellow: #ffcc00;
   --yellow-glow: rgba(255, 204, 0, 0.45);
+  --yellow-accent: #e5b800; /* Darker yellow for high-contrast text rendering */
   
   /* Text: Strictly Black and White */
   --text-main: #000000;
@@ -21,26 +22,28 @@
   
   /* Neumorphic Shadows on Metallic Background */
   --nm-raised: 
-    -8px -8px 20px rgba(255, 255, 255, 0.9), 
-    8px 8px 20px rgba(148, 163, 184, 0.25);
+    inset 1.5px 1.5px 0px rgba(255, 255, 255, 0.85),
+    -8px -8px 20px rgba(255, 255, 255, 0.95), 
+    8px 8px 20px rgba(148, 163, 184, 0.22);
   
   --nm-inset: 
-    inset -6px -6px 15px rgba(255, 255, 255, 0.9), 
-    inset 6px 6px 15px rgba(148, 163, 184, 0.25);
+    inset -6px -6px 15px rgba(255, 255, 255, 0.95), 
+    inset 6px 6px 15px rgba(148, 163, 184, 0.22);
 
   --nm-btn-hover:
-    -3px -3px 8px rgba(255, 255, 255, 0.9), 
-    3px 3px 8px rgba(148, 163, 184, 0.25);
+    inset 1px 1px 0px rgba(255, 255, 255, 0.85),
+    -3px -3px 8px rgba(255, 255, 255, 0.95), 
+    3px 3px 8px rgba(148, 163, 184, 0.22);
 
   /* Glassmorphism Overlays */
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.45);
   --glass-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.08);
-  --glass-blur: blur(12px);
+  --glass-blur: blur(16px);
 
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-title: 'Outfit', sans-serif;
+  --font-title: 'Zilla Slab', Georgia, serif;
   --font-mono: 'Share Tech Mono', monospace;
   
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -55,8 +58,10 @@
 }
 
 body {
-  background: var(--bg-metal) no-repeat fixed;
-  background-size: cover;
+  background-color: #f7f9fb;
+  background-image: var(--bg-metal);
+  background-size: 80px 80px;
+  background-attachment: fixed;
   color: var(--text-main);
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -65,16 +70,60 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Nothing Tech Inspired Glassmorphic Background Blobs */
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.38;
+  animation: float-blob 25s infinite ease-in-out alternate;
+}
+.yellow-blob {
+  top: 15%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.45) 0%, rgba(255, 204, 0, 0) 70%);
+}
+.copper-blob-1 {
+  bottom: 15%;
+  left: 8%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(191, 120, 89, 0.4) 0%, rgba(191, 120, 89, 0) 70%);
+}
+.copper-blob-2 {
+  top: 10%;
+  right: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(186, 123, 102, 0.35) 0%, rgba(186, 123, 102, 0) 70%);
+}
+.dark-blob {
+  bottom: 8%;
+  right: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.25) 0%, rgba(148, 163, 184, 0) 70%);
+}
+
+@keyframes float-blob {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, -40px) scale(1.15); }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--metal-divider);
-  border: 3px solid var(--bg);
+  border: 3px solid #ffffff;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -101,37 +150,6 @@ body {
   width: 100%;
 }
 
-/* --- Corner Screws / Rivets (Mechanical Tactile Detail) --- */
-.screws-container {
-  position: relative;
-}
-
-.screw {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
-  border: 1px solid #475569;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10;
-  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.8), 1px 1px 2px rgba(0,0,0,0.15);
-}
-
-/* Horizontal/vertical slot line on the screw head */
-.screw::after {
-  content: "";
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 6px; height: 1.5px;
-  background: #475569;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.screw.tl { top: 12px; left: 12px; }
-.screw.tr { top: 12px; right: 12px; }
-.screw.bl { bottom: 12px; left: 12px; }
-.screw.br { bottom: 12px; right: 12px; }
 
 .yellow-bar {
   height: 4px;
@@ -215,8 +233,8 @@ body {
   border: 2px solid #000000;
   font-family: var(--font-mono);
   box-shadow: var(--nm-raised);
-  border-radius: 6px;
-  padding: 6px 14px;
+  border-radius: 20px;
+  padding: 6px 16px;
   font-size: 0.82rem;
   font-weight: 900;
   display: inline-flex;
@@ -366,8 +384,8 @@ body {
   backdrop-filter: var(--glass-blur);
   border: 1.5px solid #000000;
   color: #000000;
-  border-radius: 6px;
-  padding: 6px 14px;
+  border-radius: 20px;
+  padding: 6px 16px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 900;
@@ -422,6 +440,47 @@ body {
   gap: 30px;
   margin-bottom: 50px;
 }
+
+/* --- Nothing Tech-Style Card Header & Indicator Dots --- */
+.card-tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--metal-divider);
+}
+
+.tech-spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.tech-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.channel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: inline-block;
+  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.4);
+}
+
+.channel-dot.red { background-color: #ff3b30; }
+.channel-dot.white { background-color: #ffffff; }
+.channel-dot.yellow { background-color: var(--yellow); }
+.channel-dot.black { background-color: #000000; }
+.channel-dot.lightblue { background-color: #3498db; }
+.channel-dot.blue { background-color: #2980b9; }
+.channel-dot.cyan { background-color: #00bcd4; }
 
 .project-card {
   background: var(--glass-bg);
@@ -526,7 +585,7 @@ body {
   border: 1.5px solid #000000;
   color: var(--text-main);
   padding: 9px 18px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 700;
@@ -550,118 +609,6 @@ body {
   box-shadow: var(--nm-inset);
 }
 
-/* --- Split Layout (DTN & Ph.D.) --- */
-.split-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-@media (max-width: 900px) {
-  .split-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.phd-card {
-  background: linear-gradient(135deg, #f8fafc 0%, #edf0f4 100%);
-  border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
-  border: 2px solid #cbd5e1;
-  padding: 35px;
-  position: relative;
-  overflow: hidden;
-}
-
-.thesis-tag {
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.thesis-title {
-  font-family: var(--font-title);
-  font-size: 1.55rem;
-  font-weight: 900;
-  color: var(--text-main);
-  line-height: 1.35;
-  margin-bottom: 12px;
-}
-
-.thesis-journal {
-  font-size: 0.92rem;
-  color: var(--text-dim);
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.thesis-highlights {
-  list-style: none;
-}
-
-.thesis-highlights li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 12px;
-  font-size: 0.92rem;
-  color: var(--text-sub);
-  line-height: 1.5;
-}
-
-.thesis-highlights li::before {
-  content: "■";
-  position: absolute;
-  left: 0;
-  color: var(--yellow);
-  font-size: 10px;
-  top: 2px;
-}
-
-/* DTN Visualizer Panel */
-.visualizer-panel {
-  background: linear-gradient(135deg, #f8fafc 0%, #edf0f4 100%);
-  border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
-  border: 2px solid #cbd5e1;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.visualizer-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 900;
-  color: var(--text-main);
-}
-
-.canvas-container {
-  width: 100%;
-  aspect-ratio: 1.1 / 1;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: var(--nm-inset);
-  overflow: hidden;
-  position: relative;
-  border: 2px solid var(--text-main);
-}
-
-#dtn-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 /* --- Action Section --- */
 .action-grid {
@@ -714,7 +661,7 @@ body {
   color: #000000;
   box-shadow: var(--nm-btn-hover);
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 900;
