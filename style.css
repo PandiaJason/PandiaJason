@@ -1,52 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
 
-/* --- CSS Variables & Design Tokens --- */
+/* --- Metallic Light Theme Variables --- */
 :root {
-  --bg: #f0f3f8;
-  --card-bg: #f0f3f8;
-  --panel-bg: rgba(255, 255, 255, 0.45);
+  /* Metallic background (brushed steel/aluminum) */
+  --bg: #e2e7ec;
+  --card-bg: linear-gradient(135deg, #f1f4f8, #d6dee6);
+  --metal-dark: #b8c4d1;
+  --metal-light: #ffffff;
   
   /* Text colors */
-  --text-main: #2c3e50;
-  --text-sub: #5c6a79;
-  --text-dim: #8fa0b2;
+  --text-main: #1e293b;
+  --text-sub: #475569;
+  --text-dim: #64748b;
   
-  /* Yellow accents */
+  /* Retrofuturistic Yellow & Warnings */
   --yellow: #f1c40f;
-  --yellow-accent: #d8af06;
+  --yellow-accent: #d4ac0d;
   --yellow-bg: #ffeb3b;
-  --yellow-glow: rgba(241, 196, 15, 0.4);
-  --yellow-badge: rgba(241, 196, 15, 0.15);
+  --yellow-glow: rgba(212, 172, 13, 0.5);
+  --yellow-badge: rgba(212, 172, 13, 0.12);
   
-  /* Neumorphic Shadows (Light Mode) */
+  /* Metallic Neumorphism Shadows */
   --nm-raised: 
-    -8px -8px 20px #ffffff, 
-    8px 8px 20px #d1d9e6;
+    -8px -8px 20px var(--metal-light), 
+    8px 8px 20px var(--metal-dark);
   
   --nm-inset: 
-    inset -6px -6px 15px #ffffff, 
-    inset 6px 6px 15px #d1d9e6;
+    inset -6px -6px 15px var(--metal-light), 
+    inset 6px 6px 15px var(--metal-dark);
 
   --nm-button-hover:
-    -4px -4px 10px #ffffff, 
-    4px 4px 10px #d1d9e6;
+    -3px -3px 8px var(--metal-light), 
+    3px 3px 8px var(--metal-dark);
 
-  /* Glassmorphism Styles */
-  --glass-bg: rgba(255, 255, 255, 0.45);
+  /* Glassmorphism Overlays */
+  --glass-bg: rgba(255, 255, 255, 0.35);
   --glass-border: rgba(255, 255, 255, 0.65);
-  --glass-shadow: 0 8px 32px 0 rgba(166, 180, 200, 0.12);
-  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.12);
+  --glass-blur: blur(16px);
 
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-title: 'Outfit', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
   
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --radius: 20px;
+  --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --radius: 18px;
 }
 
-/* --- Base Styles --- */
+/* --- Base Resets --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -55,6 +57,11 @@
 
 body {
   background-color: var(--bg);
+  background-image: 
+    radial-gradient(var(--metal-light) 0.5px, transparent 0.5px), 
+    radial-gradient(var(--metal-light) 0.5px, var(--bg) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
   color: var(--text-main);
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -63,17 +70,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbars */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg);
+  box-shadow: inset 1px 0 3px rgba(0,0,0,0.05);
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd3e0;
-  border: 2px solid var(--bg);
-  border-radius: 6px;
+  background: linear-gradient(to bottom, var(--metal-light), var(--metal-dark));
+  border: 3px solid var(--bg);
+  border-radius: 8px;
+  box-shadow: var(--nm-raised);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--yellow-accent);
@@ -86,18 +95,48 @@ body {
   padding: 50px 20px;
 }
 
-/* --- Header Section (Glassmorphic) --- */
+/* --- Technical HUD / CAD Bevel Lines --- */
+.tech-outline {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--nm-raised);
+}
+
+/* Crosshair decorations in corners (+ symbols) */
+.tech-outline::before,
+.tech-outline::after {
+  content: "+";
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--yellow-accent);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.tech-outline::before { top: 6px; left: 8px; }
+.tech-outline::after { bottom: 6px; right: 8px; }
+
+/* Warning yellow tape accent line */
+.yellow-bar {
+  height: 4px;
+  background: var(--yellow-accent);
+  box-shadow: 0 0 8px var(--yellow-glow);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* --- Profile Header Panel (Metallic Bevel) --- */
 .header-panel {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  background: var(--card-bg);
   border-radius: var(--radius);
   padding: 35px;
   margin-bottom: 40px;
-  position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .profile-title-container {
@@ -110,28 +149,33 @@ body {
 
 .profile-info h1 {
   font-family: var(--font-title);
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
   color: var(--text-main);
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
 
 .profile-info p {
   font-size: 1.15rem;
   color: var(--text-sub);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.2px;
 }
 
-/* Badges */
+/* Neumorphic/Glassmorphic Status Badge */
 .status-badge {
   background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: 30px;
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -155,23 +199,23 @@ body {
 
 /* --- Developer Console (Terminal Widget) --- */
 .terminal-window {
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow), var(--nm-raised);
   border-radius: var(--radius);
   margin-bottom: 50px;
   overflow: hidden;
 }
 
 .terminal-header {
-  background: rgba(255, 255, 255, 0.3);
-  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 14px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .terminal-buttons {
@@ -192,30 +236,31 @@ body {
 
 .terminal-title {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-sub);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .terminal-body {
-  padding: 22px;
+  padding: 24px;
   height: 380px;
   overflow-y: auto;
   font-family: var(--font-mono);
   font-size: 0.95rem;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .terminal-output {
   margin-bottom: 15px;
   white-space: pre-wrap;
-  color: var(--text-main);
+  line-height: 1.6;
 }
 
 .terminal-line {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-sub);
 }
 
 .terminal-prompt {
@@ -249,8 +294,8 @@ body {
 /* Quick commands bar */
 .terminal-shortcuts {
   padding: 15px 22px;
-  background: rgba(255, 255, 255, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -259,7 +304,7 @@ body {
 
 .shortcut-label {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-sub);
   margin-right: 8px;
 }
@@ -272,7 +317,7 @@ body {
   padding: 6px 14px;
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   box-shadow: var(--glass-shadow);
   transition: var(--transition);
@@ -286,7 +331,7 @@ body {
 
 .shortcut-btn:active {
   box-shadow: var(--nm-inset);
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 /* --- Builder Creed Card --- */
@@ -299,7 +344,7 @@ body {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow), var(--nm-raised);
   border-radius: var(--radius);
   padding: 40px;
   text-align: center;
@@ -310,39 +355,42 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 20px;
-  right: 20px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  left: 30px;
+  right: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow-accent), transparent);
+  box-shadow: 0 0 6px var(--yellow-glow);
 }
 
 .creed-card p {
   font-family: var(--font-title);
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
   line-height: 1.6;
   color: var(--text-main);
   max-width: 900px;
   margin: 0 auto;
+  letter-spacing: -0.2px;
 }
 
 /* --- Section Title --- */
 .section-title {
   font-family: var(--font-title);
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   gap: 15px;
   color: var(--text-main);
+  letter-spacing: -0.5px;
 }
 
 .section-title::after {
   content: "";
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg, #d1d9e6, transparent);
+  background: linear-gradient(90deg, var(--metal-dark), transparent);
 }
 
 /* --- Systems Portfolio Grid --- */
@@ -356,18 +404,16 @@ body {
 .project-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: -10px -10px 25px #ffffff, 10px 10px 25px #c8d3e6;
+  box-shadow: -10px -10px 25px var(--metal-light), 10px 10px 25px #c0cbd6;
 }
 
 .project-card-header {
@@ -380,18 +426,20 @@ body {
 .project-title {
   font-family: var(--font-title);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-main);
+  letter-spacing: -0.2px;
 }
 
 .project-tech {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   background: var(--yellow-badge);
   color: var(--yellow-accent);
   padding: 4px 10px;
   border-radius: 30px;
-  border: 1px solid rgba(241, 196, 15, 0.25);
+  border: 1px solid rgba(212, 172, 13, 0.25);
+  box-shadow: inset 1px 1px 0px rgba(255,255,255,0.6);
 }
 
 .project-desc {
@@ -402,14 +450,15 @@ body {
   line-height: 1.5;
 }
 
+/* Recessed Inset Panel for Metrics */
 .project-metrics {
   background: rgba(255, 255, 255, 0.35);
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 25px;
   box-shadow: var(--nm-inset);
-  font-family: var(--font-sans);
   font-size: 0.85rem;
+  border: 1px solid rgba(0,0,0,0.02);
 }
 
 .metric-row {
@@ -423,12 +472,12 @@ body {
 
 .metric-label {
   color: var(--text-sub);
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .metric-val {
   color: var(--text-main);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .project-links {
@@ -446,7 +495,7 @@ body {
   border-radius: 10px;
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -482,15 +531,13 @@ body {
 .phd-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
   padding: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .thesis-tag {
   color: var(--yellow-accent);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   display: block;
@@ -500,16 +547,18 @@ body {
 .thesis-title {
   font-family: var(--font-title);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 850;
   color: var(--text-main);
   line-height: 1.35;
   margin-bottom: 12px;
+  letter-spacing: -0.3px;
 }
 
 .thesis-journal {
   font-size: 0.92rem;
   color: var(--text-sub);
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .thesis-highlights {
@@ -537,9 +586,7 @@ body {
 .visualizer-panel {
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
   padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
 }
@@ -549,8 +596,9 @@ body {
   justify-content: space-between;
   margin-bottom: 15px;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-sub);
+  letter-spacing: 0.5px;
 }
 
 .canvas-container {
@@ -581,9 +629,7 @@ body {
 .action-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: var(--nm-raised);
   padding: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -592,9 +638,10 @@ body {
 .action-card h3 {
   font-family: var(--font-title);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 12px;
   color: var(--text-main);
+  letter-spacing: -0.2px;
 }
 
 .action-card p {
@@ -642,7 +689,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
   font-size: 0.92rem;
 }
 .contact-item:last-child {
@@ -651,11 +698,11 @@ body {
 
 .contact-label {
   color: var(--text-sub);
-  font-weight: 500;
+  font-weight: 550;
 }
 .contact-val {
   color: var(--text-main);
-  font-weight: 600;
+  font-weight: 700;
   word-break: break-all;
 }
 
@@ -665,7 +712,7 @@ footer {
   padding: 40px 20px;
   color: var(--text-dim);
   font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-top: 1px solid #e2e8f0;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-top: 1px solid #cbd5e1;
 }
