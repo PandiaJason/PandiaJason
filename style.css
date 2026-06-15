@@ -265,8 +265,8 @@ body {
 @media (min-width: 768px) {
   .desktop-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto);
+    grid-template-columns: 1fr 1.35fr 1fr;
+    align-items: center;
     gap: 30px;
     margin-bottom: 50px;
   }
