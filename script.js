@@ -12,6 +12,7 @@ const commands = {
   help: `Available commands:
   -------------------------------------------------------------
   [nanos]       Display WebAssembly micro-runtime architecture
+  [spice-ns]    View ns-3 Delay-Tolerant Network simulation
   [bats]        Display Go deterministic agent safety proxy
   [ranotot]     View Godot 4 gravity physics game structure
   [ninai]       Bypass CORS/CSP Electron webview structure
@@ -33,10 +34,24 @@ const commands = {
   - Metered Fuel budget               - Zero TCP Loopback             - Metal/CUDA offload
   - Zero host direct access           - No JSON serialization         - File/Network proxies
 
-  Performance Metrics:
+  Performance Metrics (from README.md):
   * Startup Boot Latency: <3ms (WASM instantiation)
-  * System Memory Footprint: ~20MB RSS (50x lighter than Docker/VM)
+  * System Memory Footprint: ~39MB RSS (vs 2GB+ VM / 50x RAM reduction)
   * FFI Syscall execution: <1ms (300x faster than local HTTP)`,
+
+  'spice-ns': `[spice-ns] Deep Space Network Simulation
+  -------------------------------------------------------------
+  Language: C++ / Python / ns-3 simulator
+  Target: High-fidelity simulation of space relay networks
+
+  Simulation Paradigm:
+  Mars Surface-to-Orbit  <--->  NASA SPICE Astrodynamics  <--->  ns-3 simulator
+  - Ka-band / UHF links         - Orbital contact relays         - Custom node extensions
+
+  Key Features & Performance:
+  * Extensions: Models Delay-Tolerant Networking (DTN) and DSN topologies.
+  * Congestion Soft Constraints: Integrates quadratic load-balancing Hamiltonian.
+  * Performance: Delivers 2.4x more data capacity than standard CGR.`,
 
   bats: `[bats] WAND -- Watch. Audit. Never Delegate.
   -------------------------------------------------------------
@@ -51,13 +66,14 @@ const commands = {
 
   Key Features:
   * Deterministic Policy: 136 BLOCK and 47 CHALLENGE rules evaluated via pre-compiled regex.
-  * Performance: Evaluated in <5ms with zero LLM/probabilistic latency.
+  * Performance: Evaluated in <5ms with zero LLM-probabilistic latency.
   * Compliance: Cryptographic audit log using SHA-256 hash chaining with fsync durability.
   * Safety Gatekeeping: Hard blocks prompt injections, destructive commands, or API resource exhaustion.`,
 
   ranotot: `[Ranotot] 2D Gravity-Based Space Delivery Game
   -------------------------------------------------------------
   Engine: Godot 4.6 (GL Compatibility)
+  Developer: Hikki Studios
   Languages: GDScript / Python (Level Generation)
 
   Mechanics & Architecture:
@@ -71,7 +87,7 @@ const commands = {
 
   ninai: `[ninai] Local-First Desktop Workspace Integration
   -------------------------------------------------------------
-  Framework: Electron / React 19 / TypeScript 5.9 / Vite 7
+  Framework: Electron 40 / React 19 / TypeScript 5.9 / Vite 7
   Storage: Dexie.js (IndexedDB wrapper)
 
   Key Core Engineering Features:
@@ -147,7 +163,7 @@ const commands = {
     IT Department, Nehru Institute of Technology, Coimbatore, India
     - Courses taught: Advanced Networks, OS, Distributed Systems.
     - Built 'cnl-codetainers' to make sandboxed networking labs accessible.
-    - Researched QUBO formulations for aerospace DTN architectures.`
+    - Researched SPICE-ns Delay-Tolerant Network simulator architectures.`
 };
 
 // Process terminal commands
@@ -177,7 +193,7 @@ function runCommand(cmdText) {
   terminalBody.scrollTop = terminalBody.scrollHeight;
 }
 
-// Event Listeners
+// Event Listeners for Terminal
 terminalInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     const cmd = terminalInput.value;
@@ -204,15 +220,135 @@ terminalInput.addEventListener('keydown', (e) => {
   }
 });
 
-// Shortcut buttons
 shortcutBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const cmd = btn.getAttribute('data-cmd');
     runCommand(cmd);
+    terminalInput.focus();
   });
 });
 
-// Focus terminal input on clicking the body
 terminalBody.addEventListener('click', () => {
   terminalInput.focus();
 });
+
+
+// --- Real-time Analog Clock ---
+function updateClock() {
+  const hourHand = document.getElementById('hour-hand');
+  const minuteHand = document.getElementById('minute-hand');
+  const secondHand = document.getElementById('second-hand');
+  
+  if (!hourHand || !minuteHand || !secondHand) return;
+  
+  const now = new Date();
+  const hr = now.getHours();
+  const min = now.getMinutes();
+  const sec = now.getSeconds();
+  
+  const hrAngle = (hr % 12) * 30 + min * 0.5;
+  const minAngle = min * 6 + sec * 0.1;
+  const secAngle = sec * 6;
+  
+  hourHand.style.transform = `rotate(${hrAngle}deg)`;
+  minuteHand.style.transform = `rotate(${minAngle}deg)`;
+  secondHand.style.transform = `rotate(${secAngle}deg)`;
+}
+setInterval(updateClock, 1000);
+updateClock(); // Initial run
+
+
+// --- Modal Dialog System ---
+const desktopWrapper = document.getElementById('desktop-wrapper');
+
+const modals = {
+  console: document.getElementById('modal-console-overlay'),
+  projects: document.getElementById('modal-projects-overlay'),
+  creed: document.getElementById('modal-creed-overlay'),
+  resume: document.getElementById('modal-resume-overlay'),
+  profile: document.getElementById('modal-profile-overlay')
+};
+
+// Open Modal function
+function openModal(modalKey) {
+  const modal = modals[modalKey];
+  if (!modal) return;
+  
+  modal.classList.add('active');
+  desktopWrapper.classList.add('modal-active');
+  
+  // Custom behaviors per modal
+  if (modalKey === 'console') {
+    setTimeout(() => {
+      terminalInput.focus();
+    }, 100);
+  }
+}
+
+// Close Modal function
+function closeModal(modal) {
+  if (!modal) return;
+  modal.classList.remove('active');
+  
+  // Check if any other modal is still active
+  const anyActive = Object.values(modals).some(m => m.classList.contains('active'));
+  if (!anyActive) {
+    desktopWrapper.classList.remove('modal-active');
+  }
+}
+
+// Wire Desktop Icons/Cards Click Events
+document.getElementById('card-projects').addEventListener('click', () => openModal('projects'));
+document.getElementById('card-console').addEventListener('click', () => openModal('console'));
+document.getElementById('card-creed').addEventListener('click', () => openModal('creed'));
+document.getElementById('card-resume').addEventListener('click', () => openModal('resume'));
+document.getElementById('card-profile').addEventListener('click', () => openModal('profile'));
+
+// Setup general Close handlers (Click close capsule or click backdrop)
+Object.values(modals).forEach(modal => {
+  const closeBtn = modal.querySelector('.modal-close-capsule');
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal(modal));
+  }
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
+// Prevent backdrop close when clicking inside the modal content box
+document.querySelectorAll('.modal-container').forEach(container => {
+  container.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
+
+
+// --- Projects Accordion System ---
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+  const header = item.querySelector('.accordion-header');
+  
+  header.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    
+    // Collapse all items
+    accordionItems.forEach(otherItem => {
+      otherItem.classList.remove('active');
+    });
+    
+    // Toggle clicked item
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// Open the first accordion item by default in Projects modal
+if (accordionItems.length > 0) {
+  accordionItems[0].classList.add('active');
+}

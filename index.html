@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Pandian | Systems, Game & Optimization Engineer</title>
-  <meta name="description" content="Portfolio of Jason Pandian: Ph.D. Scholar at Anna University, Systems Developer, and Game Designer. Creator of nanos, bats, ranotot, and DSA-C.">
+  <title>Jason Pandian | Systems &amp; Optimization Engineer</title>
+  <meta name="description" content="Virtual Desktop of Jason Pandian: Ph.D. Scholar, Systems Developer, and Game Designer. Creator of nanos, bats, ranotot, and DSA-C.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,30 +14,159 @@
   <div class="bg-blob copper-blob-2"></div>
   <div class="bg-blob dark-blob"></div>
 
-  <div class="container">
+  <!-- Main Desktop Wrapper (blurred when modal is active) -->
+  <div class="desktop-wrapper" id="desktop-wrapper">
     
+    <!-- Top capsule menu bar -->
     <header class="header-panel tech-outline">
       <div class="header-left">
-        <svg class="menu-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        <span class="header-name">Jason Pandian</span>
-        <span class="header-subtitle">// Systems &amp; Optimization</span>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Breathe. Orcestrate.</span>
+        </div>
       </div>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        <span>Operational</span>
+      <div class="header-center">
+        <span class="header-name">Jason Pandian</span>
+      </div>
+      <div class="header-right">
       </div>
     </header>
 
-    <!-- Interactive Developer Console -->
-    <section aria-label="Terminal Console">
-      <div class="terminal-window tech-outline">
+    <!-- Desktop Widgets Grid -->
+    <main class="desktop-grid">
+      
+      <!-- Widget 1: Analog Clock -->
+      <div class="widget-card clock-widget" aria-label="Analog Clock">
+        <div class="clock-face">
+          <div class="clock-ticks">
+            <!-- 12 tick marks around the face -->
+            <span class="tick tick-12"></span>
+            <span class="tick tick-3"></span>
+            <span class="tick tick-6"></span>
+            <span class="tick tick-9"></span>
+          </div>
+          <div class="hand hour-hand" id="hour-hand"></div>
+          <div class="hand minute-hand" id="minute-hand"></div>
+          <div class="hand second-hand" id="second-hand"></div>
+          <div class="clock-center"></div>
+        </div>
+      </div>
+
+      <!-- Widget 2: Projects Card -->
+      <div class="widget-card folder-card" id="card-projects" role="button" tabindex="0">
+        <div class="card-icon-container">
+          <!-- Dot matrix projects logo -->
+          <svg class="folder-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="48" height="38" rx="6" stroke="currentColor" stroke-width="1.8" />
+            <path d="M8 22H56" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" />
+            <circle cx="20" cy="36" r="3" fill="currentColor" />
+            <circle cx="32" cy="36" r="3" fill="currentColor" />
+            <circle cx="44" cy="36" r="3" fill="currentColor" />
+            <circle cx="20" cy="44" r="3" fill="currentColor" />
+            <circle cx="32" cy="44" r="3" fill="currentColor" />
+            <circle cx="44" cy="44" r="3" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-title">Projects</span>
+          <span class="card-subtitle">SYSTEMS</span>
+        </div>
+      </div>
+
+      <!-- Widget 3: Console Card -->
+      <div class="widget-card folder-card" id="card-console" role="button" tabindex="0">
+        <div class="card-icon-container">
+          <!-- Terminal preview/icon -->
+          <svg class="folder-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="48" height="38" rx="6" stroke="currentColor" stroke-width="1.8" />
+            <path d="M16 28L22 33L16 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="26" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <circle cx="48" cy="22" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-title">Console</span>
+          <span class="card-subtitle">TERMINAL</span>
+        </div>
+      </div>
+
+      <!-- Widget 4: Creed (Philosophy) Card -->
+      <div class="widget-card folder-card" id="card-creed" role="button" tabindex="0">
+        <div class="card-icon-container">
+          <!-- Quotes icon -->
+          <svg class="folder-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="48" height="38" rx="6" stroke="currentColor" stroke-width="1.8" />
+            <path d="M22 28C22 33 19 37 16 39M32 28C32 33 29 37 26 39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M40 26H48M40 32H46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-title">Creed</span>
+          <span class="card-subtitle">PHILOSOPHY</span>
+        </div>
+      </div>
+
+      <!-- Widget 5: Resume Card -->
+      <div class="widget-card folder-card" id="card-resume" role="button" tabindex="0">
+        <div class="card-icon-container">
+          <!-- Resume CV badge icon -->
+          <svg class="folder-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="48" height="38" rx="6" stroke="currentColor" stroke-width="1.8" />
+            <path d="M20 24H44M20 32H44M20 40H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="42" cy="40" r="2" fill="var(--yellow)" />
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-title">Resume</span>
+          <span class="card-subtitle">CV &amp; LINKS</span>
+        </div>
+      </div>
+
+      <!-- Widget 6: Main Projects Profile Display (Bottom Center Card like Nothing ear (a)) -->
+      <!-- Widget 6: Jason (p) Profile Card -->
+      <div class="widget-card folder-card" id="card-profile" role="button" tabindex="0">
+        <div class="card-icon-container">
+          <!-- Profile/Academic icon -->
+          <svg class="folder-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="48" height="38" rx="6" stroke="currentColor" stroke-width="1.8" />
+            <path d="M32 20L48 27L32 34L16 27Z" fill="var(--yellow)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            <path d="M22 30V38C22 41 32 44 32 44C32 44 42 41 42 38V30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M44 28.5V36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="44" cy="37" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-title">jason (p)</span>
+          <span class="card-subtitle">ACADEMICS &amp; PH.D.</span>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+
+  </div>
+
+  <!-- ==================== MODAL OVERLAYS ==================== -->
+
+  <!-- Modal 1: Console / Terminal -->
+  <div class="modal-overlay" id="modal-console-overlay">
+    <div class="modal-container">
+      <button class="modal-close-capsule" aria-label="Close Console">
+        <span class="close-icon">✕</span>
+        <span class="close-label">CONSOLE</span>
+      </button>
+      
+      <div class="modal-content-window tech-outline">
         <div class="terminal-header">
           <div class="terminal-buttons">
             <span class="t-btn"></span>
             <span class="t-btn yellow"></span>
             <span class="t-btn"></span>
           </div>
-          <div class="terminal-title">PANDIA-SYSTEMS v1.0.8 // DEVELOPER CONSOLE</div>
+          <div class="terminal-title">PANDIA-SYSTEMS v1.0.8 DEVELOPER CONSOLE</div>
           <div style="width: 50px;"></div>
         </div>
         
@@ -47,7 +176,7 @@
 guest@pandiajason.github.io:~$ </div>
           <div class="terminal-line">
             <span class="terminal-prompt">guest@pandiajason.github.io:~$</span>
-            <input type="text" class="terminal-input" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+            <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
             <span class="cursor-blink" id="input-cursor"></span>
           </div>
         </div>
@@ -57,6 +186,7 @@ guest@pandiajason.github.io:~$ </div>
           <span class="shortcut-label">QUICK COMMANDS:</span>
           <button class="shortcut-btn" data-cmd="help">help</button>
           <button class="shortcut-btn" data-cmd="nanos">nanos</button>
+          <button class="shortcut-btn" data-cmd="spice-ns">spice-ns</button>
           <button class="shortcut-btn" data-cmd="bats">bats</button>
           <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
           <button class="shortcut-btn" data-cmd="ninai">ninai</button>
@@ -64,308 +194,624 @@ guest@pandiajason.github.io:~$ </div>
           <button class="shortcut-btn" data-cmd="clear">clear</button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Builder Creed Banner -->
-    <section class="creed-container" aria-label="Philosophy">
-      <div class="creed-card tech-outline">
-        <p>
+  <!-- Modal 2: Projects / Portfolio Accordion -->
+  <div class="modal-overlay" id="modal-projects-overlay">
+    <div class="modal-container">
+      <button class="modal-close-capsule" aria-label="Close Projects">
+        <span class="close-icon">✕</span>
+        <span class="close-label">PROJECTS</span>
+      </button>
+
+      <div class="modal-content-window projects-list-window">
+        
+        <!-- Accordion Item 1: nanos -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">N-01</span>
+              <span class="accordion-title">nanos</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Rust / WASM</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- WASM Guest Sandbox -->
+                    <rect x="15" y="30" width="135" height="100" rx="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="82.5" y="20" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">GUEST (WASM)</text>
+                    <text x="82.5" y="60" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">TypeScript Agent</text>
+                    <rect x="35" y="80" width="95" height="24" rx="4" fill="rgba(0,0,0,0.03)" stroke="currentColor" stroke-width="1"/>
+                    <text x="82.5" y="96" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">QuickJS / Fuel</text>
+
+                    <!-- FFI Pointer Bridge -->
+                    <path d="M150 70 H270" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <path d="M270 90 H150" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <polygon points="215,66 223,70 215,74" fill="currentColor"/>
+                    <polygon points="205,86 197,90 205,94" fill="currentColor"/>
+                    <text x="210" y="55" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">FFI Pointer Pass</text>
+                    <text x="210" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="var(--yellow-accent)" font-weight="bold">&lt;1ms latency</text>
+
+                    <!-- Rust Host Space -->
+                    <rect x="270" y="30" width="135" height="100" rx="8" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="337.5" y="20" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">HOST RUNTIME</text>
+                    <text x="337.5" y="60" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">Rust Microkernel</text>
+                    <rect x="285" y="80" width="105" height="24" rx="4" fill="rgba(255,204,0,0.08)" stroke="var(--yellow)" stroke-width="1.2"/>
+                    <text x="337.5" y="96" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="currentColor">Metal / CUDA GPU</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Lightweight, capability-isolated WebAssembly micro-runtime for sandboxed AI agents with native host GPU offloading (Apple Metal / CUDA).</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Sandbox Boot</span>
+                    <span class="spec-tbl-val">&lt; 3 ms (cold start)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Memory Footprint</span>
+                    <span class="spec-tbl-val">~39 MB RSS (vs 2GB+ VM)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Tool Latency (FFI)</span>
+                    <span class="spec-tbl-val">&lt; 1 ms (zero-copy)</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/nanos" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: spice-ns -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">S-02</span>
+              <span class="accordion-title">spice-ns</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">ns-3 / C++</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Planet Mars -->
+                    <circle cx="70" cy="80" r="30" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="70" cy="80" r="6" fill="currentColor"/>
+                    <text x="70" y="125" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">Mars Node</text>
+
+                    <!-- Satellite Orbit -->
+                    <path d="M70 80 Q210 -10 350 80" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+                    
+                    <!-- Satellite Relay -->
+                    <circle cx="210" cy="35" r="8" fill="var(--yellow)" stroke="currentColor" stroke-width="1"/>
+                    <line x1="202" y1="35" x2="194" y2="35" stroke="currentColor" stroke-width="1"/>
+                    <line x1="218" y1="35" x2="226" y2="35" stroke="currentColor" stroke-width="1"/>
+                    <text x="210" y="20" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Relay (SoC: 98%)</text>
+
+                    <!-- Ground DSN Earth -->
+                    <circle cx="350" cy="80" r="24" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M350 56 V80" stroke="currentColor" stroke-width="1.2"/>
+                    <text x="350" y="120" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">DSN Earth</text>
+
+                    <!-- Transmission Packets -->
+                    <path d="M100 70 L195 43" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 2"/>
+                    <path d="M225 43 L326 70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 2"/>
+                    
+                    <!-- Flow text -->
+                    <text x="210" y="90" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--yellow-accent)">P-ECGR Energy Path</text>
+                    <text x="210" y="105" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Zero Packet Drops</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Next-gen simulation framework extending ns-3 to model Deep Space Network (DSN) and Delay-Tolerant Network (DTN) communication protocols, validated on NASA Mars topologies.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Simulation Engine</span>
+                    <span class="spec-tbl-val">ns-3 Simulator</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Validation Topo</span>
+                    <span class="spec-tbl-val">NASA Mars SPICE Relays</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Astrodynamics</span>
+                    <span class="spec-tbl-val">Geospatial propagation</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/SPICE-ns-Project" class="project-btn" target="_blank">
+                    Research 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: bats -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">B-03</span>
+              <span class="accordion-title">bats (WAND)</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Go</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- AI Agent -->
+                    <rect x="15" y="45" width="90" height="70" rx="6" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="60" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">AI Agent</text>
+                    <text x="60" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Proposes Action</text>
+
+                    <!-- Request flow -->
+                    <path d="M105 80 H165" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="165,80 157,76 157,84" fill="currentColor"/>
+
+                    <!-- WAND Proxy Security Gate -->
+                    <rect x="165" y="30" width="110" height="100" rx="8" stroke="var(--yellow)" stroke-width="2" fill="rgba(255,204,0,0.03)"/>
+                    <text x="220" y="52" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">WAND Proxy</text>
+                    <line x1="175" y1="62" x2="265" y2="62" stroke="var(--yellow)" stroke-width="1.2"/>
+                    <text x="220" y="78" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">183 Rules Engine</text>
+                    <text x="220" y="94" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">mTLS Auth</text>
+                    <text x="220" y="112" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="var(--yellow-accent)">&lt;5ms latency</text>
+
+                    <!-- Audit Log chain representation -->
+                    <path d="M275 80 H320" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="320,80 312,76 312,84" fill="currentColor"/>
+                    
+                    <!-- WAL blocks -->
+                    <rect x="320" y="45" width="85" height="70" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="362.5" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">SHA-256</text>
+                    <text x="362.5" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">WAL (fsync)</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Go-native deterministic safety proxy (WAND) evaluating 183 pre-compiled policy rules in &lt;5ms for autonomous AI agents and MCP tools.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Policy Engine</span>
+                    <span class="spec-tbl-val">183 Pre-compiled Rules</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Enforcement Latency</span>
+                    <span class="spec-tbl-val">&lt; 5 ms</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Audit Trail</span>
+                    <span class="spec-tbl-val">Hash-Chained SHA-256 WAL</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/bats" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4: ranotot -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">R-04</span>
+              <span class="accordion-title">ranotot</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Godot 4 / Python</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Orbit 1 -->
+                    <circle cx="100" cy="80" r="32" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <circle cx="100" cy="80" r="14" fill="currentColor"/>
+                    <text x="100" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet A</text>
+
+                    <!-- Ship -->
+                    <rect x="180" y="45" width="22" height="14" rx="3" transform="rotate(-15 180 45)" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="208,44 202,40 202,48" fill="var(--yellow)"/>
+                    <text x="190" y="30" text-anchor="middle" font-family="var(--font-sans)" font-size="9" fill="currentColor">Ship Cargo</text>
+
+                    <!-- Gravity pull indicators -->
+                    <path d="M170 55 C145 65 130 70 120 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
+                    <polygon points="120,74 128,73 123,79" fill="currentColor"/>
+                    <path d="M210 50 C240 60 270 70 290 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
+                    <polygon points="290,74 282,79 287,73" fill="currentColor"/>
+
+                    <!-- Orbit 2 -->
+                    <circle cx="310" cy="80" r="28" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <circle cx="310" cy="80" r="10" fill="currentColor"/>
+                    <text x="310" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet B</text>
+
+                    <!-- Zero-G deadzone camera box -->
+                    <rect x="145" y="25" width="120" height="100" rx="4" stroke="currentColor" stroke-width="1" stroke-dasharray="6 6" opacity="0.4"/>
+                    <text x="205" y="140" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Camera deadzone (zoom: 0.5)</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">A gravity-based 2D space cargo delivery platformer game with custom physics, dynamic radial planet gravity fields, and orbital mechanics.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Engine &amp; Setup</span>
+                    <span class="spec-tbl-val">Godot 4.6 (GL Compatibility)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Level Layouts</span>
+                    <span class="spec-tbl-val">30 Levels (+31-90 Procedural)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Developer Group</span>
+                    <span class="spec-tbl-val">Hikki Studios</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/ranotot" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5: ninai -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">E-05</span>
+              <span class="accordion-title">ninai</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Electron / React 19</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Split Window border -->
+                    <rect x="15" y="20" width="390" height="120" rx="8" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="210" y1="20" x2="210" y2="140" stroke="currentColor" stroke-width="1.5"/>
+
+                    <!-- Left Pane: AI Webviews -->
+                    <text x="112.5" y="38" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">webview: ChatGPT/Claude</text>
+                    <rect x="30" y="50" width="150" height="60" rx="4" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+                    <text x="105" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor">AI Subscriptions</text>
+                    
+                    <!-- Scissors stripping headers -->
+                    <rect x="35" y="118" width="140" height="16" rx="3" fill="rgba(255,204,0,0.1)" stroke="var(--yellow)" stroke-width="1"/>
+                    <text x="105" y="130" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="currentColor">Strips CSP / X-Frame-Options</text>
+
+                    <!-- Right Pane: Markdown editor -->
+                    <text x="307.5" y="38" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">TipTap Markdown Editor</text>
+                    <rect x="230" y="50" width="150" height="80" rx="4" stroke="currentColor" stroke-width="1"/>
+                    <line x1="240" y1="65" x2="310" y2="65" stroke="currentColor" stroke-width="1.2"/>
+                    <line x1="240" y1="80" x2="340" y2="80" stroke="currentColor" stroke-width="1.2"/>
+                    <line x1="240" y1="95" x2="280" y2="95" stroke="currentColor" stroke-width="1.2"/>
+
+                    <!-- Super Copy Arrow -->
+                    <path d="M190 75 Q210 65 230 75" stroke="var(--yellow)" stroke-width="2"/>
+                    <polygon points="230,75 222,71 226,79" fill="var(--yellow)"/>
+                    <text x="210" y="58" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="var(--yellow-accent)">Super Copy</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Local-first desktop application that unifies web-based AI subscription platforms and notes in a side-by-side dual-pane workspace.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Desktop Runtime</span>
+                    <span class="spec-tbl-val">Electron 40 + React 19</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Local Database</span>
+                    <span class="spec-tbl-val">Dexie.js (IndexedDB)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Bypass Engine</span>
+                    <span class="spec-tbl-val">Super Copy (CORS-free)</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/ninai" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 6: DSA-C -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-index">D-06</span>
+              <span class="accordion-title">DSA-C</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">C</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Node A -->
+                    <rect x="20" y="55" width="80" height="46" rx="6" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="50" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor">Node A</text>
+                    <line x1="80" y1="55" x2="80" y2="101" stroke="currentColor" stroke-width="1"/>
+                    <text x="90" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">next</text>
+
+                    <!-- Link from A to deleted B -->
+                    <path d="M100 78 H160" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="160,78 152,74 152,82" fill="currentColor"/>
+
+                    <!-- Deleted Node B -->
+                    <rect x="160" y="55" width="80" height="46" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                    <text x="190" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor" opacity="0.6">Node B</text>
+                    <line x1="220" y1="55" x2="220" y2="101" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                    <text x="230" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.6">next</text>
+                    <!-- Deletion X -->
+                    <line x1="165" y1="60" x2="235" y2="96" stroke="#ff3b30" stroke-width="2"/>
+                    <line x1="235" y1="60" x2="165" y2="96" stroke="#ff3b30" stroke-width="2"/>
+                    <text x="200" y="40" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff3b30" font-weight="bold">free(temp)</text>
+
+                    <!-- Link from B to C -->
+                    <path d="M240 78 H300" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="300,78 292,74 292,82" fill="currentColor" opacity="0.6"/>
+
+                    <!-- Re-routing Pointer from A straight to C -->
+                    <path d="M90 78 C90 125, 305 125, 305 82" stroke="var(--yellow)" stroke-width="2"/>
+                    <polygon points="305,82 300,90 309,87" fill="var(--yellow)"/>
+                    <text x="200" y="142" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="var(--yellow-accent)">prev->next = temp->next</text>
+
+                    <!-- Node C -->
+                    <rect x="300" y="55" width="80" height="46" rx="6" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="330" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor">Node C</text>
+                    <line x1="360" y1="55" x2="360" y2="101" stroke="currentColor" stroke-width="1"/>
+                    <text x="370" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">next</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">A repository containing low-level implementations of fundamental and advanced data structures and algorithms in standard C, focusing on manual memory management.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">DSA Language</span>
+                    <span class="spec-tbl-val">Standard C</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Memory</span>
+                    <span class="spec-tbl-val">Manual (malloc / free)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Core structures</span>
+                    <span class="spec-tbl-val">Pointers, Lists, Trees, Stacks</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/DSA-C" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Creed / Philosophy -->
+  <div class="modal-overlay" id="modal-creed-overlay">
+    <div class="modal-container">
+      <button class="modal-close-capsule" aria-label="Close Creed">
+        <span class="close-icon">✕</span>
+        <span class="close-label">CREED</span>
+      </button>
+
+      <div class="modal-content-window creed-window tech-outline">
+        <div class="creed-logo-container">
+          <!-- Dot matrix quotes design -->
+          <span class="dot-matrix-quote">“</span>
+        </div>
+        <p class="creed-quote-text">
           "I don't just learn syntax; I build. I learn by building my own version of a system, studying existing production implementations, comparing the differences, and recursively refining both design and code. I believe that mastering data structures and algorithms with AI as an accelerator is a developer's superpower. With perfect agentic orchestration and a deep logical understanding of low-level systems, I build high-performance software that solves real-world challenges—turning complex architectural concepts into highly optimized working beasts."
         </p>
+        <span class="creed-signature">JASON PANDIAN</span>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Systems Portfolio -->
-    <section id="portfolio">
-      <h2 class="section-title">SYSTEMS PORTFOLIO</h2>
-      
-      <div class="projects-grid">
-        
-        <!-- Card 1: nanos -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// N-01</span>
-            <div class="tech-dots">
-              <span class="channel-dot red" title="High-Speed Execution"></span>
-              <span class="channel-dot white" title="Sandboxed WASM"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path></svg>
-                <h3 class="project-title">nanos</h3>
-              </div>
-              <span class="project-tech">Rust / WASM</span>
-            </div>
-            <p class="project-desc">Lightweight, process-isolated WebAssembly micro-runtime for sandboxed AI agents with native host GPU offloading (CUDA / Metal).</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">Sandbox Boot:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">&lt; 3 ms</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Memory Footprint:</span>
-                <span class="metric-val">~20 MB (50x lighter)</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Tool Latency (FFI):</span>
-                <span class="metric-val">&lt; 1 ms (300x faster)</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason/nanos" class="project-btn" target="_blank">Source Code <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
+  <!-- Modal 4: Resume / CV & Contacts -->
+  <div class="modal-overlay" id="modal-resume-overlay">
+    <div class="modal-container">
+      <button class="modal-close-capsule" aria-label="Close Resume">
+        <span class="close-icon">✕</span>
+        <span class="close-label">RESUME</span>
+      </button>
 
-        <!-- Card 2: qubo-space-routing -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// Q-02</span>
-            <div class="tech-dots">
-              <span class="channel-dot yellow" title="Lagrangian Soft Constraints"></span>
-              <span class="channel-dot black" title="Dynamic Optimization"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><circle cx="19" cy="5" r="2"></circle><circle cx="5" cy="19" r="2"></circle><circle cx="19" cy="19" r="2"></circle><circle cx="5" cy="5" r="2"></circle><line x1="7" y1="7" x2="10" y2="10"></line><line x1="14" y1="14" x2="17" y2="17"></line><line x1="17" y1="7" x2="14" y2="10"></line><line x1="10" y1="14" x2="7" y2="17"></line></svg>
-                <h3 class="project-title">qubo-routing</h3>
-              </div>
-              <span class="project-tech">Python / C++</span>
-            </div>
-            <p class="project-desc">Always-feasible Delay-Tolerant Network (DTN) routing optimization using Lagrangian relaxation and quadratic soft constraints.</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">Delivery Capacity:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">2.4x higher than CGR</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Solver Speed:</span>
-                <span class="metric-val">&lt; 200 ms</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Validation Topo:</span>
-                <span class="metric-val">NASA Mars SPICE Relays</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason" class="project-btn" target="_blank">Research <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
-
-        <!-- Card 3: bats -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// B-03</span>
-            <div class="tech-dots">
-              <span class="channel-dot lightblue" title="Transaction Auditing"></span>
-              <span class="channel-dot white" title="Regex Policy Enforcement"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><circle cx="12" cy="11" r="2"></circle><path d="M12 13v3"></path></svg>
-                <h3 class="project-title">bats (WAND)</h3>
-              </div>
-              <span class="project-tech">Go</span>
-            </div>
-            <p class="project-desc">Deterministic safety enforcement and transaction auditing proxy for autonomous AI agents, evaluating regex policies at sub-5ms latencies.</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">Policy Engine:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">183 Pre-compiled Rules</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Enforcement Latency:</span>
-                <span class="metric-val">&lt; 5 ms</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Audit Trail:</span>
-                <span class="metric-val">Hash-Chained SHA-256 WAL</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason/bats" class="project-btn" target="_blank">Source Code <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
-
-        <!-- Card 4: ranotot -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// R-04</span>
-            <div class="tech-dots">
-              <span class="channel-dot blue" title="Godot Physics"></span>
-              <span class="channel-dot yellow" title="Python Generator"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"></circle><path d="M2 12h2M20 12h2M12 2v2M12 20v2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6l-1.4 1.4M7 17l-1.4 1.4"></path></svg>
-                <h3 class="project-title">Ranotot</h3>
-              </div>
-              <span class="project-tech">Godot 4 / Python</span>
-            </div>
-            <p class="project-desc">A gravity-based 2D space delivery platformer game with custom physics and Python-based procedural level generators.</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">Gravity Mechanics:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">Dynamic 2D Planet Fields</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Level Gen:</span>
-                <span class="metric-val">Procedural Python Scripting</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Camera System:</span>
-                <span class="metric-val">Fixed Zoom Zero-G Deadzone</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason/ranotot" class="project-btn" target="_blank">Source Code <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
-
-        <!-- Card 5: ninai -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// E-05</span>
-            <div class="tech-dots">
-              <span class="channel-dot cyan" title="Electron Host"></span>
-              <span class="channel-dot white" title="React UI"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                <h3 class="project-title">ninai</h3>
-              </div>
-              <span class="project-tech">Electron / React 19</span>
-            </div>
-            <p class="project-desc">Local-first desktop workspace note editor and AI webview collector featuring advanced header modifications and clipboard CORS bypasses.</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">WebView Intercept:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">CSP & Frame Overrides</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Asset Copying:</span>
-                <span class="metric-val">Super Copy (CORS-free)</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Data Storage:</span>
-                <span class="metric-val">IndexedDB/Dexie Caching</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason/ninai" class="project-btn" target="_blank">Source Code <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
-
-        <!-- Card 6: DSA-C -->
-        <article class="project-card">
-          <div class="card-tech-header">
-            <span class="tech-spec-label">// D-06</span>
-            <div class="tech-dots">
-              <span class="channel-dot black" title="Standard C Code"></span>
-              <span class="channel-dot white" title="Manual Memory Management"></span>
-            </div>
-          </div>
-          <div>
-            <div class="project-card-header">
-              <div class="project-title-group">
-                <svg class="project-card-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"></rect><rect x="15" y="3" width="6" height="6" rx="1"></rect><rect x="9" y="15" width="6" height="6" rx="1"></rect><line x1="6" y1="9" x2="11" y2="15"></line><line x1="18" y1="9" x2="13" y2="15"></line></svg>
-                <h3 class="project-title">DSA-C</h3>
-              </div>
-              <span class="project-tech">C</span>
-            </div>
-            <p class="project-desc">A repository containing low-level implementations of fundamental and advanced data structures and algorithms in standard C, focusing on manual memory allocation and pointers.</p>
-            
-            <div class="project-metrics">
-              <div class="metric-row">
-                <span class="metric-label">DSA Language:</span>
-                <span class="metric-val" style="color: var(--yellow-accent);">Standard C</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Memory:</span>
-                <span class="metric-val">Manual (malloc / free)</span>
-              </div>
-              <div class="metric-row">
-                <span class="metric-label">Core structures:</span>
-                <span class="metric-val">Pointers, Lists, Trees, Stacks</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-links">
-            <a href="https://github.com/PandiaJason/DSA-C" class="project-btn" target="_blank">Source Code <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-
-
-    <!-- Actions & Resume -->
-    <section class="action-grid">
-      
-      <!-- Resume Download -->
-      <div class="action-card tech-outline">
-        <div>
-          <h3 style="color: var(--text-main);">Systems Resume</h3>
-          <p>Get the fully detailed resume highlighting systems-level achievements, low-level Rust/C++ projects, and code comprehension experience.</p>
+      <div class="modal-content-window resume-window tech-outline">
+        <div class="resume-info-block">
+          <h3 class="resume-block-title">GitHub Profile</h3>
+          <p class="resume-block-desc">Explore the public source code repositories, systems tool implementations, and active development activity.</p>
+          <a href="https://github.com/PandiaJason" class="action-btn-full" target="_blank">
+            GitHub Page 
+            <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
-        <a href="resume.md" class="action-btn-full">View Resume <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-      </div>
 
-      <!-- Contact Info -->
-      <div class="action-card tech-outline">
-        <div>
-          <h3 style="color: var(--text-main);">Connection Links</h3>
+        <div class="resume-contact-block">
+          <h3 class="resume-block-title">Connection Links</h3>
           <ul class="contact-list">
             <li class="contact-item">
-              <span class="contact-label"><svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email</span>
+              <span class="contact-label">
+                <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg> 
+                Email
+              </span>
               <span class="contact-val" style="color: var(--yellow-accent);">pandiajason@gmail.com</span>
             </li>
             <li class="contact-item">
-              <span class="contact-label"><svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Location</span>
+              <span class="contact-label">
+                <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg> 
+                Location
+              </span>
               <span class="contact-val">Coimbatore, India</span>
             </li>
             <li class="contact-item">
-              <span class="contact-label"><svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg> Affiliation</span>
+              <span class="contact-label">
+                <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg> 
+                Affiliation
+              </span>
               <span class="contact-val">Nehru Institute of Tech</span>
             </li>
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Jason (p) Academic Profile -->
+  <div class="modal-overlay" id="modal-profile-overlay">
+    <div class="modal-container">
+      <button class="modal-close-capsule" aria-label="Close Profile">
+        <span class="close-icon">✕</span>
+        <span class="close-label">JASON (P)</span>
+      </button>
       
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      // CORE LOGGED IN // OPERATIONAL 2026 // CO-DESIGNED BY JASON & ANTIGRAVITY
-    </footer>
-
+      <div class="modal-content-window tech-outline" style="background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); padding: 30px;">
+        <div class="product-header" style="border-bottom: 1.5px solid var(--metal-divider); padding-bottom: 12px; margin-bottom: 16px;">
+          <h2 class="product-title" style="margin: 0; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.5px;">jason (p)</h2>
+          <span class="product-tech-label" style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-dim); opacity: 0.6;">SYS-ENG v1.0.8</span>
+        </div>
+        
+        <div class="product-body" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 0;">
+          <div class="product-spec-row" style="display: flex; align-items: flex-start; gap: 12px;">
+            <span class="product-spec-dot" style="width: 6px; height: 6px; background: #000000; border-radius: 50%; flex-shrink: 0; margin-top: 6px;"></span>
+            <span class="product-spec-text" style="font-family: var(--font-sans); font-size: 0.95rem; font-weight: 500; color: var(--text-sub); line-height: 1.5;"><strong>Confirmed Ph.D. Research Scholar:</strong> Anna University (Part-Time) — officially approved by the Doctoral Committee to proceed with research under the Faculty of Computer Science and Information Engineering.</span>
+          </div>
+          <div class="product-spec-row" style="display: flex; align-items: flex-start; gap: 12px;">
+            <span class="product-spec-dot" style="width: 6px; height: 6px; background: #000000; border-radius: 50%; flex-shrink: 0; margin-top: 6px;"></span>
+            <span class="product-spec-text" style="font-family: var(--font-sans); font-size: 0.95rem; font-weight: 500; color: var(--text-sub); line-height: 1.5;"><strong>Thesis Focus:</strong> Mitigating Challenges in Deep Space Networking — optimizing routing protocols, congestion dynamics, and delay-tolerant architectures.</span>
+          </div>
+          <div class="product-spec-row" style="display: flex; align-items: flex-start; gap: 12px;">
+            <span class="product-spec-dot" style="width: 6px; height: 6px; background: #000000; border-radius: 50%; flex-shrink: 0; margin-top: 6px;"></span>
+            <span class="product-spec-text" style="font-family: var(--font-sans); font-size: 0.95rem; font-weight: 500; color: var(--text-sub); line-height: 1.5;"><strong>Academic Instruction &amp; Mentorship:</strong> Assistant Professor and Programming &amp; DSA Communicator. Active instructor in core programming paradigms, data structures &amp; algorithms (DSA), and agentic/autonomous AI coding technologies.</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
