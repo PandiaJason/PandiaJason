@@ -237,11 +237,66 @@ body {
   gap: 20px;
   margin-bottom: 35px;
 }
+
+@media (max-width: 767px) {
+  #mascot-card {
+    order: 1;
+  }
+  #card-profile {
+    order: 2;
+  }
+  .clock-widget {
+    order: 3;
+  }
+  #card-projects {
+    order: 4;
+  }
+  #card-console {
+    order: 5;
+  }
+  #card-creed {
+    order: 6;
+  }
+  #card-resume {
+    order: 7;
+  }
+}
+
 @media (min-width: 768px) {
   .desktop-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
     gap: 30px;
     margin-bottom: 50px;
+  }
+  .clock-widget {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #card-projects {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #card-console {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #mascot-card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #card-creed {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #card-resume {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #card-profile {
+    grid-column: 3;
+    grid-row: 3;
   }
 }
 
@@ -947,4 +1002,25 @@ footer {
   font-weight: 900;
   letter-spacing: 1.5px;
   opacity: 0.65;
+}
+
+/* --- Mascot Card Styling --- */
+#mascot-card {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+  aspect-ratio: 1 / 1;
+}
+.mascot-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#mascot-card:hover .mascot-img {
+  transform: scale(1.06) rotate(2deg);
 }
