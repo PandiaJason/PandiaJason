@@ -1104,20 +1104,29 @@ footer {
 /* --- Mascot Card Styling --- */
 #mascot-card {
   padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
-.mascot-img {
+#mascot-card .mascot-img {
+  grid-area: 1 / 1;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   border-radius: 12px;
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-#mascot-card:hover .mascot-img {
+.mascot-hover {
+  opacity: 0;
+  pointer-events: none;
+}
+#mascot-card:hover .mascot-default {
+  opacity: 0;
+  transform: scale(1.06) rotate(2deg);
+}
+#mascot-card:hover .mascot-hover {
+  opacity: 1;
   transform: scale(1.06) rotate(2deg);
 }
