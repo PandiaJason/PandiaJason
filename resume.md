@@ -35,11 +35,12 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 *   Built a high-fidelity Delay-Tolerant Network extension for the **ns-3** simulator, validated on Mars surface-to-orbit Ka-band/UHF relay contacts derived from NASA SPICE kernels.
 *   Presented research findings on routing survivability under congestion; paper submitted to the Elsevier journal **Ad Hoc Networks**.
 
-### 3. **amphitude** (C++, SDL2)
-*A serverless, zero-dependency peer-to-peer (P2P) arcade platform fighter and physics engine built from scratch.*
-*   Developed a multiplayer game engine from scratch in **C++ and SDL2**, bypassing commercial game engines to focus on raw performance and custom mechanics.
-*   Wrote a **custom reliable UDP transport protocol** implementing **STUN client bindings for NAT Hole Punching**, allowing players to establish direct client-to-client connections over public networks without central relay servers.
-*   Implemented custom packet acknowledgment, state interpolation, clock-drift compensation, and local-physics synchronization.
+### 3. **bats (WAND)** (Go 1.24+)
+*Deterministic safety enforcement and audit layer for autonomous AI agents.*
+*   Designed and built a high-performance **Go** safety proxy to evaluate and gatekeep autonomous AI agent actions in real-time.
+*   Enforced safety policies through a deterministic engine evaluating **183 pre-compiled rules** (BLOCK / CHALLENGE / ALLOW) in **<5ms** with zero LLM-probabilistic latency.
+*   Implemented a tamper-evident, append-only **Write-Ahead Log (WAL)** using SHA-256 cryptographic hash chaining and fsync durability for audit compliance.
+*   Integrated rate limiting and random cryptographically generated nonces to prevent action replay attacks.
 
 ### 4. **ninai** (Electron, React 19, TypeScript 5.9, Vite 7)
 *Local-first, dual-pane desktop workspace unifying AI web assets and a persistent Markdown notebook.*

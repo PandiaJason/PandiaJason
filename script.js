@@ -13,7 +13,7 @@ const commands = {
   -------------------------------------------------------------
   [nanos]       Display WebAssembly micro-runtime architecture
   [qubo]        View Ph.D. quadratic routing formulation
-  [amphitude]   Inspect C++ P2P socket engine specifications
+  [bats]        Display Go deterministic agent safety proxy
   [ranotot]     View Godot 4 gravity physics game structure
   [ninai]       Bypass CORS/CSP Electron webview structure
   [dsa-c]       Inspect C DSA repository implementations
@@ -54,21 +54,22 @@ const commands = {
   4. Solver automatically balances and spreads traffic to alternative orbits.
   5. In deep overloads, Algorithm resolves remaining conflicts via priority-aware eviction.`,
 
-  amphitude: `[amphitude] C++ Zero-Dependency Serverless Multiplayer
+  bats: `[bats] WAND -- Watch. Audit. Never Delegate.
   -------------------------------------------------------------
-  Language: C++ (C++17) / SDL2
-  Architecture: Authoritative Client-Host Peer-to-Peer
+  Language: Go (1.24+)
+  Framework: Deterministic safety proxy for autonomous AI agents
 
-  Networking Stack:
-  * Reliable UDP (rUDP): Custom packet structure with sequence tracking.
-  * NAT Traversal: Custom STUN client implementation to query public mapping.
-  * Connection Bridge: Direct client-to-client UDP Hole Punching.
-  * State Compression: Delta-encoded state packets to fit within MTU.
-  * Synchronization: Clock drift compensation and active input buffering.
+  Security Design Paradigm:
+  [Autonomous Agent]  --->  [WAND Deterministic Engine]  --->  [Tamper-Evident WAL]  --->  [Infrastructure]
+                                   |
+                        183 Pre-Compiled Rules
+                        (BLOCK / CHALLENGE / ALLOW)
 
-  Structure:
-  [Host Player]  <==== STUN NAT Hole Punch ====>  [Client Player]
-  (Authoritative)      (Direct UDP Packets)       (Input Forwarding)`,
+  Key Features:
+  * Deterministic Policy: 136 BLOCK and 47 CHALLENGE rules evaluated via pre-compiled regex.
+  * Performance: Evaluated in <5ms with zero LLM/probabilistic latency.
+  * Compliance: Cryptographic audit log using SHA-256 hash chaining with fsync durability.
+  * Safety Gatekeeping: Hard blocks prompt injections, destructive commands, or API resource exhaustion.`,
 
   ranotot: `[Ranotot] 2D Gravity-Based Space Delivery Game
   -------------------------------------------------------------
