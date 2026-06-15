@@ -250,12 +250,12 @@ window.addEventListener('resize', () => {
 });
 
 // Physics/Node coordinates
-const mars = { x: 80, y: 0, r: 30, color: '#e74c3c', label: 'Mars' };
-const earth = { x: 0, y: 0, r: 36, color: '#3498db', label: 'Earth DSN' };
+const mars = { x: 80, y: 0, r: 30, color: '#ffcc00', label: 'Mars' };
+const earth = { x: 0, y: 0, r: 36, color: '#ffffff', label: 'Earth DSN' };
 
-const rover = { angle: 0, r: 8, color: '#e67e22', label: 'Rover' };
-const mro = { orbitR: 65, speed: 0.009, angle: 0, r: 6, color: '#f1c40f', label: 'MRO' };
-const odyssey = { orbitR: 100, speed: 0.006, angle: Math.PI, r: 6, color: '#f1c40f', label: 'Odyssey' };
+const rover = { angle: 0, r: 8, color: '#000000', label: 'Rover' };
+const mro = { orbitR: 65, speed: 0.009, angle: 0, r: 6, color: '#000000', label: 'MRO' };
+const odyssey = { orbitR: 100, speed: 0.006, angle: Math.PI, r: 6, color: '#000000', label: 'Odyssey' };
 
 // Queue variables to show store-and-forward state
 let mroQueue = [];
@@ -294,7 +294,7 @@ class DataPacket {
     
     ctx.beginPath();
     ctx.arc(currentX, currentY, 4, 0, Math.PI * 2);
-    ctx.fillStyle = this.priority > 5 ? '#e6b800' : '#7f8c8d';
+    ctx.fillStyle = this.priority > 5 ? '#ffcc00' : '#000000';
     ctx.fill();
   }
 }
@@ -340,24 +340,24 @@ function drawSimulation() {
   // Draw Earth
   ctx.beginPath();
   ctx.arc(earth.x, earth.y, earth.r, 0, Math.PI * 2);
-  ctx.fillStyle = '#eaf2f8';
-  ctx.strokeStyle = '#3498db';
+  ctx.fillStyle = '#ffffff';
+  ctx.strokeStyle = '#000000';
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
   ctx.font = '600 10px Inter';
-  ctx.fillStyle = '#2980b9';
+  ctx.fillStyle = '#000000';
   ctx.fillText(earth.label, earth.x - 26, earth.y + 4);
 
   // Draw Mars
   ctx.beginPath();
   ctx.arc(mars.x, mars.y, mars.r, 0, Math.PI * 2);
-  ctx.fillStyle = '#fdebd0';
-  ctx.strokeStyle = '#e74c3c';
+  ctx.fillStyle = '#ffcc00';
+  ctx.strokeStyle = '#000000';
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
-  ctx.fillStyle = '#c0392b';
+  ctx.fillStyle = '#000000';
   ctx.fillText(mars.label, mars.x - 12, mars.y + 4);
 
   // Rover stationary on Mars surface
@@ -367,7 +367,9 @@ function drawSimulation() {
   ctx.arc(roverX, roverY, rover.r, 0, Math.PI * 2);
   ctx.fillStyle = rover.color;
   ctx.fill();
-  ctx.fillStyle = '#7f8c8d';
+  ctx.strokeStyle = '#000000';
+  ctx.stroke();
+  ctx.fillStyle = '#000000';
   ctx.fillText('Rover', roverX + 10, roverY - 5);
 
   // Update Orbiters
@@ -397,13 +399,13 @@ function drawSimulation() {
   ctx.arc(mroX, mroY, mro.r, 0, Math.PI * 2);
   ctx.fillStyle = mro.color;
   ctx.fill();
-  ctx.strokeStyle = '#d4ac0d';
+  ctx.strokeStyle = '#ffcc00';
   ctx.stroke();
-  ctx.fillStyle = '#7f8c8d';
+  ctx.fillStyle = '#000000';
   ctx.fillText('MRO', mroX - 10, mroY - 10);
   
   // Render MRO queue buffer indicator
-  ctx.fillStyle = 'rgba(0,0,0,0.05)';
+  ctx.fillStyle = 'rgba(0,0,0,0.1)';
   ctx.fillRect(mroX - 10, mroY + 8, 20, 4);
   ctx.fillStyle = varColor('yellow-accent');
   ctx.fillRect(mroX - 10, mroY + 8, Math.min(20, mroQueue.length * 4), 4);
@@ -413,13 +415,13 @@ function drawSimulation() {
   ctx.arc(odyX, odyY, odyssey.r, 0, Math.PI * 2);
   ctx.fillStyle = odyssey.color;
   ctx.fill();
-  ctx.strokeStyle = '#d4ac0d';
+  ctx.strokeStyle = '#ffcc00';
   ctx.stroke();
-  ctx.fillStyle = '#7f8c8d';
+  ctx.fillStyle = '#000000';
   ctx.fillText('Odyssey', odyX - 18, odyY - 10);
   
   // Render Odyssey queue buffer indicator
-  ctx.fillStyle = 'rgba(0,0,0,0.05)';
+  ctx.fillStyle = 'rgba(0,0,0,0.1)';
   ctx.fillRect(odyX - 10, odyY + 8, 20, 4);
   ctx.fillStyle = varColor('yellow-accent');
   ctx.fillRect(odyX - 10, odyY + 8, Math.min(20, odysseyQueue.length * 4), 4);
@@ -447,7 +449,7 @@ function drawSimulation() {
     ctx.beginPath();
     ctx.moveTo(roverX, roverY);
     ctx.lineTo(mroX, mroY);
-    ctx.strokeStyle = 'rgba(230, 126, 34, 0.35)';
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.4)';
     ctx.lineWidth = 1.5;
     ctx.stroke();
   }
@@ -455,7 +457,7 @@ function drawSimulation() {
     ctx.beginPath();
     ctx.moveTo(roverX, roverY);
     ctx.lineTo(odyX, odyY);
-    ctx.strokeStyle = 'rgba(230, 126, 34, 0.35)';
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.4)';
     ctx.lineWidth = 1.5;
     ctx.stroke();
   }
@@ -463,7 +465,7 @@ function drawSimulation() {
     ctx.beginPath();
     ctx.moveTo(mroX, mroY);
     ctx.lineTo(earth.x, earth.y);
-    ctx.strokeStyle = 'rgba(52, 152, 219, 0.25)';
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
     ctx.lineWidth = 1.2;
     ctx.stroke();
   }
@@ -471,7 +473,7 @@ function drawSimulation() {
     ctx.beginPath();
     ctx.moveTo(odyX, odyY);
     ctx.lineTo(earth.x, earth.y);
-    ctx.strokeStyle = 'rgba(52, 152, 219, 0.25)';
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
     ctx.lineWidth = 1.2;
     ctx.stroke();
   }
@@ -546,7 +548,7 @@ function varColor(name) {
 function drawGlowCircle(x, y, radius, color) {
   ctx.beginPath();
   ctx.arc(x, y, radius, 0, Math.PI * 2);
-  ctx.strokeStyle = color;
+  ctx.strokeStyle = '#ffcc00';
   ctx.lineWidth = 2;
   ctx.stroke();
 }
