@@ -233,70 +233,167 @@ body {
 /* --- Desktop Grid Layout --- */
 .desktop-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-bottom: 35px;
+  grid-template-columns: 80px 140px 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0 auto 35px auto;
 }
 
-@media (max-width: 767px) {
-  #mascot-card {
-    order: 1;
-  }
-  #card-profile {
-    order: 2;
-  }
-  .clock-widget {
-    order: 3;
-  }
-  #card-projects {
-    order: 4;
-  }
-  #card-console {
-    order: 5;
-  }
-  #card-creed {
-    order: 6;
-  }
-  #card-resume {
-    order: 7;
-  }
+.clock-widget {
+  grid-column: 1;
+  grid-row: 1;
+}
+#card-projects {
+  grid-column: 3;
+  grid-row: 1;
+}
+#card-console {
+  grid-column: 1;
+  grid-row: 2;
+}
+#mascot-card {
+  grid-column: 2;
+  grid-row: 2;
+}
+#card-creed {
+  grid-column: 3;
+  grid-row: 2;
+}
+#card-resume {
+  grid-column: 1;
+  grid-row: 3;
+}
+#card-profile {
+  grid-column: 3;
+  grid-row: 3;
 }
 
 @media (min-width: 768px) {
   .desktop-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.35fr 1fr;
-    align-items: center;
+    grid-template-columns: 120px 240px 120px;
     gap: 30px;
     margin-bottom: 50px;
   }
-  .clock-widget {
-    grid-column: 1;
-    grid-row: 1;
+}
+
+/* Styling non-mascot cards to match desktop icon sizes */
+.desktop-grid > .widget-card:not(#mascot-card) {
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.desktop-grid > .widget-card:not(#mascot-card) .card-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.desktop-grid > .widget-card:not(#mascot-card) .folder-svg {
+  width: 32px;
+  height: 32px;
+}
+.desktop-grid > .widget-card:not(#mascot-card) .card-info {
+  gap: 2px;
+  text-align: center;
+  max-width: 100%;
+}
+.desktop-grid > .widget-card:not(#mascot-card) .card-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.desktop-grid > .widget-card:not(#mascot-card) .card-subtitle {
+  font-size: 0.45rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Analog Clock Widget Overrides inside the desktop grid */
+.desktop-grid > .clock-widget {
+  padding: 6px !important;
+  background: #ffffff;
+}
+.desktop-grid > .clock-widget .clock-face {
+  border-width: 1px;
+}
+.desktop-grid > .clock-widget .tick {
+  height: 4px;
+  width: 1px;
+  margin-left: -0.5px;
+}
+.desktop-grid > .clock-widget .tick-12 { top: 2px; }
+.desktop-grid > .clock-widget .tick-3  { top: 50%; right: 2px; left: auto; width: 4px; height: 1px; transform: translateY(-0.5px); }
+.desktop-grid > .clock-widget .tick-6  { bottom: 2px; }
+.desktop-grid > .clock-widget .tick-9  { top: 50%; left: 2px; width: 4px; height: 1px; transform: translateY(-0.5px); }
+
+.desktop-grid > .clock-widget .hour-hand {
+  width: 1.5px;
+  margin-left: -0.75px;
+}
+.desktop-grid > .clock-widget .minute-hand {
+  width: 1px;
+  margin-left: -0.5px;
+}
+.desktop-grid > .clock-widget .second-hand {
+  width: 0.6px;
+  margin-left: -0.3px;
+}
+.desktop-grid > .clock-widget .clock-center {
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-width: 0.8px;
+}
+
+@media (min-width: 768px) {
+  .desktop-grid > .widget-card:not(#mascot-card) {
+    padding: 12px;
+    border-radius: 16px;
+    gap: 10px;
   }
-  #card-projects {
-    grid-column: 3;
-    grid-row: 1;
+  .desktop-grid > .widget-card:not(#mascot-card) .folder-svg {
+    width: 44px;
+    height: 44px;
   }
-  #card-console {
-    grid-column: 1;
-    grid-row: 2;
+  .desktop-grid > .widget-card:not(#mascot-card) .card-title {
+    font-size: 0.85rem;
   }
-  #mascot-card {
-    grid-column: 2;
-    grid-row: 2;
+  .desktop-grid > .widget-card:not(#mascot-card) .card-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
   }
-  #card-creed {
-    grid-column: 3;
-    grid-row: 2;
+  .desktop-grid > .clock-widget {
+    padding: 10px !important;
   }
-  #card-resume {
-    grid-column: 1;
-    grid-row: 3;
+  .desktop-grid > .clock-widget .tick {
+    height: 6px;
   }
-  #card-profile {
-    grid-column: 3;
-    grid-row: 3;
+  .desktop-grid > .clock-widget .tick-12 { top: 3px; }
+  .desktop-grid > .clock-widget .tick-3  { right: 3px; width: 6px; }
+  .desktop-grid > .clock-widget .tick-6  { bottom: 3px; }
+  .desktop-grid > .clock-widget .tick-9  { left: 3px; width: 6px; }
+  
+  .desktop-grid > .clock-widget .hour-hand {
+    width: 2px;
+    margin-left: -1px;
+  }
+  .desktop-grid > .clock-widget .minute-hand {
+    width: 1.2px;
+    margin-left: -0.6px;
+  }
+  .desktop-grid > .clock-widget .second-hand {
+    width: 0.8px;
+    margin-left: -0.4px;
   }
 }
 
