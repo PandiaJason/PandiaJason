@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Pandian | Systems & Infrastructure Engineer</title>
+  <meta name="description" content="Portfolio of Jason Pandian: Ph.D. Scholar at Anna University, Systems Builder, and developer of nanos, amphitude, and qubo-space-routing.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt-flicker">
+  
+  <!-- CRT Screen Filter Overlay -->
+  <div class="crt-overlay"></div>
+
+  <div class="container">
+    
+    <!-- Header Warning Stripes -->
+    <div class="warning-stripes" style="border-radius: 4px 4px 0 0;"></div>
+    
+    <!-- Profile Header Panel -->
+    <header class="header-panel">
+      <div class="profile-title-container">
+        <div class="profile-info">
+          <h1>JASON PANDIAN</h1>
+          <p>Systems & Infrastructure Engineer | Ph.D. Researcher | Technical Code Auditor</p>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>SYSTEM STATE: <span class="accent-text">CO-DESIGNING WITH AI</span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Interactive Retro Terminal -->
+    <section aria-label="Terminal Console">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="t-btn"></span>
+            <span class="t-btn yellow"></span>
+            <span class="t-btn"></span>
+          </div>
+          <div class="terminal-title">PANDIA-SYSTEMS v1.0.5 // GUEST CONSOLE</div>
+          <div style="width: 50px;"></div>
+        </div>
+        
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-output" id="terminal-output">Welcome to Pandia-Systems retro-terminal.
+Type <span class="accent-text">help</span> to list available commands.
+
+guest@pandiajason.github.io:~$ </div>
+          <div class="terminal-line">
+            <span class="terminal-prompt">guest@pandiajason.github.io:~$</span>
+            <input type="text" class="terminal-input" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+            <span class="cursor-blink" id="input-cursor"></span>
+          </div>
+        </div>
+        
+        <!-- Terminal Quick Buttons -->
+        <div class="terminal-shortcuts">
+          <span class="shortcut-label">QUICK RUN:</span>
+          <button class="shortcut-btn" data-cmd="help">help</button>
+          <button class="shortcut-btn" data-cmd="nanos">nanos</button>
+          <button class="shortcut-btn" data-cmd="qubo">qubo</button>
+          <button class="shortcut-btn" data-cmd="amphitude">amphitude</button>
+          <button class="shortcut-btn" data-cmd="ninai">ninai</button>
+          <button class="shortcut-btn" data-cmd="creed">creed</button>
+          <button class="shortcut-btn" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Builder Creed Banner -->
+    <section class="creed-container" aria-label="Philosophy">
+      <div class="creed-card">
+        <div class="warning-stripes" style="position: absolute; top: 0; left: 0; height: 4px;"></div>
+        <p>
+          "I don't just learn syntax; I build. I learn by building my own version of a system, studying existing production implementations, comparing the differences, and recursively refining both design and code. I believe that mastering data structures and algorithms with AI as an accelerator is a developer's superpower. With perfect agentic orchestration and a deep logical understanding of low-level systems, I build high-performance software that solves real-world challenges—turning complex architectural concepts into highly optimized working beasts."
+        </p>
+        <div class="warning-stripes" style="position: absolute; bottom: 0; left: 0; height: 4px;"></div>
+      </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section id="portfolio">
+      <h2 class="section-title">SYSTEMS PORTFOLIO</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Card 1: nanos -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title accent-text">nanos</h3>
+              <span class="project-tech">Rust / WASM</span>
+            </div>
+            <p class="project-desc">Lightweight, process-isolated WebAssembly micro-runtime for sandboxed AI agents with native GPU (Metal & CUDA) offload capabilities.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">Sandbox Boot:</span>
+                <span class="metric-val accent-text">&lt; 3 ms</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Memory Footprint:</span>
+                <span class="metric-val">~20 MB (50x lighter)</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Tool Latency (FFI):</span>
+                <span class="metric-val">&lt; 1 ms (300x faster)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason/nanos" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 2: qubo-space-routing -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title accent-text">qubo-routing</h3>
+              <span class="project-tech">Python / C++ / TeX</span>
+            </div>
+            <p class="project-desc">Always-feasible Delay-Tolerant Network (DTN) routing optimization using Lagrangian relaxation and quadratic soft-congestion constraints.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">Data Delivery:</span>
+                <span class="metric-val accent-text">2.4x higher than CGR</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Solver Runtime:</span>
+                <span class="metric-val">&lt; 200 ms</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Feasibility:</span>
+                <span class="metric-val">100% (under overload)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason" class="project-btn" target="_blank">RESEARCH &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 3: amphitude -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title accent-text">amphitude</h3>
+              <span class="project-tech">C++ / SDL2</span>
+            </div>
+            <p class="project-desc">A serverless, zero-dependency peer-to-peer multiplayer platform fighter built from scratch with custom physics and networking.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">Network Architecture:</span>
+                <span class="metric-val accent-text">P2P Reliable UDP</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">NAT Traversal:</span>
+                <span class="metric-val">Custom STUN client bindings</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Dependencies:</span>
+                <span class="metric-val">SDL2 (zero heavy engines)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason/amphitude" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 4: ninai -->
+        <article class="project-card">
+          <div>
+            <div class="project-card-header">
+              <h3 class="project-title accent-text">ninai</h3>
+              <span class="project-tech">Electron / React 19</span>
+            </div>
+            <p class="project-desc">Local-first desktop workspace side-by-side note editor and AI tool collector with custom desktop API overrides.</p>
+            
+            <div class="project-metrics">
+              <div class="metric-row">
+                <span class="metric-label">CSP Bypasses:</span>
+                <span class="metric-val accent-text">IPC Main Header Strip</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Copy Mechanism:</span>
+                <span class="metric-val">Super Copy (CORS-free)</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Local Cache:</span>
+                <span class="metric-val">Debounced IndexedDB</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/PandiaJason/ninai" class="project-btn" target="_blank">SOURCE_CODE &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Ph.D. Research & Orbit Visualizer -->
+    <section class="split-layout">
+      
+      <!-- Ph.D. Card -->
+      <div class="phd-card">
+        <h2 class="section-title">PH.D. RESEARCH</h2>
+        
+        <div class="phd-thesis">
+          <span class="thesis-tag">Thesis Project</span>
+          <h3 class="thesis-title">Always-Feasible DTN Routing via Quadratic Soft Constraints</h3>
+          <p class="thesis-journal">Submitted/Published in: <span class="accent-text">Elsevier Ad Hoc Networks</span></p>
+          
+          <ul class="thesis-highlights">
+            <li>Replaced hard capacity constraints with **quadratic soft penalties** to guarantee valid routing under arbitrary network overloads.</li>
+            <li>Proved that squaring the capacity violation creates pairwise congestion cross-terms, enabling automatic load-balancing.</li>
+            <li>Validated against NASA SPICE-derived planetary orbit positions (surface asset to relay orbit to Earth ground station links).</li>
+            <li>Matches ILP-optimal mission value while running in under 200 ms, making it quantum-annealer ready.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Live Network Visualizer -->
+      <div class="visualizer-panel">
+        <div class="visualizer-header">
+          <span>DTN ORBITAL SIMULATION</span>
+          <span class="accent-text">LIVE RUNNING</span>
+        </div>
+        
+        <div class="canvas-container">
+          <canvas id="dtn-canvas"></canvas>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Actions & Resume -->
+    <section class="action-grid">
+      
+      <!-- Resume Download -->
+      <div class="action-card">
+        <div>
+          <h3 class="accent-text">SYSTEMS RESUME</h3>
+          <p>Get the fully detailed resume highlighting PhD systems-level achievements, low-level Rust/C++ projects, and code comprehension experience.</p>
+        </div>
+        <a href="resume.md" class="action-btn-full">VIEW_RESUME_DOC &rarr;</a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="action-card">
+        <div>
+          <h3 class="accent-text">CONNECTION_LINKS</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-label">EMAIL:</span>
+              <span class="contact-val accent-text">pandiajason@gmail.com</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">LOCATION:</span>
+              <span class="contact-val">Coimbatore, India</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">AFFILIATION:</span>
+              <span class="contact-val">Nehru Institute of Tech</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      // CORE LOGGED IN // OPERATIONAL 2026 // CO-DESIGNED BY JASON & ANTIGRAVITY
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
