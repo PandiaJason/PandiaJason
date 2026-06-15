@@ -75,7 +75,7 @@ body {
   position: fixed;
   border-radius: 50%;
   filter: blur(120px);
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
   opacity: 0.38;
   animation: float-blob 25s infinite ease-in-out alternate;
@@ -151,41 +151,24 @@ body {
 }
 
 
-.yellow-bar {
-  height: 4px;
-  background: var(--yellow);
-  border-bottom: 1.5px solid #000000;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
 /* --- Section Dividers --- */
 .section-title {
   font-family: var(--font-title);
-  font-size: 2.1rem;
-  font-weight: 900;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   gap: 15px;
   color: var(--text-main);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .section-title::after {
   content: "";
   flex: 1;
-  height: 4px;
-  background: repeating-linear-gradient(
-    -45deg,
-    #000000,
-    #000000 4px,
-    var(--yellow) 4px,
-    var(--yellow) 8px
-  );
+  height: 1px;
+  background: var(--metal-divider);
 }
 
 /* --- Headers & Panels (White Neumorphic Plate + Caution Accent) --- */
@@ -193,7 +176,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--nm-raised);
   padding: 35px;
@@ -212,11 +195,11 @@ body {
 
 .profile-info h1 {
   font-family: var(--font-title);
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -1.5px;
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
   color: var(--text-main);
-  text-transform: uppercase;
+  text-transform: none;
   margin-bottom: 5px;
 }
 
@@ -230,7 +213,7 @@ body {
 .status-badge {
   background-color: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   font-family: var(--font-mono);
   box-shadow: var(--nm-raised);
   border-radius: 20px;
@@ -263,7 +246,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: var(--nm-raised);
   border-radius: var(--radius);
   margin-bottom: 50px;
@@ -313,7 +296,7 @@ body {
   background-color: #000000; /* Sleek black screen */
   color: #ffffff;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
-  border: 2px solid #000000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   margin: 15px;
 }
@@ -382,7 +365,7 @@ body {
 .shortcut-btn {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border: 1.5px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: #000000;
   border-radius: 20px;
   padding: 6px 16px;
@@ -414,7 +397,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: var(--nm-raised);
   border-radius: var(--radius);
   padding: 40px;
@@ -426,7 +409,7 @@ body {
 .creed-card p {
   font-family: var(--font-title);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.6;
   color: var(--text-main);
   max-width: 900px;
@@ -486,7 +469,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--nm-raised);
   padding: 30px;
@@ -517,7 +500,7 @@ body {
 .project-title {
   font-family: var(--font-title);
   font-size: 1.45rem;
-  font-weight: 900;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -527,7 +510,7 @@ body {
   font-weight: 900;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border: 1.5px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: #000000;
   padding: 4px 10px;
   border-radius: 6px;
@@ -551,7 +534,7 @@ body {
   margin-bottom: 25px;
   box-shadow: var(--nm-inset);
   font-size: 0.85rem;
-  border: 1.5px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .metric-row {
@@ -582,7 +565,7 @@ body {
 .project-btn {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border: 1.5px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: var(--text-main);
   padding: 9px 18px;
   border-radius: 20px;
@@ -622,7 +605,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--nm-raised);
   padding: 35px;
@@ -641,9 +624,10 @@ body {
 .action-card h3 {
   font-family: var(--font-title);
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 12px;
   color: var(--text-main);
+  text-transform: none;
 }
 
 .action-card p {
@@ -657,7 +641,7 @@ body {
   width: 100%;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border: 1.5px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: #000000;
   box-shadow: var(--nm-btn-hover);
   padding: 14px;
