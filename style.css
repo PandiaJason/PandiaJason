@@ -363,29 +363,26 @@ body {
 }
 
 .shortcut-btn {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   color: #000000;
   border-radius: 20px;
   padding: 6px 16px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: var(--nm-btn-hover);
   transition: var(--transition);
 }
 
 .shortcut-btn:hover {
-  background: var(--glass-bg);
+  background: rgba(0, 0, 0, 0.08);
   border-color: var(--yellow);
   box-shadow: 0 0 8px var(--yellow-glow);
-  transform: translateY(1px);
 }
 
 .shortcut-btn:active {
-  box-shadow: var(--nm-inset);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 /* --- Builder Creed Panel (Caution Styled) --- */
@@ -562,14 +559,24 @@ body {
   align-items: center;
 }
 
-.project-btn {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+.project-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-card-icon {
   color: var(--text-main);
-  padding: 9px 18px;
-  border-radius: 20px;
-  font-family: var(--font-sans);
+  flex-shrink: 0;
+}
+
+.project-btn {
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -578,18 +585,22 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: var(--nm-btn-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .project-btn:hover {
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.82);
   border-color: var(--yellow);
   color: #000000;
-  box-shadow: 0 0 8px var(--yellow-glow);
+  box-shadow: 0 0 12px var(--yellow-glow);
 }
 
 .project-btn:active {
-  box-shadow: var(--nm-inset);
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  flex-shrink: 0;
 }
 
 
@@ -639,13 +650,11 @@ body {
 
 .action-btn-full {
   width: 100%;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  color: #000000;
-  box-shadow: var(--nm-btn-hover);
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
   padding: 14px;
-  border-radius: 20px;
+  border-radius: 24px;
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 900;
@@ -656,17 +665,24 @@ body {
   justify-content: center;
   gap: 8px;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .action-btn-full:hover {
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.82);
   border-color: var(--yellow);
-  box-shadow: 0 0 10px var(--yellow-glow);
-  transform: translateY(1px);
+  color: #000000;
+  box-shadow: 0 0 12px var(--yellow-glow);
 }
 
 .action-btn-full:active {
-  box-shadow: var(--nm-inset);
+  transform: translateY(1px);
+}
+
+.contact-icon {
+  margin-right: 6px;
+  vertical-align: middle;
+  opacity: 0.8;
 }
 
 .contact-list {
