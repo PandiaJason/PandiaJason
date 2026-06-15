@@ -2,11 +2,11 @@
 
 /* --- Nothing Tech Inspired Design System --- */
 :root {
-  --bg-metal: radial-gradient(rgba(0, 0, 0, 0.08) 1.2px, transparent 1.2px);
+  --bg-metal: radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px);
   --bg-white: #ffffff;
   
   /* Glassmorphism Bases */
-  --card-bg: rgba(255, 255, 255, 0.35);
+  --card-bg: #ffffff;
   --metal-divider: rgba(0, 0, 0, 0.08);
   
   /* Yellow Accent for Highlights Only */
@@ -35,7 +35,7 @@
     3px 3px 8px rgba(148, 163, 184, 0.15);
 
   /* Glassmorphism Overlays */
-  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg: #ffffff;
   --glass-border: rgba(255, 255, 255, 0.55);
   --glass-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.08);
   --glass-blur: blur(20px);
@@ -57,7 +57,7 @@
 }
 
 body {
-  background-color: #f7f9fb;
+  background-color: #f4f4f4;
   background-image: var(--bg-metal);
   background-size: 28px 28px;
   background-attachment: fixed;
@@ -71,13 +71,7 @@ body {
 
 /* Nothing Tech Inspired Background Blobs */
 .bg-blob {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.48;
-  animation: float-blob 30s infinite ease-in-out alternate;
+  display: none;
 }
 .yellow-blob {
   top: 15%;
@@ -540,9 +534,9 @@ body {
 
 /* Content Window */
 .modal-content-window {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 12px 40px 0 rgba(148, 163, 184, 0.1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.06);
   border-radius: var(--radius);
   padding: 30px;
   width: 100%;
@@ -555,7 +549,7 @@ body {
 .projects-list-window {
   padding: 0;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
 }
 .accordion-item {
   border-bottom: 1.5px solid var(--metal-divider);
@@ -587,13 +581,7 @@ body {
   align-items: center;
   gap: 16px;
 }
-.accordion-index {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  opacity: 0.55;
-  letter-spacing: 1px;
-}
+
 .accordion-title {
   font-family: var(--font-title);
   font-size: 1.35rem;
