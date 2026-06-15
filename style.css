@@ -74,10 +74,10 @@ body {
 .bg-blob {
   position: fixed;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(95px);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.38;
+  opacity: 0.52; /* Enhanced opacity to show off the metallic reflections clearly */
   animation: float-blob 25s infinite ease-in-out alternate;
 }
 .yellow-blob {
@@ -85,28 +85,28 @@ body {
   left: -5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 204, 0, 0.45) 0%, rgba(255, 204, 0, 0) 70%);
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 215, 0, 0.42) 35%, rgba(184, 134, 11, 0.18) 70%, transparent 100%);
 }
 .copper-blob-1 {
   bottom: 15%;
   left: 8%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(191, 120, 89, 0.4) 0%, rgba(191, 120, 89, 0) 70%);
+  background: radial-gradient(circle at 45% 45%, rgba(255, 255, 255, 0.75) 0%, rgba(191, 120, 89, 0.45) 30%, rgba(120, 60, 40, 0.22) 65%, rgba(0, 0, 0, 0.15) 85%, transparent 100%);
 }
 .copper-blob-2 {
   top: 10%;
   right: 5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(186, 123, 102, 0.35) 0%, rgba(186, 123, 102, 0) 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(186, 123, 102, 0.4) 35%, rgba(90, 45, 30, 0.15) 75%, transparent 100%);
 }
 .dark-blob {
   bottom: 8%;
   right: -5%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(148, 163, 184, 0.25) 0%, rgba(148, 163, 184, 0) 70%);
+  background: radial-gradient(circle at 35% 35%, rgba(240, 240, 240, 0.5) 0%, rgba(100, 116, 139, 0.3) 40%, rgba(15, 23, 42, 0.15) 75%, transparent 100%);
 }
 
 @keyframes float-blob {
