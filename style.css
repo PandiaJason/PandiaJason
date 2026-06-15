@@ -107,26 +107,27 @@ body {
 
 .screw {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 50%, #94a3b8 100%);
-  border: 1px solid #000000;
+  width: 12px;
+  height: 12px;
+  background: var(--bg);
+  border: none;
   border-radius: 50%;
+  box-shadow: var(--nm-inset);
   pointer-events: none;
   z-index: 10;
-  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.8), 1px 1px 2px rgba(0,0,0,0.15);
 }
 
-/* Horizontal/vertical slot line on the screw head */
+/* Neumorphic raised button inside the screw recess */
 .screw::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 3px;
+  left: 3px;
   width: 6px;
-  height: 1.5px;
-  background: #000000;
-  transform: translate(-50%, -50%) rotate(45deg);
+  height: 6px;
+  background: var(--bg);
+  border-radius: 50%;
+  box-shadow: -1.5px -1.5px 3px #ffffff, 1.5px 1.5px 3px rgba(166, 180, 200, 0.4);
 }
 
 .screw.tl { top: 12px; left: 12px; }
@@ -137,7 +138,6 @@ body {
 .yellow-bar {
   height: 6px;
   background: var(--yellow);
-  border-bottom: 2px solid #000000;
   width: 100%;
   position: absolute;
   top: 0;
@@ -179,7 +179,7 @@ body {
   padding: 35px;
   margin-bottom: 40px;
   position: relative;
-  border: 1.5px solid var(--metal-divider);
+  border: none;
   overflow: hidden;
 }
 
@@ -209,24 +209,24 @@ body {
 
 /* Yellow Warning Badge with Black Text */
 .status-badge {
-  background-color: #000000;
-  border: 2px solid var(--yellow);
+  background-color: var(--yellow);
+  border: none;
   font-family: var(--font-mono);
-  box-shadow: 3px 3px 0px var(--yellow);
-  border-radius: 4px;
+  box-shadow: -3px -3px 8px #ffffff, 3px 3px 8px rgba(166, 180, 200, 0.4);
+  border-radius: 6px;
   padding: 6px 14px;
   font-size: 0.82rem;
   font-weight: 900;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--yellow);
+  color: #000000;
 }
 
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--yellow);
+  background-color: #000000;
   border-radius: 50%;
   animation: pulse 1.5s infinite;
 }
@@ -239,10 +239,8 @@ body {
 
 /* --- Yellow Backlit Developer Console (Terminal Widget) --- */
 .terminal-window {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid #000000;
+  background: var(--card-bg);
+  border: none;
   box-shadow: var(--nm-raised);
   border-radius: var(--radius);
   margin-bottom: 50px;
@@ -251,12 +249,11 @@ body {
 }
 
 .terminal-header {
-  background: #000000;
-  padding: 12px 22px;
+  background: transparent;
+  padding: 18px 22px 5px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--yellow);
 }
 
 .terminal-buttons {
@@ -268,30 +265,34 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #000000;
-  border: 1.5px solid var(--yellow);
+  background: var(--bg);
+  box-shadow: var(--nm-inset);
+  border: none;
 }
 .t-btn.yellow {
   background: var(--yellow);
+  box-shadow: -1px -1px 2px #ffffff, 1px 1px 2px rgba(166, 180, 200, 0.5);
 }
 
 .terminal-title {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 900;
-  color: var(--yellow);
+  color: var(--text-main);
 }
 
-/* Black screen with Yellow text */
+/* Light screen with Black text */
 .terminal-body {
   padding: 24px;
   height: 380px;
   overflow-y: auto;
   font-family: var(--font-mono);
   font-size: 0.95rem;
-  background-color: #000000; /* Retro black screen */
-  color: var(--yellow);
-  border-bottom: 2px solid #000000;
+  background-color: var(--bg);
+  color: var(--text-main);
+  box-shadow: var(--nm-inset);
+  border-radius: var(--radius);
+  margin: 15px;
 }
 
 .terminal-output {
@@ -385,7 +386,7 @@ body {
 
 .creed-card {
   background: var(--card-bg);
-  border: 2px solid var(--text-main);
+  border: none;
   box-shadow: var(--nm-raised);
   border-radius: var(--radius);
   padding: 40px;
@@ -416,8 +417,7 @@ body {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--nm-raised);
-  border: 1.5px solid var(--metal-divider);
-  border-top: 4px solid var(--yellow); /* Yellow next */
+  border: none;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -429,7 +429,6 @@ body {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--yellow);
   box-shadow: 
     -10px -10px 25px rgba(255,255,255,0.95), 
     10px 10px 25px rgba(166,180,200,0.35),
@@ -456,9 +455,10 @@ body {
   font-weight: 900;
   background: var(--yellow);
   color: #000000;
-  padding: 3px 8px;
-  border-radius: 4px;
-  border: 1.5px solid #000000;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: -2px -2px 5px #ffffff, 2px 2px 5px rgba(166, 180, 200, 0.4);
+  border: none;
 }
 
 .project-desc {
@@ -471,13 +471,13 @@ body {
 
 /* Inset Neumorphic Plate */
 .project-metrics {
-  background: rgba(166, 180, 200, 0.08);
+  background: rgba(166, 180, 200, 0.05);
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 25px;
   box-shadow: var(--nm-inset);
   font-size: 0.85rem;
-  border: 1.5px solid var(--metal-divider);
+  border: none;
 }
 
 .metric-row {
@@ -506,8 +506,8 @@ body {
 }
 
 .project-btn {
-  background: var(--glass-bg);
-  border: 1.5px solid var(--metal-divider);
+  background: var(--bg);
+  border: none;
   color: var(--text-main);
   padding: 9px 18px;
   border-radius: 10px;
@@ -525,9 +525,8 @@ body {
 
 .project-btn:hover {
   background: var(--yellow);
-  border-color: var(--text-main);
   color: #000000;
-  box-shadow: var(--nm-raised);
+  box-shadow: -2px -2px 5px #ffffff, 2px 2px 5px rgba(166, 180, 200, 0.4);
 }
 
 .project-btn:active {
@@ -656,10 +655,10 @@ body {
 }
 
 .action-card {
-  background: linear-gradient(135deg, #f8fafc 0%, #edf0f4 100%);
+  background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--nm-raised);
-  border: 2px solid #cbd5e1;
+  border: none;
   padding: 35px;
   display: flex;
   flex-direction: column;
@@ -670,11 +669,7 @@ body {
 
 /* Mechanical outline for tech themed components */
 .tech-outline {
-  border: 2px solid #cbd5e1;
-  box-shadow: 
-    0 0 0 1px #f8fafc,
-    var(--nm-raised),
-    inset 0 0 0 1px #ffffff;
+  border: none;
   position: relative;
 }
 
@@ -696,7 +691,7 @@ body {
 .action-btn-full {
   width: 100%;
   background: var(--yellow);
-  border: 1.5px solid var(--text-main);
+  border: none;
   color: #000000;
   box-shadow: -4px -4px 10px #ffffff, 4px 4px 10px rgba(166, 180, 200, 0.4);
   padding: 14px;
@@ -757,5 +752,5 @@ footer {
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 1.5px;
-  border-top: 1.5px solid var(--metal-divider);
+  border-top: none;
 }
