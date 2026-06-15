@@ -1,5 +1,6 @@
 // --- Interactive Terminal Emulator ---
 const terminalInput = document.getElementById('terminal-input');
+const terminalInputDisplay = document.getElementById('terminal-input-display');
 const terminalOutput = document.getElementById('terminal-output');
 const terminalBody = document.getElementById('terminal-body');
 const shortcutBtns = document.querySelectorAll('.shortcut-btn');
@@ -193,6 +194,11 @@ function runCommand(cmdText) {
   terminalBody.scrollTop = terminalBody.scrollHeight;
 }
 
+// Sync display text with hidden input
+terminalInput.addEventListener('input', () => {
+  terminalInputDisplay.textContent = terminalInput.value;
+});
+
 // Event Listeners for Terminal
 terminalInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
@@ -202,20 +208,24 @@ terminalInput.addEventListener('keydown', (e) => {
     
     runCommand(cmd);
     terminalInput.value = '';
+    terminalInputDisplay.textContent = '';
   } else if (e.key === 'ArrowUp') {
     e.preventDefault();
     if (cmdIndex > 0) {
       cmdIndex--;
       terminalInput.value = cmdHistory[cmdIndex];
+      terminalInputDisplay.textContent = cmdHistory[cmdIndex];
     }
   } else if (e.key === 'ArrowDown') {
     e.preventDefault();
     if (cmdIndex < cmdHistory.length - 1) {
       cmdIndex++;
       terminalInput.value = cmdHistory[cmdIndex];
+      terminalInputDisplay.textContent = cmdHistory[cmdIndex];
     } else {
       cmdIndex = cmdHistory.length;
       terminalInput.value = '';
+      terminalInputDisplay.textContent = '';
     }
   }
 });

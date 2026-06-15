@@ -914,14 +914,33 @@ body {
   font-weight: 900;
   color: var(--yellow);
 }
-.terminal-input {
-  background: transparent;
-  border: none;
-  color: #ffffff;
+.terminal-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.terminal-input-display {
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: bold;
-  flex: 1;
+  color: #ffffff;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.terminal-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: transparent;
+  caret-color: transparent;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: bold;
   outline: none;
 }
 .cursor-blink {
@@ -930,6 +949,7 @@ body {
   height: 15px;
   background: var(--yellow);
   animation: cursor-blink 1s infinite;
+  margin-left: 2px;
 }
 @keyframes cursor-blink {
   0%, 49% { opacity: 1; }
