@@ -146,14 +146,14 @@ const commands = {
   challenges—turning complex architectural concepts into highly 
   optimized working beasts."`,
 
-  education: `[Academic Background & Publications]
+  education: `[Academic Background & Research Focus]
   -------------------------------------------------------------
   * Ph.D. Scholar (Computer Science & Engineering)
     Nehru Institute of Technology / Anna University, Chennai, India (Doctoral Committee Confirmed)
     Focus: Delay-Tolerant Networking (DTN), Quadratic soft-constraints.
   
-  * Featured Publications:
-    - "Routing Optimization in Delay-Tolerant Space Relays using Astrodynamic Contacts" (Submitted to Elsevier Ad Hoc Networks)
+  * Ph.D. Thesis Project:
+    - "Delay-Tolerant Space Relay Routing Optimization using Astrodynamic Contacts"
   
   * M.E. in Computer Science & Engineering
     Anna University, Chennai, India
