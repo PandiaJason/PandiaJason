@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Pandian | Systems &amp; Optimization Engineer</title>
-  <meta name="description" content="Virtual Desktop of Jason Pandian: Ph.D. Scholar, Systems Developer, and Game Designer. Creator of nanos, bats, ranotot, and DSA-C.">
+  <title>Jason Pandian | Deep Space Networking &amp; Systems Researcher</title>
+  <meta name="description" content="Virtual Desktop of Jason Pandian: Ph.D. Scholar, Systems Developer, and Deep Space Network Researcher. Creator of nanos, bats, ranotot, and DSA-C.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <div class="header-left">
       </div>
       <div class="header-center">
-        <span class="header-name">breathe. orcestrate.</span>
+        <span class="header-name">deep space networking &amp; systems research</span>
       </div>
       <div class="header-right">
       </div>
@@ -260,15 +260,15 @@ guest@pandiajason.github.io:~$ </div>
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Sandbox Boot</span>
-                    <span class="spec-tbl-val">&lt; 3 ms (cold start)</span>
+                    <span class="spec-tbl-val">&lt; 3 ms cold start (50x faster than MicroVMs)</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Memory Footprint</span>
-                    <span class="spec-tbl-val">~39 MB RSS (vs 2GB+ VM)</span>
+                    <span class="spec-tbl-val">~39 MB RSS (vs 2GB+ standard Linux VM)</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Tool Latency (FFI)</span>
-                    <span class="spec-tbl-val">&lt; 1 ms (zero-copy)</span>
+                    <span class="spec-tbl-val">&lt; 1 ms zero-copy (300x faster than localhost TCP loopback)</span>
                   </div>
                 </div>
 
@@ -340,16 +340,16 @@ guest@pandiajason.github.io:~$ </div>
                 
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Simulation Engine</span>
-                    <span class="spec-tbl-val">ns-3 Simulator</span>
+                    <span class="spec-tbl-label">Data Throughput</span>
+                    <span class="spec-tbl-val">2.4x capacity (vs standard Contact Graph Routing / CGR)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Optimization Goal</span>
+                    <span class="spec-tbl-val">Matches Integer Linear Programming (ILP) upper bound</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Validation Topo</span>
-                    <span class="spec-tbl-val">NASA Mars SPICE Relays</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Astrodynamics</span>
-                    <span class="spec-tbl-val">Geospatial propagation</span>
+                    <span class="spec-tbl-val">NASA Mars SPICE Orbit Relay models</span>
                   </div>
                 </div>
 
@@ -421,15 +421,15 @@ guest@pandiajason.github.io:~$ </div>
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Policy Engine</span>
-                    <span class="spec-tbl-val">183 Pre-compiled Rules</span>
+                    <span class="spec-tbl-val">183 Pre-compiled Go Rules</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Enforcement Latency</span>
-                    <span class="spec-tbl-val">&lt; 5 ms</span>
+                    <span class="spec-tbl-val">&lt; 5 ms (vs 1500ms+ for LLM-based safety evals)</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Audit Trail</span>
-                    <span class="spec-tbl-val">Hash-Chained SHA-256 WAL</span>
+                    <span class="spec-tbl-val">Hash-Chained SHA-256 WAL (fsync durable)</span>
                   </div>
                 </div>
 
@@ -531,7 +531,7 @@ guest@pandiajason.github.io:~$ </div>
         <div class="accordion-item">
           <button class="accordion-header">
             <span class="accordion-header-left">
-              <span class="accordion-title">ninai</span>
+              <span class="accordion-title">ninai (Local-First CORS Bypass)</span>
             </span>
             <span class="accordion-header-right">
               <span class="accordion-tech-badge">Electron / React 19</span>
@@ -554,7 +554,7 @@ guest@pandiajason.github.io:~$ </div>
                     <!-- Left Pane: AI Webviews -->
                     <text x="112.5" y="38" text-anchor="middle" font-family="monospace" font-size="10" fill="currentColor">webview: ChatGPT/Claude</text>
                     <rect x="30" y="50" width="150" height="60" rx="4" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
-                    <text x="105" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor">AI Subscriptions</text>
+                    <text x="105" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" fill="currentColor">AI Web Views</text>
                     
                     <!-- Scissors stripping headers -->
                     <rect x="35" y="118" width="140" height="16" rx="3" fill="rgba(255,204,0,0.1)" stroke="var(--yellow)" stroke-width="1"/>
@@ -574,20 +574,20 @@ guest@pandiajason.github.io:~$ </div>
                   </svg>
                 </div>
 
-                <p class="project-desc-text">Local-first desktop application that unifies web-based AI subscription platforms and notes in a side-by-side dual-pane workspace.</p>
+                <p class="project-desc-text">Local-first desktop workspace featuring custom Electron main-process request interceptors to strip CSP and X-Frame-Options headers, enabling secure sandboxed embedding of AI web apps combined with a local Dexie.js database.</p>
                 
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Desktop Runtime</span>
-                    <span class="spec-tbl-val">Electron 40 + React 19</span>
+                    <span class="spec-tbl-label">Network Interceptor</span>
+                    <span class="spec-tbl-val">Strips CSP &amp; X-Frame-Options headers</span>
                   </div>
                   <div class="spec-table-row">
                     <span class="spec-tbl-label">Local Database</span>
-                    <span class="spec-tbl-val">Dexie.js (IndexedDB)</span>
+                    <span class="spec-tbl-val">Dexie.js (IndexedDB write-buffering)</span>
                   </div>
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Bypass Engine</span>
-                    <span class="spec-tbl-val">Super Copy (CORS-free)</span>
+                    <span class="spec-tbl-label">Clipboard Engine</span>
+                    <span class="spec-tbl-val">Super Copy (CORS-free media buffer)</span>
                   </div>
                 </div>
 
@@ -610,10 +610,10 @@ guest@pandiajason.github.io:~$ </div>
         <div class="accordion-item">
           <button class="accordion-header">
             <span class="accordion-header-left">
-              <span class="accordion-title">DSA-C</span>
+              <span class="accordion-title">DSA-C (Pedagogical Reference Archive)</span>
             </span>
             <span class="accordion-header-right">
-              <span class="accordion-tech-badge">C</span>
+              <span class="accordion-tech-badge">C / Pedagogical</span>
               <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -663,19 +663,19 @@ guest@pandiajason.github.io:~$ </div>
                   </svg>
                 </div>
 
-                <p class="project-desc-text">A repository containing low-level implementations of fundamental and advanced data structures and algorithms in standard C, focusing on manual memory management.</p>
+                <p class="project-desc-text">A pedagogical collection of low-level algorithms, custom data structures, and reference C implementations used for academic CS systems instruction.</p>
                 
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">DSA Language</span>
-                    <span class="spec-tbl-val">Standard C</span>
+                    <span class="spec-tbl-label">Archive Type</span>
+                    <span class="spec-tbl-val">Educational / Academic Reference</span>
                   </div>
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Memory</span>
-                    <span class="spec-tbl-val">Manual (malloc / free)</span>
+                    <span class="spec-tbl-label">Memory Paradigm</span>
+                    <span class="spec-tbl-val">Manual allocation (malloc / free)</span>
                   </div>
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Core structures</span>
+                    <span class="spec-tbl-label">Curricular Focus</span>
                     <span class="spec-tbl-val">Pointers, Lists, Trees, Stacks</span>
                   </div>
                 </div>
@@ -730,20 +730,42 @@ guest@pandiajason.github.io:~$ </div>
 
       <div class="modal-content-window resume-window tech-outline">
         <div class="resume-info-block">
-          <h3 class="resume-block-title">GitHub Profile</h3>
-          <p class="resume-block-desc">Explore the public source code repositories, systems tool implementations, and active development activity.</p>
-          <a href="https://github.com/PandiaJason" class="action-btn-full" target="_blank">
-            GitHub Page 
+          <h3 class="resume-block-title">Systems CV</h3>
+          <p class="resume-block-desc">Read the complete curriculum vitae, low-level systems engineering credentials, and academic profile.</p>
+          <a href="https://github.com/PandiaJason/PandiaJason/blob/main/resume.md" class="action-btn-full" target="_blank" style="margin-bottom: 20px;">
+            View Full CV (Markdown) 
             <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
+
+          <h3 class="resume-block-title" style="margin-top: 15px;">Featured Publications</h3>
+          <div style="margin-bottom: 15px;">
+            <p style="font-family: var(--font-title); font-size: 1.1rem; font-weight: bold; margin-bottom: 4px;">"Routing Optimization in Delay-Tolerant Space Relays using Astrodynamic Contacts"</p>
+            <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 4px; font-weight: bold;">Ad Hoc Networks (Elsevier) — Under Review</p>
+            <p style="font-size: 0.85rem; line-height: 1.45; color: var(--text-dim);">Formulates an always-feasible routing solver mapping hard link capacities to quadratic Hamiltonian penalties, improving Contact Graph Routing (CGR) throughput by 2.4x under saturation.</p>
+          </div>
+
+          <h3 class="resume-block-title">Systems Education Tools</h3>
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 0.9rem; font-weight: bold; margin-bottom: 4px; color: var(--yellow-accent);">cnl-codetainers (Docker / Go / Shell)</p>
+            <p style="font-size: 0.85rem; line-height: 1.45; color: var(--text-dim);">Lightweight containerized sandboxes for hands-on network lab curricula. Standardizes student sandboxing without virtual machine overhead.</p>
+          </div>
         </div>
 
         <div class="resume-contact-block">
           <h3 class="resume-block-title">Connection Links</h3>
           <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-label">
+                <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg> 
+                GitHub
+              </span>
+              <span class="contact-val"><a href="https://github.com/PandiaJason" target="_blank" style="color: inherit; text-decoration: underline;">github.com/PandiaJason</a></span>
+            </li>
             <li class="contact-item">
               <span class="contact-label">
                 <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -772,7 +794,7 @@ guest@pandiajason.github.io:~$ </div>
                 </svg> 
                 Affiliation
               </span>
-              <span class="contact-val">Nehru Institute of Tech</span>
+              <span class="contact-val" style="font-size: 0.82rem;">Nehru Inst of Technology</span>
             </li>
           </ul>
         </div>

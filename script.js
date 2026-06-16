@@ -16,10 +16,10 @@ const commands = {
   [spice-ns]    View ns-3 Delay-Tolerant Network simulation
   [bats]        Display Go deterministic agent safety proxy
   [ranotot]     View Godot 4 gravity physics game structure
-  [ninai]       Bypass CORS/CSP Electron webview structure
-  [dsa-c]       Inspect C DSA repository implementations
+  [ninai]       Local-first dual-pane CORS/CSP bypass workspace
+  [dsa-c]       Pedagogical reference DSA implementations in C
   [creed]       Print Jason's systems engineering philosophy
-  [education]   Show academic credentials
+  [education]   Show academic credentials & publications
   [experience]  Show professional background
   [clear]       Clear the terminal console`,
 
@@ -36,9 +36,9 @@ const commands = {
   - Zero host direct access           - No JSON serialization         - File/Network proxies
 
   Performance Metrics (from README.md):
-  * Startup Boot Latency: <3ms (WASM instantiation)
-  * System Memory Footprint: ~39MB RSS (vs 2GB+ VM / 50x RAM reduction)
-  * FFI Syscall execution: <1ms (300x faster than local HTTP)`,
+  * Startup Boot Latency: <3ms (50x faster than Linux MicroVM instantiation)
+  * System Memory Footprint: ~39MB RSS (vs 2GB+ standard Linux VM / 50x RAM reduction)
+  * FFI Syscall execution: <1ms (300x faster than localhost TCP loopback)`,
 
   'spice-ns': `[spice-ns] Deep Space Network Simulation
   -------------------------------------------------------------
@@ -52,7 +52,7 @@ const commands = {
   Key Features & Performance:
   * Extensions: Models Delay-Tolerant Networking (DTN) and DSN topologies.
   * Congestion Soft Constraints: Integrates quadratic load-balancing Hamiltonian.
-  * Performance: Delivers 2.4x more data capacity than standard CGR.`,
+  * Performance: Delivers 2.4x more data capacity than standard CGR and matches the ILP-optimal upper bound.`,
 
   bats: `[bats] WAND -- Watch. Audit. Never Delegate.
   -------------------------------------------------------------
@@ -67,7 +67,7 @@ const commands = {
 
   Key Features:
   * Deterministic Policy: 136 BLOCK and 47 CHALLENGE rules evaluated via pre-compiled regex.
-  * Performance: Evaluated in <5ms with zero LLM-probabilistic latency.
+  * Performance: Evaluated in <5ms (vs 1500ms+ for LLM-based safety evals) with zero LLM-probabilistic latency.
   * Compliance: Cryptographic audit log using SHA-256 hash chaining with fsync durability.
   * Safety Gatekeeping: Hard blocks prompt injections, destructive commands, or API resource exhaustion.`,
 
@@ -86,13 +86,13 @@ const commands = {
     levels 31-90 dynamically, building planet arrangements and asteroid grids.
   * Save System: JSON-serialized game progress states stored locally.`,
 
-  ninai: `[ninai] Local-First Desktop Workspace Integration
+  ninai: `[ninai] Local-First CORS/CSP Bypass Workspace
   -------------------------------------------------------------
   Framework: Electron 40 / React 19 / TypeScript 5.9 / Vite 7
   Storage: Dexie.js (IndexedDB wrapper)
 
-  Key Core Engineering Features:
-  * CSP/Frame Interception: Electron Main Process intercepts network layer
+  Key Core Engineering & Security Features:
+  * CSP/CORS Header Interception: Electron Main Process intercepts network layer
     to strip X-Frame-Options & Content-Security-Policy headers, enabling
     safe embedded frame loads of ChatGPT, Claude, and Gemini.
   * Super Copy: Bypasses standard browser CORS/hotlink locks by intercepting
@@ -101,7 +101,7 @@ const commands = {
   * DB Write Buffering: Debounced save hooks flush changes in groups to 
     IndexedDB, preventing UI lagging during intensive typing.`,
 
-  'dsa-c': `[DSA-C] Standard C Data Structures & Algorithms
+  'dsa-c': `[DSA-C] Pedagogical Reference DSA Implementations
   -------------------------------------------------------------
   Language: Standard C (C99/C11)
   Focus: Low-level memory management, pointers, and custom implementations
@@ -131,8 +131,8 @@ const commands = {
       free(temp);
   }
   
-  * Focuses on zero-dependency, manual memory allocation (malloc/free)
-    and raw pointer manipulation to build fundamental structures.`,
+  * A pedagogical reference library focusing on manual memory allocation (malloc/free)
+    and raw pointer manipulation to teach fundamental structures.`,
 
   creed: `[Engineering Creed]
   -------------------------------------------------------------
@@ -146,11 +146,14 @@ const commands = {
   challenges—turning complex architectural concepts into highly 
   optimized working beasts."`,
 
-  education: `[Academic Background]
+  education: `[Academic Background & Publications]
   -------------------------------------------------------------
   * Ph.D. Scholar (Computer Science & Engineering)
-    Anna University, Chennai, India (Doctoral Committee Confirmed)
+    Nehru Institute of Technology / Anna University, Chennai, India (Doctoral Committee Confirmed)
     Focus: Delay-Tolerant Networking (DTN), Quadratic soft-constraints.
+  
+  * Featured Publications:
+    - "Routing Optimization in Delay-Tolerant Space Relays using Astrodynamic Contacts" (Submitted to Elsevier Ad Hoc Networks)
   
   * M.E. in Computer Science & Engineering
     Anna University, Chennai, India
