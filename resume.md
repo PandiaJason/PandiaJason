@@ -33,7 +33,7 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 *   Formulated an always-feasible Delay-Tolerant Network (DTN) routing protocol by replacing hard capacity constraints with **quadratic soft penalties** $(L_e - C_e)^2$ mapped to a Quadratic Unconstrained Binary Optimization (QUBO) Hamiltonian.
 *   Leveraged quadratic cross-terms to make congestion pairwise visible to the solver, driving automatic global load-balancing without heuristics. Delivered **2.4x more data** than Contact Graph Routing (CGR) and matched ILP-optimal mission value.
 *   Built a high-fidelity Delay-Tolerant Network extension for the **ns-3** simulator, validated on Mars surface-to-orbit Ka-band/UHF relay contacts derived from NASA SPICE kernels.
-*   Presented research findings on routing survivability under congestion; paper submitted to the Elsevier journal **Ad Hoc Networks**.
+*   Presented research findings on routing survivability under congestion, demonstrating throughput gains under high link saturation.
 
 ### 3. **bats (WAND)** (Go 1.24+)
 *Deterministic safety enforcement and audit layer for autonomous AI agents.*
@@ -64,6 +64,14 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 ### 7. **cnl-codetainers** (Docker, Go, Shell)
 *Accessible containerized networking sandboxes for student education.*
 *   Created a system of lightweight, Docker-isolated sandbox runtimes to make low-level computer networking lab curricula accessible to students with zero installation and dependency friction.
+
+---
+
+## 📝 Publications Under Review
+
+*   **Predictive Energy-Aware Contact Graph Routing for SmallSat Relay Networks**  
+    *Research Article · Manuscript ID: 1492912*  
+    Submitted to the **International Journal of Communication Systems (Wiley)** on 1 June 2026. Status: Under Review.
 
 ---
 
