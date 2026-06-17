@@ -1149,9 +1149,9 @@ footer {
 }
 #mascot-card:hover .mascot-default {
   opacity: 0;
-  transform: scale(1.06) rotate(2deg);
+  transform: scale(1.06);
 }
 #mascot-card:hover .mascot-hover {
   opacity: 1;
-  transform: scale(1.06) rotate(2deg);
+  transform: scale(1.06);
 }
