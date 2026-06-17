@@ -320,6 +320,18 @@ document.getElementById('card-creed').addEventListener('click', () => openModal(
 document.getElementById('card-resume').addEventListener('click', () => openModal('resume'));
 document.getElementById('card-profile').addEventListener('click', () => openModal('profile'));
 
+// Clock Card Hover -> Mascot Card Time-Check State
+const clockWidget = document.querySelector('.clock-widget');
+const mascotCard = document.getElementById('mascot-card');
+if (clockWidget && mascotCard) {
+  clockWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-clock');
+  });
+  clockWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-clock');
+  });
+}
+
 // Setup general Close handlers (Click close capsule or click backdrop)
 Object.values(modals).forEach(modal => {
   const closeBtn = modal.querySelector('.modal-close-capsule');

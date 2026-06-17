@@ -1143,10 +1143,23 @@ footer {
   border-radius: 12px;
   transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.mascot-hover {
+.mascot-hover,
+.mascot-clock {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Clock hover interaction (CSS :has() + JS fallback) */
+.desktop-grid:has(.clock-widget:hover) #mascot-card:not(:hover) .mascot-default,
+#mascot-card.hover-clock:not(:hover) .mascot-default {
+  opacity: 0;
+}
+.desktop-grid:has(.clock-widget:hover) #mascot-card:not(:hover) .mascot-clock,
+#mascot-card.hover-clock:not(:hover) .mascot-clock {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
 #mascot-card:hover .mascot-default {
   opacity: 0;
   transform: scale(1.06);
@@ -1154,4 +1167,7 @@ footer {
 #mascot-card:hover .mascot-hover {
   opacity: 1;
   transform: scale(1.06);
+}
+#mascot-card:hover .mascot-clock {
+  opacity: 0;
 }
