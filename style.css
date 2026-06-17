@@ -277,6 +277,11 @@ body {
   }
 }
 
+/* progressive enhancement: hide cards on initial load if JavaScript is enabled to prevent layout flash */
+.js-loading .desktop-grid > .widget-card:not(#mascot-card) {
+  opacity: 0;
+}
+
 /* Styling non-mascot cards to match desktop icon sizes */
 .desktop-grid > .widget-card:not(#mascot-card) {
   aspect-ratio: 1 / 1;

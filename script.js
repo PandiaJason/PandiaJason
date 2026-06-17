@@ -5,6 +5,9 @@ const terminalOutput = document.getElementById('terminal-output');
 const terminalBody = document.getElementById('terminal-body');
 const shortcutBtns = document.querySelectorAll('.shortcut-btn');
 
+const entranceCards = document.querySelectorAll('.desktop-grid > .widget-card:not(#mascot-card)');
+
+
 // Command History
 let cmdHistory = [];
 let cmdIndex = -1;
@@ -365,3 +368,63 @@ accordionItems.forEach(item => {
 if (accordionItems.length > 0) {
   accordionItems[0].classList.add('active');
 }
+
+// --- Card Entrance Fly-Out Animation ---
+function triggerEntranceAnimation() {
+  if (window.entranceAnimationTriggered) return;
+  window.entranceAnimationTriggered = true;
+  
+  const mascot = document.getElementById('mascot-card');
+  if (!mascot) return;
+  
+  const mascotRect = mascot.getBoundingClientRect();
+  const mascotX = mascotRect.left + mascotRect.width / 2;
+  const mascotY = mascotRect.top + mascotRect.height / 2;
+  
+  entranceCards.forEach(card => {
+    card.style.transition = 'none';
+    
+    const cardRect = card.getBoundingClientRect();
+    const cardX = cardRect.left + cardRect.width / 2;
+    const cardY = cardRect.top + cardRect.height / 2;
+    
+    const dx = mascotX - cardX;
+    const dy = mascotY - cardY;
+    
+    card.style.transform = `translate(${dx}px, ${dy}px) scale(0.2)`;
+    card.style.opacity = '0';
+  });
+  
+  // Remove js-loading class to enable normal layout styles (like default opacity: 1)
+  document.documentElement.classList.remove('js-loading');
+  
+  // Force a browser reflow/layout recalculation
+  void mascot.offsetHeight;
+  
+  // Animate the cards to their layout positions with a cascade delay
+  entranceCards.forEach((card, index) => {
+    const delay = index * 60; // 60ms staggered delay between cards
+    setTimeout(() => {
+      card.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease';
+      card.style.transform = 'translate(0, 0) scale(1)';
+      card.style.opacity = '1';
+      
+      // Clean up styles to preserve hover transitions defined in CSS
+      setTimeout(() => {
+        card.style.transform = '';
+        card.style.opacity = '';
+        card.style.transition = '';
+      }, 850);
+    }, delay);
+  });
+}
+
+// Trigger animation on load or via safety timeout fallback
+if (document.readyState === 'complete') {
+  triggerEntranceAnimation();
+} else {
+  window.addEventListener('load', triggerEntranceAnimation);
+  // Backup timeout: trigger animation if loading takes longer than 1.2s to prevent blank screens
+  setTimeout(triggerEntranceAnimation, 1200);
+}
+
