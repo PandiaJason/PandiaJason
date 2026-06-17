@@ -1145,7 +1145,9 @@ footer {
 }
 .mascot-hover,
 .mascot-clock,
-.mascot-projects {
+.mascot-projects,
+.mascot-creed,
+.mascot-profile {
   opacity: 0;
   pointer-events: none;
 }
@@ -1172,6 +1174,28 @@ footer {
   transform: scale(1.04);
 }
 
+/* Creed hover interaction (CSS :has() + JS fallback) */
+.desktop-grid:has(#card-creed:hover) #mascot-card:not(:hover) .mascot-default,
+#mascot-card.hover-creed:not(:hover) .mascot-default {
+  opacity: 0;
+}
+.desktop-grid:has(#card-creed:hover) #mascot-card:not(:hover) .mascot-creed,
+#mascot-card.hover-creed:not(:hover) .mascot-creed {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* Profile hover interaction (CSS :has() + JS fallback) */
+.desktop-grid:has(#card-profile:hover) #mascot-card:not(:hover) .mascot-default,
+#mascot-card.hover-profile:not(:hover) .mascot-default {
+  opacity: 0;
+}
+.desktop-grid:has(#card-profile:hover) #mascot-card:not(:hover) .mascot-profile,
+#mascot-card.hover-profile:not(:hover) .mascot-profile {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
 #mascot-card:hover .mascot-default {
   opacity: 0;
   transform: scale(1.06);
@@ -1181,6 +1205,8 @@ footer {
   transform: scale(1.06);
 }
 #mascot-card:hover .mascot-clock,
-#mascot-card:hover .mascot-projects {
+#mascot-card:hover .mascot-projects,
+#mascot-card:hover .mascot-creed,
+#mascot-card:hover .mascot-profile {
   opacity: 0;
 }

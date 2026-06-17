@@ -343,6 +343,28 @@ if (projectsWidget && mascotCard) {
   });
 }
 
+// Creed Card Hover -> Mascot Card Creed State
+const creedWidget = document.getElementById('card-creed');
+if (creedWidget && mascotCard) {
+  creedWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-creed');
+  });
+  creedWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-creed');
+  });
+}
+
+// Profile Card Hover -> Mascot Card Profile State
+const profileWidget = document.getElementById('card-profile');
+if (profileWidget && mascotCard) {
+  profileWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-profile');
+  });
+  profileWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-profile');
+  });
+}
+
 // Setup general Close handlers (Click close capsule or click backdrop)
 Object.values(modals).forEach(modal => {
   const closeBtn = modal.querySelector('.modal-close-capsule');
