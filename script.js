@@ -332,6 +332,17 @@ if (clockWidget && mascotCard) {
   });
 }
 
+// Projects Card Hover -> Mascot Card Projects State
+const projectsWidget = document.getElementById('card-projects');
+if (projectsWidget && mascotCard) {
+  projectsWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-projects');
+  });
+  projectsWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-projects');
+  });
+}
+
 // Setup general Close handlers (Click close capsule or click backdrop)
 Object.values(modals).forEach(modal => {
   const closeBtn = modal.querySelector('.modal-close-capsule');
