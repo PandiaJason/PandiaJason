@@ -712,7 +712,8 @@ body {
 /* --- Projects Modal Accordion --- */
 .projects-list-window {
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: #ffffff;
 }
 .accordion-item {
