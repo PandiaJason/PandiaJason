@@ -365,6 +365,28 @@ if (profileWidget && mascotCard) {
   });
 }
 
+// Console Card Hover -> Mascot Card Console State
+const consoleWidget = document.getElementById('card-console');
+if (consoleWidget && mascotCard) {
+  consoleWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-console');
+  });
+  consoleWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-console');
+  });
+}
+
+// Resume/CV Card Hover -> Mascot Card Resume State
+const resumeWidget = document.getElementById('card-resume');
+if (resumeWidget && mascotCard) {
+  resumeWidget.addEventListener('mouseenter', () => {
+    mascotCard.classList.add('hover-resume');
+  });
+  resumeWidget.addEventListener('mouseleave', () => {
+    mascotCard.classList.remove('hover-resume');
+  });
+}
+
 // Setup general Close handlers (Click close capsule or click backdrop)
 Object.values(modals).forEach(modal => {
   const closeBtn = modal.querySelector('.modal-close-capsule');
