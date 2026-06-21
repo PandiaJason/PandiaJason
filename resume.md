@@ -56,12 +56,18 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 *   Created a custom **Python automation script** to procedurally generate levels (levels 31-90), placing planets and spawning asteroid trajectories.
 *   Built and packaged automated release pipelines for macOS, Windows, and Linux headless target compiles.
 
-### 6. **DSA-C** (C)
+### 6. **OwnedC** (C, Python, CMake)
+*Rust-inspired memory safety framework for C, providing RAII, dynamic borrow checking, and thread-safe arena allocators.*
+*   Designed and built a runtime ownership registry in standard **C (C99/C11)** to track dynamic memory allocations and catch borrow violations, double-frees, and leaks on runtime exit.
+*   Implemented compiler-assisted scope-bound **RAII** cleanups using GCC/Clang cleanup attributes to auto-free pointers on block exit.
+*   Created a pluggable allocation wrapper and successfully validated safety guarantees by integrating it with **SQLite (v3.47.0)**'s allocator hooks with zero core engine code changes.
+
+### 7. **DSA-C** (C)
 *Low-level implementations of fundamental data structures and algorithms in standard C.*
 *   Implemented native **C** solutions for fundamental and advanced data structures, focusing on manual memory management (`malloc` / `free`) and pointers.
 *   Developed clean, custom implementations of lists, trees, and stacks without external dependencies or heavy libraries.
 
-### 7. **cnl-codetainers** (Docker, Go, Shell)
+### 8. **cnl-codetainers** (Docker, Go, Shell)
 *Accessible containerized networking sandboxes for student education.*
 *   Created a system of lightweight, Docker-isolated sandbox runtimes to make low-level computer networking lab curricula accessible to students with zero installation and dependency friction.
 

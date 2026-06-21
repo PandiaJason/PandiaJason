@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jason Pandian | Deep Space Networking &amp; Systems Researcher</title>
-  <meta name="description" content="Virtual Desktop of Jason Pandian: Ph.D. Scholar, Deep Space Networking &amp; Systems Researcher. Creator of nanos, bats, ranotot, and DSA-C.">
+  <meta name="description" content="Virtual Desktop of Jason Pandian: Ph.D. Scholar, Deep Space Networking &amp; Systems Researcher. Creator of nanos, bats, ranotot, OwnedC, and DSA-C.">
   <link rel="stylesheet" href="style.css">
   <script>
     document.documentElement.classList.add('js-loading');
@@ -201,6 +201,7 @@ guest@pandiajason.github.io:~$ </div>
           <button class="shortcut-btn" data-cmd="bats">bats</button>
           <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
           <button class="shortcut-btn" data-cmd="ninai">ninai</button>
+          <button class="shortcut-btn" data-cmd="ownedc">ownedc</button>
           <button class="shortcut-btn" data-cmd="dsa-c">dsa-c</button>
           <button class="shortcut-btn" data-cmd="clear">clear</button>
         </div>
@@ -689,6 +690,89 @@ guest@pandiajason.github.io:~$ </div>
 
                 <div class="projects-links-row">
                   <a href="https://github.com/PandiaJason/DSA-C" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 7: OwnedC -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-title">OwnedC</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">C / Memory Safety</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Scope Box -->
+                    <rect x="20" y="25" width="170" height="110" rx="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="35" y="45" font-family="monospace" font-size="10" fill="currentColor">Scope { ... }</text>
+                    
+                    <rect x="35" y="60" width="140" height="42" rx="4" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1"/>
+                    <text x="45" y="76" font-family="monospace" font-size="9" fill="currentColor">OWNED void* ptr =</text>
+                    <text x="45" y="90" font-family="monospace" font-size="9" fill="var(--yellow-accent)">owner_malloc(1024)</text>
+
+                    <!-- Registry Box -->
+                    <rect x="260" y="25" width="140" height="110" rx="8" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="330" y="48" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">Registry (Metadata)</text>
+                    <text x="275" y="75" font-family="monospace" font-size="9" fill="currentColor">size: 1024 bytes</text>
+                    <text x="275" y="90" font-family="monospace" font-size="9" fill="currentColor">borrows: 0 active</text>
+                    <text x="275" y="105" font-family="monospace" font-size="9" fill="currentColor">state: OWNED</text>
+
+                    <!-- Connection arrow -->
+                    <path d="M190 80 H260" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="260,80 252,76 252,84" fill="currentColor"/>
+                    <text x="225" y="70" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">register</text>
+
+                    <!-- Auto-deallocation path -->
+                    <path d="M105 135 V150 H330 V135" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <polygon points="330,135 326,143 334,143" fill="#ff3b30"/>
+                    <text x="218" y="146" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff3b30" font-weight="bold">Auto-free on Scope Exit</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Rust-inspired memory safety framework for C, providing scope-bound RAII, dynamic borrow checking, and thread-safe arena allocators without codebase rewrites.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Dynamic Tracking</span>
+                    <span class="spec-tbl-val">Metadata registry &amp; borrow checking</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">RAII Scope Cleanup</span>
+                    <span class="spec-tbl-val">Zero-cost compiler cleanup (GCC/Clang attributes)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Production Path</span>
+                    <span class="spec-tbl-val">Zero-overhead safe_region arenas</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Integration Showcase</span>
+                    <span class="spec-tbl-val">Pluggable sqlite3_mem_methods compatibility (0 changes)</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/OwnedC" class="project-btn" target="_blank">
                     Source Code 
                     <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>

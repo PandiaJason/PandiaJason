@@ -20,6 +20,7 @@ const commands = {
   [bats]        Display Go deterministic agent safety proxy
   [ranotot]     View Godot 4 gravity physics game structure
   [ninai]       Local-first dual-pane CORS/CSP bypass workspace
+  [ownedc]      Display C memory safety & borrow-checking framework
   [dsa-c]       Pedagogical reference DSA implementations in C
   [creed]       Print Jason's systems engineering philosophy
   [education]   Show academic credentials & publications
@@ -103,6 +104,21 @@ const commands = {
     directly to the native system Clipboard API.
   * DB Write Buffering: Debounced save hooks flush changes in groups to 
     IndexedDB, preventing UI lagging during intensive typing.`,
+
+  ownedc: `[OwnedC] Memory Safety Framework for C
+  -------------------------------------------------------------
+  Language: Standard C (C99 / C11)
+  Repository: https://github.com/PandiaJason/OwnedC
+
+  Key Security & Structural Features:
+  * Dynamic Ownership Tracking: Uses a runtime metadata registry to intercept 
+    double-frees, use-after-frees, and ownership/borrow violations.
+  * Scope-Bound RAII: Zero-cost compiler cleanup attributes (GCC/Clang) 
+    automatically free resources when variables go out of scope.
+  * Thread-Safe Arenas: 'safe_region' provides zero-overhead arena allocation 
+    for high-performance hot paths.
+  * Real-World Integration: Easily injected into production legacy codebases 
+    (like SQLite3 mem_methods) with zero core engine code changes.`,
 
   'dsa-c': `[DSA-C] Pedagogical Reference DSA Implementations
   -------------------------------------------------------------
