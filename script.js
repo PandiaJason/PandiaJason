@@ -16,12 +16,12 @@ const commands = {
   help: `Available commands:
   -------------------------------------------------------------
   [nanos]       Display WebAssembly micro-runtime architecture
-  [spice-ns]    View ns-3 Delay-Tolerant Network simulation
-  [bats]        Display Go deterministic agent safety proxy
-  [ranotot]     View Godot 4 gravity physics game structure
-  [ninai]       Local-first dual-pane CORS/CSP bypass workspace
   [ownedc]      Display C memory safety & borrow-checking framework
+  [ranotot]     View Godot 4 gravity physics game structure
+  [spice-ns]    View ns-3 Delay-Tolerant Network simulation
+  [ninai]       Local-first dual-pane CORS/CSP bypass workspace
   [dsa-c]       Pedagogical reference DSA implementations in C
+  [bats]        Display Go deterministic agent safety proxy
   [creed]       Print Jason's systems engineering philosophy
   [education]   Show academic credentials & publications
   [experience]  Show professional background

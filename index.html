@@ -197,12 +197,12 @@ guest@pandiajason.github.io:~$ </div>
           <span class="shortcut-label">QUICK COMMANDS:</span>
           <button class="shortcut-btn" data-cmd="help">help</button>
           <button class="shortcut-btn" data-cmd="nanos">nanos</button>
-          <button class="shortcut-btn" data-cmd="spice-ns">spice-ns</button>
-          <button class="shortcut-btn" data-cmd="bats">bats</button>
-          <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
-          <button class="shortcut-btn" data-cmd="ninai">ninai</button>
           <button class="shortcut-btn" data-cmd="ownedc">ownedc</button>
+          <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
+          <button class="shortcut-btn" data-cmd="spice-ns">spice-ns</button>
+          <button class="shortcut-btn" data-cmd="ninai">ninai</button>
           <button class="shortcut-btn" data-cmd="dsa-c">dsa-c</button>
+          <button class="shortcut-btn" data-cmd="bats">bats</button>
           <button class="shortcut-btn" data-cmd="clear">clear</button>
         </div>
       </div>
@@ -295,7 +295,169 @@ guest@pandiajason.github.io:~$ </div>
           </div>
         </div>
 
-        <!-- Accordion Item 2: spice-ns -->
+        <!-- Accordion Item 2: OwnedC -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-title">OwnedC</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">C / Memory Safety</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Scope Box -->
+                    <rect x="20" y="25" width="170" height="110" rx="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="35" y="45" font-family="monospace" font-size="10" fill="currentColor">Scope { ... }</text>
+                    
+                    <rect x="35" y="60" width="140" height="42" rx="4" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1"/>
+                    <text x="45" y="76" font-family="monospace" font-size="9" fill="currentColor">OWNED void* ptr =</text>
+                    <text x="45" y="90" font-family="monospace" font-size="9" fill="var(--yellow-accent)">owner_malloc(1024)</text>
+
+                    <!-- Registry Box -->
+                    <rect x="260" y="25" width="140" height="110" rx="8" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="330" y="48" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">Registry (Metadata)</text>
+                    <text x="275" y="75" font-family="monospace" font-size="9" fill="currentColor">size: 1024 bytes</text>
+                    <text x="275" y="90" font-family="monospace" font-size="9" fill="currentColor">borrows: 0 active</text>
+                    <text x="275" y="105" font-family="monospace" font-size="9" fill="currentColor">state: OWNED</text>
+
+                    <!-- Connection arrow -->
+                    <path d="M190 80 H260" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="260,80 252,76 252,84" fill="currentColor"/>
+                    <text x="225" y="70" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">register</text>
+
+                    <!-- Auto-deallocation path -->
+                    <path d="M105 135 V150 H330 V135" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <polygon points="330,135 326,143 334,143" fill="#ff3b30"/>
+                    <text x="218" y="146" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff3b30" font-weight="bold">Auto-free on Scope Exit</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Rust-inspired memory safety framework for C, providing scope-bound RAII, dynamic borrow checking, and thread-safe arena allocators without codebase rewrites.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Dynamic Tracking</span>
+                    <span class="spec-tbl-val">Metadata registry &amp; borrow checking</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">RAII Scope Cleanup</span>
+                    <span class="spec-tbl-val">Zero-cost compiler cleanup (GCC/Clang attributes)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Production Path</span>
+                    <span class="spec-tbl-val">Zero-overhead safe_region arenas</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Integration Showcase</span>
+                    <span class="spec-tbl-val">Pluggable sqlite3_mem_methods compatibility (0 changes)</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/OwnedC" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: ranotot -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-title">ranotot</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Godot 4 / Python</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Orbit 1 -->
+                    <circle cx="100" cy="80" r="32" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <circle cx="100" cy="80" r="14" fill="currentColor"/>
+                    <text x="100" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet A</text>
+
+                    <!-- Ship -->
+                    <rect x="180" y="45" width="22" height="14" rx="3" transform="rotate(-15 180 45)" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="208,44 202,40 202,48" fill="var(--yellow)"/>
+                    <text x="190" y="30" text-anchor="middle" font-family="var(--font-sans)" font-size="9" fill="currentColor">Ship Cargo</text>
+
+                    <!-- Gravity pull indicators -->
+                    <path d="M170 55 C145 65 130 70 120 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
+                    <polygon points="120,74 128,73 123,79" fill="currentColor"/>
+                    <path d="M210 50 C240 60 270 70 290 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
+                    <polygon points="290,74 282,79 287,73" fill="currentColor"/>
+
+                    <!-- Orbit 2 -->
+                    <circle cx="310" cy="80" r="28" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
+                    <circle cx="310" cy="80" r="10" fill="currentColor"/>
+                    <text x="310" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet B</text>
+
+                    <!-- Zero-G deadzone camera box -->
+                    <rect x="145" y="25" width="120" height="100" rx="4" stroke="currentColor" stroke-width="1" stroke-dasharray="6 6" opacity="0.4"/>
+                    <text x="205" y="140" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Camera deadzone (zoom: 0.5)</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">A gravity-based 2D space cargo delivery platformer game with custom physics, dynamic radial planet gravity fields, and orbital mechanics.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Engine &amp; Setup</span>
+                    <span class="spec-tbl-val">Godot 4.6 (GL Compatibility)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Level Layouts</span>
+                    <span class="spec-tbl-val">30 Levels (+31-90 Procedural)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Developer Group</span>
+                    <span class="spec-tbl-val">Hikki Studios</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/ranotot" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4: spice-ns -->
         <div class="accordion-item">
           <button class="accordion-header">
             <span class="accordion-header-left">
@@ -364,165 +526,6 @@ guest@pandiajason.github.io:~$ </div>
                 <div class="projects-links-row">
                   <a href="https://github.com/PandiaJason/SPICE-ns-Project" class="project-btn" target="_blank">
                     Research 
-                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 3: bats -->
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span class="accordion-header-left">
-              <span class="accordion-title">bats (WAND)</span>
-            </span>
-            <span class="accordion-header-right">
-              <span class="accordion-tech-badge">Go</span>
-              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-content-box">
-              <div class="accordion-inner">
-                
-                <!-- Refined Schematic SVG diagram -->
-                <div class="schematic-container">
-                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- AI Agent -->
-                    <rect x="15" y="45" width="90" height="70" rx="6" stroke="currentColor" stroke-width="1.5"/>
-                    <text x="60" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">AI Agent</text>
-                    <text x="60" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Proposes Action</text>
-
-                    <!-- Request flow -->
-                    <path d="M105 80 H165" stroke="currentColor" stroke-width="1.5"/>
-                    <polygon points="165,80 157,76 157,84" fill="currentColor"/>
-
-                    <!-- WAND Proxy Security Gate -->
-                    <rect x="165" y="30" width="110" height="100" rx="8" stroke="var(--yellow)" stroke-width="2" fill="rgba(255,204,0,0.03)"/>
-                    <text x="220" y="52" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">WAND Proxy</text>
-                    <line x1="175" y1="62" x2="265" y2="62" stroke="var(--yellow)" stroke-width="1.2"/>
-                    <text x="220" y="78" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">183 Rules Engine</text>
-                    <text x="220" y="94" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">mTLS Auth</text>
-                    <text x="220" y="112" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="var(--yellow-accent)">&lt;5ms latency</text>
-
-                    <!-- Audit Log chain representation -->
-                    <path d="M275 80 H320" stroke="currentColor" stroke-width="1.5"/>
-                    <polygon points="320,80 312,76 312,84" fill="currentColor"/>
-                    
-                    <!-- WAL blocks -->
-                    <rect x="320" y="45" width="85" height="70" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                    <text x="362.5" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">SHA-256</text>
-                    <text x="362.5" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">WAL (fsync)</text>
-                  </svg>
-                </div>
-
-                <p class="project-desc-text">Go-native deterministic safety proxy (WAND) evaluating 183 pre-compiled policy rules in &lt;5ms for autonomous AI agents and MCP tools.</p>
-                
-                <div class="projects-metrics-table">
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Policy Engine</span>
-                    <span class="spec-tbl-val">183 Pre-compiled Go Rules</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Enforcement Latency</span>
-                    <span class="spec-tbl-val">&lt; 5 ms (vs 1500ms+ for LLM-based safety evals)</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Audit Trail</span>
-                    <span class="spec-tbl-val">Hash-Chained SHA-256 WAL (fsync durable)</span>
-                  </div>
-                </div>
-
-                <div class="projects-links-row">
-                  <a href="https://github.com/PandiaJason/bats" class="project-btn" target="_blank">
-                    Source Code 
-                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 4: ranotot -->
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span class="accordion-header-left">
-              <span class="accordion-title">ranotot</span>
-            </span>
-            <span class="accordion-header-right">
-              <span class="accordion-tech-badge">Godot 4 / Python</span>
-              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-content-box">
-              <div class="accordion-inner">
-                
-                <!-- Refined Schematic SVG diagram -->
-                <div class="schematic-container">
-                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Orbit 1 -->
-                    <circle cx="100" cy="80" r="32" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
-                    <circle cx="100" cy="80" r="14" fill="currentColor"/>
-                    <text x="100" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet A</text>
-
-                    <!-- Ship -->
-                    <rect x="180" y="45" width="22" height="14" rx="3" transform="rotate(-15 180 45)" stroke="currentColor" stroke-width="1.5"/>
-                    <polygon points="208,44 202,40 202,48" fill="var(--yellow)"/>
-                    <text x="190" y="30" text-anchor="middle" font-family="var(--font-sans)" font-size="9" fill="currentColor">Ship Cargo</text>
-
-                    <!-- Gravity pull indicators -->
-                    <path d="M170 55 C145 65 130 70 120 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
-                    <polygon points="120,74 128,73 123,79" fill="currentColor"/>
-                    <path d="M210 50 C240 60 270 70 290 74" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 1"/>
-                    <polygon points="290,74 282,79 287,73" fill="currentColor"/>
-
-                    <!-- Orbit 2 -->
-                    <circle cx="310" cy="80" r="28" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/>
-                    <circle cx="310" cy="80" r="10" fill="currentColor"/>
-                    <text x="310" y="122" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="currentColor">Planet B</text>
-
-                    <!-- Zero-G deadzone camera box -->
-                    <rect x="145" y="25" width="120" height="100" rx="4" stroke="currentColor" stroke-width="1" stroke-dasharray="6 6" opacity="0.4"/>
-                    <text x="205" y="140" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Camera deadzone (zoom: 0.5)</text>
-                  </svg>
-                </div>
-
-                <p class="project-desc-text">A gravity-based 2D space cargo delivery platformer game with custom physics, dynamic radial planet gravity fields, and orbital mechanics.</p>
-                
-                <div class="projects-metrics-table">
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Engine &amp; Setup</span>
-                    <span class="spec-tbl-val">Godot 4.6 (GL Compatibility)</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Level Layouts</span>
-                    <span class="spec-tbl-val">30 Levels (+31-90 Procedural)</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Developer Group</span>
-                    <span class="spec-tbl-val">Hikki Studios</span>
-                  </div>
-                </div>
-
-                <div class="projects-links-row">
-                  <a href="https://github.com/PandiaJason/ranotot" class="project-btn" target="_blank">
-                    Source Code 
                     <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
@@ -703,14 +706,14 @@ guest@pandiajason.github.io:~$ </div>
           </div>
         </div>
 
-        <!-- Accordion Item 7: OwnedC -->
+        <!-- Accordion Item 7: bats -->
         <div class="accordion-item">
           <button class="accordion-header">
             <span class="accordion-header-left">
-              <span class="accordion-title">OwnedC</span>
+              <span class="accordion-title">bats (WAND)</span>
             </span>
             <span class="accordion-header-right">
-              <span class="accordion-tech-badge">C / Memory Safety</span>
+              <span class="accordion-tech-badge">Go</span>
               <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -723,56 +726,53 @@ guest@pandiajason.github.io:~$ </div>
                 <!-- Refined Schematic SVG diagram -->
                 <div class="schematic-container">
                   <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Scope Box -->
-                    <rect x="20" y="25" width="170" height="110" rx="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                    <text x="35" y="45" font-family="monospace" font-size="10" fill="currentColor">Scope { ... }</text>
+                    <!-- AI Agent -->
+                    <rect x="15" y="45" width="90" height="70" rx="6" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="60" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">AI Agent</text>
+                    <text x="60" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">Proposes Action</text>
+
+                    <!-- Request flow -->
+                    <path d="M105 80 H165" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="165,80 157,76 157,84" fill="currentColor"/>
+
+                    <!-- WAND Proxy Security Gate -->
+                    <rect x="165" y="30" width="110" height="100" rx="8" stroke="var(--yellow)" stroke-width="2" fill="rgba(255,204,0,0.03)"/>
+                    <text x="220" y="52" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="bold" fill="currentColor">WAND Proxy</text>
+                    <line x1="175" y1="62" x2="265" y2="62" stroke="var(--yellow)" stroke-width="1.2"/>
+                    <text x="220" y="78" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">183 Rules Engine</text>
+                    <text x="220" y="94" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">mTLS Auth</text>
+                    <text x="220" y="112" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="var(--yellow-accent)">&lt;5ms latency</text>
+
+                    <!-- Audit Log chain representation -->
+                    <path d="M275 80 H320" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="320,80 312,76 312,84" fill="currentColor"/>
                     
-                    <rect x="35" y="60" width="140" height="42" rx="4" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1"/>
-                    <text x="45" y="76" font-family="monospace" font-size="9" fill="currentColor">OWNED void* ptr =</text>
-                    <text x="45" y="90" font-family="monospace" font-size="9" fill="var(--yellow-accent)">owner_malloc(1024)</text>
-
-                    <!-- Registry Box -->
-                    <rect x="260" y="25" width="140" height="110" rx="8" stroke="currentColor" stroke-width="1.5"/>
-                    <text x="330" y="48" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">Registry (Metadata)</text>
-                    <text x="275" y="75" font-family="monospace" font-size="9" fill="currentColor">size: 1024 bytes</text>
-                    <text x="275" y="90" font-family="monospace" font-size="9" fill="currentColor">borrows: 0 active</text>
-                    <text x="275" y="105" font-family="monospace" font-size="9" fill="currentColor">state: OWNED</text>
-
-                    <!-- Connection arrow -->
-                    <path d="M190 80 H260" stroke="currentColor" stroke-width="1.5"/>
-                    <polygon points="260,80 252,76 252,84" fill="currentColor"/>
-                    <text x="225" y="70" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">register</text>
-
-                    <!-- Auto-deallocation path -->
-                    <path d="M105 135 V150 H330 V135" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="2 2"/>
-                    <polygon points="330,135 326,143 334,143" fill="#ff3b30"/>
-                    <text x="218" y="146" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff3b30" font-weight="bold">Auto-free on Scope Exit</text>
+                    <!-- WAL blocks -->
+                    <rect x="320" y="45" width="85" height="70" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="362.5" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">SHA-256</text>
+                    <text x="362.5" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor">WAL (fsync)</text>
                   </svg>
                 </div>
 
-                <p class="project-desc-text">Rust-inspired memory safety framework for C, providing scope-bound RAII, dynamic borrow checking, and thread-safe arena allocators without codebase rewrites.</p>
+                <p class="project-desc-text">Go-native deterministic safety proxy (WAND) evaluating 183 pre-compiled policy rules in &lt;5ms for autonomous AI agents and MCP tools.</p>
                 
                 <div class="projects-metrics-table">
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Dynamic Tracking</span>
-                    <span class="spec-tbl-val">Metadata registry &amp; borrow checking</span>
+                    <span class="spec-tbl-label">Policy Engine</span>
+                    <span class="spec-tbl-val">183 Pre-compiled Go Rules</span>
                   </div>
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">RAII Scope Cleanup</span>
-                    <span class="spec-tbl-val">Zero-cost compiler cleanup (GCC/Clang attributes)</span>
+                    <span class="spec-tbl-label">Enforcement Latency</span>
+                    <span class="spec-tbl-val">&lt; 5 ms (vs 1500ms+ for LLM-based safety evals)</span>
                   </div>
                   <div class="spec-table-row">
-                    <span class="spec-tbl-label">Production Path</span>
-                    <span class="spec-tbl-val">Zero-overhead safe_region arenas</span>
-                  </div>
-                  <div class="spec-table-row">
-                    <span class="spec-tbl-label">Integration Showcase</span>
-                    <span class="spec-tbl-val">Pluggable sqlite3_mem_methods compatibility (0 changes)</span>
+                    <span class="spec-tbl-label">Audit Trail</span>
+                    <span class="spec-tbl-val">Hash-Chained SHA-256 WAL (fsync durable)</span>
                   </div>
                 </div>
 
                 <div class="projects-links-row">
-                  <a href="https://github.com/PandiaJason/OwnedC" class="project-btn" target="_blank">
+                  <a href="https://github.com/PandiaJason/bats" class="project-btn" target="_blank">
                     Source Code 
                     <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>

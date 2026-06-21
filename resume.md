@@ -28,44 +28,44 @@ Coimbatore, Tamil Nadu, India | pandiajason@gmail.com | [GitHub: github.com/Pand
 *   Engineered a secure **in-process syscall loop** using direct WASM linear-memory **FFI pointer passing**, bypassing JSON serialization and localhost TCP loopback latency to complete tool calls in **<1ms** (a **300x latency reduction**).
 *   Integrated Model Context Protocol (MCP) servers and instruction metering (fuel budgets) to guarantee sandboxed safety and resource constraints.
 
-### 2. **qubo-space-routing & SPICE-ns-Project** (C++, Python, LaTeX)
-*Mathematical routing optimization using Lagrangian relaxation and NASA SPICE-derived Mars relay topologies.*
-*   Formulated an always-feasible Delay-Tolerant Network (DTN) routing protocol by replacing hard capacity constraints with **quadratic soft penalties** $(L_e - C_e)^2$ mapped to a Quadratic Unconstrained Binary Optimization (QUBO) Hamiltonian.
-*   Leveraged quadratic cross-terms to make congestion pairwise visible to the solver, driving automatic global load-balancing without heuristics. Delivered **2.4x more data** than Contact Graph Routing (CGR) and matched ILP-optimal mission value.
-*   Built a high-fidelity Delay-Tolerant Network extension for the **ns-3** simulator, validated on Mars surface-to-orbit Ka-band/UHF relay contacts derived from NASA SPICE kernels.
-*   Presented research findings on routing survivability under congestion, demonstrating throughput gains under high link saturation.
+### 2. **OwnedC** (C, Python, CMake)
+*Rust-inspired memory safety framework for C, providing RAII, dynamic borrow checking, and thread-safe arena allocators.*
+*   Designed and built a runtime ownership registry in standard **C (C99/C11)** to track dynamic memory allocations and catch borrow violations, double-frees, and leaks on runtime exit.
+*   Implemented compiler-assisted scope-bound **RAII** cleanups using GCC/Clang cleanup attributes to auto-free pointers on block exit.
+*   Created a pluggable allocation wrapper and successfully validated safety guarantees by integrating it with **SQLite (v3.47.0)**'s allocator hooks with zero core engine code changes.
 
-### 3. **bats (WAND)** (Go 1.24+)
-*Deterministic safety enforcement and audit layer for autonomous AI agents.*
-*   Designed and built a high-performance **Go** safety proxy to evaluate and gatekeep autonomous AI agent actions in real-time.
-*   Enforced safety policies through a deterministic engine evaluating **183 pre-compiled rules** (BLOCK / CHALLENGE / ALLOW) in **<5ms** with zero LLM-probabilistic latency.
-*   Implemented a tamper-evident, append-only **Write-Ahead Log (WAL)** using SHA-256 cryptographic hash chaining and fsync durability for audit compliance.
-*   Integrated rate limiting and random cryptographically generated nonces to prevent action replay attacks.
-
-### 4. **ninai** (Electron, React 19, TypeScript 5.9, Vite 7)
-*Local-first, dual-pane desktop workspace unifying AI web assets and a persistent Markdown notebook.*
-*   Designed an Electron desktop app with a split-pane layout embedding secure AI webviews side-by-side with a customized TipTap (ProseMirror) editor.
-*   Wrote custom Electron main-process network interceptors to dynamically strip `X-Frame-Options` and Content-Security-Policy (CSP) headers, allowing secure integration of restricted web domains.
-*   Bypassed browser CORS and hotlinking blocks by intercepting image downloads and writing binary buffers natively to the host clipboard ("Super Copy").
-*   Managed local-first data using **Dexie.js (IndexedDB)** with debounced disk-writing queues to eliminate I/O thrashing and query locking over 10,000+ notes.
-
-### 5. **Ranotot** (Godot 4.6, Python)
+### 3. **Ranotot** (Godot 4.6, Python)
 *A gravity-based 2D space delivery platformer game with custom physics and procedural level generators.*
 *   Developed a 2D gravity-based platformer in **Godot 4.6 (GL Compatibility / GDScript)** featuring dynamic radial planet gravity fields.
 *   Programmed a custom camera system with a fixed zoom of 0.5 that locks to planets but scrolls with a deadzone when traveling in zero-G.
 *   Created a custom **Python automation script** to procedurally generate levels (levels 31-90), placing planets and spawning asteroid trajectories.
 *   Built and packaged automated release pipelines for macOS, Windows, and Linux headless target compiles.
 
-### 6. **OwnedC** (C, Python, CMake)
-*Rust-inspired memory safety framework for C, providing RAII, dynamic borrow checking, and thread-safe arena allocators.*
-*   Designed and built a runtime ownership registry in standard **C (C99/C11)** to track dynamic memory allocations and catch borrow violations, double-frees, and leaks on runtime exit.
-*   Implemented compiler-assisted scope-bound **RAII** cleanups using GCC/Clang cleanup attributes to auto-free pointers on block exit.
-*   Created a pluggable allocation wrapper and successfully validated safety guarantees by integrating it with **SQLite (v3.47.0)**'s allocator hooks with zero core engine code changes.
+### 4. **qubo-space-routing & SPICE-ns-Project** (C++, Python, LaTeX)
+*Mathematical routing optimization using Lagrangian relaxation and NASA SPICE-derived Mars relay topologies.*
+*   Formulated an always-feasible Delay-Tolerant Network (DTN) routing protocol by replacing hard capacity constraints with **quadratic soft penalties** $(L_e - C_e)^2$ mapped to a Quadratic Unconstrained Binary Optimization (QUBO) Hamiltonian.
+*   Leveraged quadratic cross-terms to make congestion pairwise visible to the solver, driving automatic global load-balancing without heuristics. Delivered **2.4x more data** than Contact Graph Routing (CGR) and matched ILP-optimal mission value.
+*   Built a high-fidelity Delay-Tolerant Network extension for the **ns-3** simulator, validated on Mars surface-to-orbit Ka-band/UHF relay contacts derived from NASA SPICE kernels.
+*   Presented research findings on routing survivability under congestion, demonstrating throughput gains under high link saturation.
 
-### 7. **DSA-C** (C)
+### 5. **ninai** (Electron, React 19, TypeScript 5.9, Vite 7)
+*Local-first, dual-pane desktop workspace unifying AI web assets and a persistent Markdown notebook.*
+*   Designed an Electron desktop app with a split-pane layout embedding secure AI webviews side-by-side with a customized TipTap (ProseMirror) editor.
+*   Wrote custom Electron main-process network interceptors to dynamically strip `X-Frame-Options` and Content-Security-Policy (CSP) headers, allowing secure integration of restricted web domains.
+*   Bypassed browser CORS and hotlinking blocks by intercepting image downloads and writing binary buffers natively to the host clipboard ("Super Copy").
+*   Managed local-first data using **Dexie.js (IndexedDB)** with debounced disk-writing queues to eliminate I/O thrashing and query locking over 10,000+ notes.
+
+### 6. **DSA-C** (C)
 *Low-level implementations of fundamental data structures and algorithms in standard C.*
 *   Implemented native **C** solutions for fundamental and advanced data structures, focusing on manual memory management (`malloc` / `free`) and pointers.
 *   Developed clean, custom implementations of lists, trees, and stacks without external dependencies or heavy libraries.
+
+### 7. **bats (WAND)** (Go 1.24+)
+*Deterministic safety enforcement and audit layer for autonomous AI agents.*
+*   Designed and built a high-performance **Go** safety proxy to evaluate and gatekeep autonomous AI agent actions in real-time.
+*   Enforced safety policies through a deterministic engine evaluating **183 pre-compiled rules** (BLOCK / CHALLENGE / ALLOW) in **<5ms** with zero LLM-probabilistic latency.
+*   Implemented a tamper-evident, append-only **Write-Ahead Log (WAL)** using SHA-256 cryptographic hash chaining and fsync durability for audit compliance.
+*   Integrated rate limiting and random cryptographically generated nonces to prevent action replay attacks.
 
 ### 8. **cnl-codetainers** (Docker, Go, Shell)
 *Accessible containerized networking sandboxes for student education.*
