@@ -16,6 +16,7 @@ const commands = {
   help: `Available commands:
   -------------------------------------------------------------
   [nanos]       Display WebAssembly micro-runtime architecture
+  [cpp]         Open Context Provider Protocol for AI coding agents
   [ownedc]      Display C memory safety & borrow-checking framework
   [ranotot]     View Godot 4 gravity physics game structure
   [spice-ns]    View ns-3 Delay-Tolerant Network simulation
@@ -43,6 +44,23 @@ const commands = {
   * Startup Boot Latency: <3ms (50x faster than Linux MicroVM instantiation)
   * System Memory Footprint: ~39MB RSS (vs 2GB+ standard Linux VM / 50x RAM reduction)
   * FFI Syscall execution: <1ms (300x faster than localhost TCP loopback)`,
+
+  cpp: `[cpp] Context Provider Protocol (CPP)
+  -------------------------------------------------------------
+  Language: Rust (Engine Core) / Python (SDK & MCP Bridge)
+  Repository: https://github.com/PandiaJason/cpp
+
+  Architectural Paradigm:
+  [AI Client]  --->  [CPP Budget Solver Engine]  --->  [Context Graph / Providers]
+                             |
+                  4KB / 10-Object Budget
+                  99.8% Context Volume Reduction
+
+  Key Performance & Design Attributes:
+  * Budget-Managed Context: Source-side solver prunes context graph to fit token constraints.
+  * Performance: <2.1ms in-memory resolution latency with high-throughput Rust engine.
+  * Protocol Architecture: Standardized JSON-RPC 2.0 wire format over HTTP/WS and stdio.
+  * Ecosystem Integration: Includes 6 built-in data providers (Git, FS, Jira, Slack) & MCP Bridge.`,
 
   'spice-ns': `[spice-ns] Deep Space Network Simulation
   -------------------------------------------------------------

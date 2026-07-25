@@ -65,6 +65,7 @@
 
 #### 🦀 High-Performance & AI Infrastructure
 *   **[nanos](https://github.com/PandiaJason/nanos)** — Rust-based, hardware-isolated WebAssembly micro-runtime for AI agents with Apple Metal/CUDA GPU offload. Tailored for extreme efficiency (<15MB RAM, <50ms boot).
+*   **[cpp](https://github.com/PandiaJason/cpp)** — Open specification and high-performance Rust runtime for Context Provider Protocol (CPP), delivering structured, budget-managed, graph-aware context to AI coding agents with 99.8% volume reduction and <2.1ms resolution latency.
 *   **[MidDB](https://github.com/PandiaJason/MidDB)** — Lightweight C++ hybrid database prototype combining structured tables with semantic vector embedding memory for AI agent memory.
 *   **[bats](https://github.com/PandiaJason/bats)** — *WAND (Watch. Audit. Never Delegate)*: A Go-native deterministic safety enforcement and policy auditing layer for autonomous AI agents and MCP tools.
 *   **[antapi](https://github.com/PandiaJason/antapi)** — Go-native REST API with Redis caching, Prometheus metrics, and API-key auth for orchestrating multiple LLM agents and agentic *Teams* (local & cloud models).

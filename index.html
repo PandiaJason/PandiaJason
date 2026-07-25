@@ -197,6 +197,7 @@ guest@pandiajason.github.io:~$ </div>
           <span class="shortcut-label">QUICK COMMANDS:</span>
           <button class="shortcut-btn" data-cmd="help">help</button>
           <button class="shortcut-btn" data-cmd="nanos">nanos</button>
+          <button class="shortcut-btn" data-cmd="cpp">cpp</button>
           <button class="shortcut-btn" data-cmd="ownedc">ownedc</button>
           <button class="shortcut-btn" data-cmd="ranotot">ranotot</button>
           <button class="shortcut-btn" data-cmd="spice-ns">spice-ns</button>
@@ -282,6 +283,96 @@ guest@pandiajason.github.io:~$ </div>
 
                 <div class="projects-links-row">
                   <a href="https://github.com/PandiaJason/nanos" class="project-btn" target="_blank">
+                    Source Code 
+                    <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: cpp (Context Provider Protocol) -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="accordion-header-left">
+              <span class="accordion-title">cpp (Context Provider Protocol)</span>
+            </span>
+            <span class="accordion-header-right">
+              <span class="accordion-tech-badge">Rust / Protocol / AI Context</span>
+              <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-box">
+              <div class="accordion-inner">
+                
+                <!-- Refined Schematic SVG diagram for CPP -->
+                <div class="schematic-container">
+                  <svg width="100%" height="160" viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- AI Client -->
+                    <rect x="15" y="35" width="100" height="90" rx="8" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="65" y="55" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">AI Agent</text>
+                    <text x="65" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">Cursor / Claude</text>
+                    <rect x="25" y="85" width="80" height="22" rx="4" fill="rgba(0,0,0,0.03)" stroke="currentColor" stroke-width="1"/>
+                    <text x="65" y="99" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">goal.code</text>
+
+                    <!-- RPC & Budget Flow -->
+                    <path d="M115 65 H175" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="175,65 167,61 167,69" fill="currentColor"/>
+                    <text x="145" y="55" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">JSON-RPC 2.0</text>
+                    
+                    <path d="M175 95 H115" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <polygon points="115,95 123,91 123,99" fill="currentColor"/>
+                    <text x="145" y="112" text-anchor="middle" font-family="monospace" font-size="8" fill="var(--yellow-accent)" font-weight="bold">4KB Bundle</text>
+
+                    <!-- CPP Budget Solver Engine -->
+                    <rect x="175" y="25" width="125" height="110" rx="8" stroke="var(--yellow)" stroke-width="2" fill="rgba(255,204,0,0.03)"/>
+                    <text x="237.5" y="45" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="bold" fill="currentColor">CPP Engine</text>
+                    <line x1="185" y1="53" x2="290" y2="53" stroke="var(--yellow)" stroke-width="1"/>
+                    <text x="237.5" y="70" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">Budget Solver</text>
+                    <text x="237.5" y="86" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">Context Graph</text>
+                    <text x="237.5" y="104" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="var(--yellow-accent)">2.1ms Latency</text>
+                    <text x="237.5" y="120" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">99.8% Pruning</text>
+
+                    <!-- Providers Flow -->
+                    <path d="M300 80 H335" stroke="currentColor" stroke-width="1.5"/>
+                    <polygon points="335,80 327,76 327,84" fill="currentColor"/>
+
+                    <!-- Data Providers -->
+                    <rect x="335" y="35" width="70" height="90" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="370" y="55" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="bold" fill="currentColor">Providers</text>
+                    <text x="370" y="73" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">Git / FS</text>
+                    <text x="370" y="88" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">Jira / Slack</text>
+                    <text x="370" y="103" text-anchor="middle" font-family="monospace" font-size="8" fill="currentColor">MCP Bridge</text>
+                  </svg>
+                </div>
+
+                <p class="project-desc-text">Open protocol and high-performance Rust runtime for feeding structured, budget-managed, graph-aware context to AI coding agents via JSON-RPC 2.0 and WebSockets.</p>
+                
+                <div class="projects-metrics-table">
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Volume Reduction</span>
+                    <span class="spec-tbl-val">99.8% (232 bytes solved vs 122KB raw filesystem scan)</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Resolution Speed</span>
+                    <span class="spec-tbl-val">&lt; 2.1 ms in-memory budget solver resolution latency</span>
+                  </div>
+                  <div class="spec-table-row">
+                    <span class="spec-tbl-label">Ecosystem Bridges</span>
+                    <span class="spec-tbl-val">6 built-in providers (Git, FS, Jira, Slack) &amp; MCP Bridge</span>
+                  </div>
+                </div>
+
+                <div class="projects-links-row">
+                  <a href="https://github.com/PandiaJason/cpp" class="project-btn" target="_blank">
                     Source Code 
                     <svg class="btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>
